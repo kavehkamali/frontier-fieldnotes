@@ -1,0 +1,94 @@
+{
+  "verified_at": "2026-09-28",
+  "scope": "Curated creative AI research: 3D Gaussian splatting, video, voice, diffusion and efficient generation. No robotics or physical AI.",
+  "papers": [
+    {
+      "id": "2609.16989",
+      "version": "v1",
+      "date": "15 Sep 2026",
+      "category": "Voice",
+      "title": "LACI: recover when long narration drifts.",
+      "summary": "An inference-time method detects errors, rolls back and temporarily constrains generation in long-form text-to-speech.",
+      "caveat": "Early evidence on specified TTS systems. Worst-of-N error rates and sliding-window speaker similarity measure different failure modes.",
+      "url": "https://arxiv.org/abs/2609.16989v1",
+      "review_depth": "Abstract and submission history; no reproduction"
+    },
+    {
+      "id": "2609.12945",
+      "version": "v1",
+      "date": "11 Sep 2026",
+      "category": "Voice",
+      "title": "StepAudio 3 Gen: one discrete audio vocabulary.",
+      "summary": "A shared residual-quantization representation supports speech, voice design and other audio generation tasks with autoregressive modeling.",
+      "caveat": "Technical report. SOTA is the authors\u2019 claim on selected tasks; no independent listening test or reproduction here.",
+      "url": "https://arxiv.org/abs/2609.12945v1",
+      "review_depth": "Abstract and submission history; no reproduction"
+    },
+    {
+      "id": "2609.13264",
+      "version": "v1",
+      "date": "07 Sep 2026",
+      "category": "Video",
+      "title": "BEACON: identity is not expression.",
+      "summary": "Reference images provide appearance; reference video supplies facial behavior. Separate conditioning addresses an important gap in subject-specific video generation.",
+      "caveat": "Preprint evaluated on MEAD and RAVDESS. Do not extrapolate facial-expression results to complete film or multi-shot consistency.",
+      "url": "https://arxiv.org/abs/2609.13264v1",
+      "review_depth": "Abstract and submission history; no reproduction"
+    },
+    {
+      "id": "2609.12343",
+      "version": "v1",
+      "date": "11 Sep 2026",
+      "category": "3D Gaussian",
+      "title": "VS-Splat: put splats where the object is.",
+      "summary": "Select object-relevant voxels before allocating Gaussian primitives for sparse-view reconstruction.",
+      "caveat": "Author-reported benchmark comparisons. Not a general winner for every scene, camera setup or capture workflow.",
+      "url": "https://arxiv.org/abs/2609.12343v1",
+      "review_depth": "Abstract and submission history; no reproduction"
+    },
+    {
+      "id": "2609.20888",
+      "version": "v2",
+      "date": "25 Sep 2026",
+      "category": "Attention",
+      "title": "Learn which context to keep.",
+      "summary": "Elastic Threshold Attention learns contextual thresholds for block-sparse decoding. Its latest abstract reports up to 2.15\u00d7 end-to-end speedup over FlashAttention-2.",
+      "caveat": "Author-reported, 1.45B model, contexts up to 512K. Do not substitute older v1 claims or interpret this as a universal speedup.",
+      "url": "https://arxiv.org/abs/2609.20888v2",
+      "review_depth": "Versioned abstract and submission history; no reproduction"
+    },
+    {
+      "id": "2609.20539",
+      "version": "v2",
+      "date": "18 Sep 2026",
+      "category": "Generation",
+      "title": "Parallel tokens are not free.",
+      "summary": "A theoretical comparison separates masked, uniform and Gaussian language diffusion under specific distribution and score-oracle assumptions.",
+      "caveat": "Theory preprint. Forward-pass complexity is not a production wall-clock benchmark or a universal ranking of deployed models.",
+      "url": "https://arxiv.org/abs/2609.20539v2",
+      "review_depth": "Abstract and submission history; proofs not independently checked"
+    },
+    {
+      "id": "2609.02748",
+      "version": "v1",
+      "date": "02 Sep 2026",
+      "category": "Generation",
+      "title": "Change what the loss can see.",
+      "summary": "Frequency-aware training targets an imbalance between coarse structure and fine detail in pixel-space flow matching.",
+      "caveat": "Early-month context, not this week\u2019s release. Convergence claims depend on the tested models and training setup.",
+      "url": "https://arxiv.org/abs/2609.02748v1",
+      "review_depth": "Abstract and submission history; no reproduction"
+    },
+    {
+      "id": "2410.23775",
+      "version": "v3",
+      "date": "05 Nov 2024",
+      "category": "Foundations",
+      "title": "IC-LoRA: make the context joint.",
+      "summary": "Joint image composition, joint captions and task-specific low-rank tuning expose useful in-context generation behavior in diffusion transformers.",
+      "caveat": "Foundation from 2024. Included to teach conditioning versus adaptation; not labeled a current breakthrough.",
+      "url": "https://arxiv.org/abs/2410.23775v3",
+      "review_depth": "Abstract, method summary and revision history; no reproduction"
+    }
+  ]
+}

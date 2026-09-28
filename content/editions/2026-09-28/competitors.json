@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Higgsfield \u00b7 3D Jutsu",
+    "date": "05 Sep 2026",
+    "summary": "Officially announced an editable 3D scene workspace with object, camera, lighting and animation controls.",
+    "implication": "Investigate repeatable camera moves and scene edits. The announcement does not establish that it uses Gaussian splatting.",
+    "url": "https://higgsfield.ai/blog/higgsfield-3d-jutsu"
+  },
+  {
+    "title": "OpenArt \u00b7 Chat Mode",
+    "date": "03 Sep 2026",
+    "summary": "A conversational interface selects generation settings and supports follow-up edits across creative media.",
+    "implication": "Compare iteration control, model transparency and usable-shot cost. Product announcement; no hands-on comparison yet.",
+    "url": "https://openart.ai/blog/chat-mode-overview/"
+  },
+  {
+    "title": "ElevenLabs \u00b7 Eleven v4",
+    "date": "Checked 28 Sep 2026",
+    "summary": "The official announcement describes expressive speech, delivery instructions and multi-speaker consistency.",
+    "implication": "Prioritize scene-level dialogue and pronunciation tests. Vendor preference and latency claims require their stated conditions.",
+    "url": "https://elevenlabs.io/blog/eleven-v4"
+  }
+]

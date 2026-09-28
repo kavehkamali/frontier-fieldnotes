@@ -1,0 +1,23 @@
+[
+  {
+    "title": "AI video \u2192 Gaussian splats",
+    "date": "September discovery",
+    "summary": "A StableDiffusion tutorial shares a workflow for reconstructing splats from generated video.",
+    "implication": "Investigation lead: camera consistency and reconstruction artifacts. Tutorial evidence is not a general fidelity benchmark.",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1wi85by/for_anyone_wondering_how_i_manage_to_do_this/"
+  },
+  {
+    "title": "Local video edits and compositing",
+    "date": "23 Sep 2026",
+    "summary": "A StableDiffusion post demonstrates a targeted video-editing workflow.",
+    "implication": "Test whether a mask preserves the unedited scene over time. Demo selected by its creator; failure rate unknown.",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1wo8oqd/v6_update_newbie_modify_a_targeted_area_of_any/"
+  },
+  {
+    "title": "Cost per usable shot, not per render",
+    "date": "September discussion",
+    "summary": "A generativeAI discussion raises concerns about the value of a creative-tool subscription.",
+    "implication": "Treat this as an anecdote that motivates a fair comparison, not a verified claim about the vendor. Track retries, quality and plan conditions.",
+    "url": "https://www.reddit.com/r/generativeAI/comments/1wknrn3/openartai_isnt_worth_the_money/"
+  }
+]
