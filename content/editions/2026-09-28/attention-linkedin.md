@@ -1,20 +1,13 @@
-“Sparse attention is faster” leaves out the hard part.
+An attention matrix can be almost empty and still be slow.
 
-Imagine a query reading from a library of token memories. Dense attention reads broadly. Sparse attention tries to keep the useful shelves.
+Choosing what to skip costs time. The remaining work also needs to fit the way a GPU moves data. A nice sparsity percentage only tells part of that story.
 
-But selecting the shelves also costs time. And a GPU does not move memory one abstract token at a time.
+Elastic Threshold Attention is a recent example worth looking at. It learns thresholds that change with the query, then skips blocks of context during decoding. The updated paper came out on September 25.
 
-That is why I separate three questions:
+The practical question is whether the model keeps the information it needs while getting faster end to end. That depends on the model, context length and implementation.
 
-1. What information is removed?
-2. How is it selected?
-3. Does the implementation actually save wall-clock time at the quality we need?
+The visual lab lets you switch between dense, causal and top-k patterns. Watch which connections disappear. The weights are synthetic, and this is a basic attention explainer rather than an ETA implementation.
 
-Elastic Threshold Attention is a recent paper worth reading through that lens. It learns context-dependent thresholds for block-sparse decoding. Read the latest version: v2, September 25, 2026.
+Paper: https://arxiv.org/abs/2609.20888v2
 
-My attached matrix is a toy illustration of dense, causal and top-k patterns. It does not implement ETA, and brighter squares are synthetic weights—not measured model attention.
-
-Primary source: https://arxiv.org/abs/2609.20888v2
-Interactive lab: https://kavehkamali.github.io/frontier-fieldnotes/#lab
-
-#MachineLearning #LLM #AIEngineering
+Try it: https://kavehkamali.github.io/frontier-fieldnotes/#basics

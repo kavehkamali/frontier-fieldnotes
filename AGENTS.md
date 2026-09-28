@@ -35,3 +35,12 @@ Do not claim a trained model or experimental result for analytic or schematic vi
 - Check: python3 scripts/check.py
 
 No API key is needed to view or run the dashboard. UI draft edits are session-local and must be downloaded to persist.
+
+## Voice, freshness and interactive depth
+Lead weekly public posts with a verified result from the last 7 days where possible, otherwise the last 28 days. Display original publication and latest revision dates separately. Older papers belong in a clearly dated reference library; do not headline them as SOTA. Re-check the rolling window on each run. SOTA means a scoped, attributed claim, not merely a fresh paper or product launch.
+
+Write like an informed colleague explaining the interesting part: contractions, direct sentences, a concrete surprise or limitation, and technical detail only where it earns its place. Avoid generic thought-leadership hooks, breathless adjectives, emoji/hashtag lists, repetitive rhetorical questions, and phrases like "game changer", "unlock", "delve", "revolutionize", or "the future is here". Never invent first-person experiments or the owner's opinions. Lead with what changed in the paper, then use a fundamental to explain why it matters. The user wants casual and human, with scientific precision.
+
+Visuals should allow substantive exploration: numerical solvers, score/velocity fields, particle trajectories, approximation errors, conditioning, temporal dynamics or actual rendering mechanisms. Aesthetic motion alone is not an explanation. Tie each advanced simulation to a recent paper, while stating clearly when it is an analytic teaching model rather than a reproduction. Navier–Stokes is an example of the desired depth; do not equate fluid flow with diffusion sampling. Keep the creative AI focus.
+
+Every new visual needs a simple sharing path: one-click GIF and PNG from the current settings, readable caption, source/context and limitations. Include a ready-to-use MP4 where practical for video-first posting. Test the actual export, including cancellation, aspect ratios and matching visual state. Do not suggest all platforms accept GIFs identically; keep a video alternative.

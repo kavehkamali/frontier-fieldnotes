@@ -60,7 +60,9 @@ def render(topic,t):
  d.text((55,815),'Educational schematic · not model output or benchmark evidence',font=font(21),fill=MUTED)
  d.text((55,850),'frontier-fieldnotes  /  Source links in the accompanying post',font=font(17),fill=MUTED)
  return im
-for topic in TITLES:
+# The advanced flow assets are exported from the browser's shared renderer.
+# Preserve that kit when refreshing the background explainers.
+for topic in ['attention', 'lora']:
  render(topic,.55 if topic!='lora' else .2).save(OUT/f'{topic}-card.png')
  frames=[]
  with tempfile.TemporaryDirectory(prefix='fieldnotes-') as td:

@@ -1,10 +1,10 @@
 [
   {
-    "title": "Diffusion as changing distributions",
-    "priority": "01 \u00b7 Ready in lab",
-    "idea": "Drag signal-to-noise level; inspect colored component densities and samples.",
-    "connection": "Foundation for image, video and audio denoisers.",
-    "url": "https://arxiv.org/abs/2011.13456"
+    "title": "Where a fast sampler misses the turn",
+    "priority": "01 \u00b7 Advanced lab ready",
+    "idea": "Follow 800 samples through exact 2D fields. Switch flow/ODE/SDE, Euler/Heun, 4\u2013128 steps and three distributions. Export your settings as a GIF.",
+    "connection": "FlashRender (3 Sep): sampling discretization and camera control. ViRDM (24 Sep): preserving motion during few-step post-training. Mechanism illustration, not paper reproduction.",
+    "url": "https://arxiv.org/abs/2609.03563v1"
   },
   {
     "title": "3D Gaussian splatting: projection & opacity",
@@ -35,10 +35,10 @@
     "url": "https://arxiv.org/abs/2609.20888v2"
   },
   {
-    "title": "LoRA weights versus reference context",
-    "priority": "06 \u00b7 Ready in lab",
-    "idea": "Change adapter rank separately from the supplied reference slots.",
-    "connection": "Use IC-LoRA as a dated foundation for newer reference-based workflows.",
-    "url": "https://arxiv.org/abs/2410.23775v3"
+    "title": "When good-looking frames still have weak motion",
+    "priority": "06 \u00b7 Proposed",
+    "idea": "Separate per-frame appearance statistics from temporal differences; let users build a clip with identical frame statistics but different motion.",
+    "connection": "ViRDM (24 Sep) adds dynamics regularization because representation matching can underconstrain motion.",
+    "url": "https://arxiv.org/abs/2609.28923v1"
   }
 ]

@@ -1,10 +1,10 @@
 1/3
-Sparse attention has two jobs: keep useful information and skip real work on the hardware. Removing entries from a diagram proves neither.
+An attention matrix can be almost empty and still be slow. Choosing what to skip costs time. The remaining work also has to suit the GPU. A sparsity percentage only tells part of the story.
 
 2/3
-ETA learns contextual thresholds for block-sparse decoding. Its latest version is v2 (Sep 25, 2026). Compare quality, selection overhead and end-to-end latency—not sparsity alone.
+ETA learns query-dependent thresholds and skips blocks of context during decoding. The latest revision is Sep 25. The useful comparison is quality and end-to-end latency at the same workload.
 https://arxiv.org/abs/2609.20888v2
 
 3/3
-Try dense, causal and top-k patterns in the visual lab. The matrix is synthetic and teaches the mechanism; it does not reproduce ETA.
-https://kavehkamali.github.io/frontier-fieldnotes/#lab
+Switch between dense, causal and top-k patterns here. Watch which connections disappear. It's a synthetic attention explainer, not an ETA implementation.
+https://kavehkamali.github.io/frontier-fieldnotes/#basics

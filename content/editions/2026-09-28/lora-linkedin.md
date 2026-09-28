@@ -1,19 +1,15 @@
-Two things often get mixed together in AI explanations:
+You can give a model a reference image without changing a single weight.
 
-Giving a model context.
-Changing its weights.
+The image guides that generation. LoRA does something else: it learns a weight update during adaptation.
 
-A reference image can influence the next output without any learning happening at inference time. LoRA, by contrast, is a way to learn a constrained weight update during adaptation.
+The little equation is ΔW = B × A. Two smaller matrices build the update. Their shared inner dimension is the rank, which limits how much the update can express.
 
-For a matrix W, the update is often written ΔW = B × A. The inner dimension—the rank—controls the capacity of that update.
+IC-LoRA brings those ideas together. It arranges images and captions jointly, then uses task-specific LoRA tuning. So the reference inputs and the learned update both have a role.
 
-IC-LoRA combines task-specific low-rank tuning with jointly arranged images and captions. That makes it a useful example of how adaptation and conditioning work together.
+This paper is from 2024. The distinction is still useful when a new tool says it can “learn your character”: find out whether you're supplying a reference, training an adapter, or doing both.
 
-This is foundational work from 2024, not a new release. I’m revisiting it because the distinction still matters when evaluating newer reference-conditioned generation systems.
+The lab shows the weight-update idea as a diagram. It doesn't compare generated images.
 
-The attached diagram is a schematic, not a generated-image comparison.
+Paper: https://arxiv.org/abs/2410.23775v3
 
-Original paper: https://arxiv.org/abs/2410.23775v3
-Interactive lab: https://kavehkamali.github.io/frontier-fieldnotes/#lab
-
-#GenerativeAI #MachineLearning #LoRA
+Try it: https://kavehkamali.github.io/frontier-fieldnotes/#basics

@@ -20,7 +20,8 @@ for topic in ['flow','attention','lora']:
  for suffix in ['card.png','loop.gif','video.mp4']:
   f=DIST/'assets'/f'{topic}-{suffix}';assert f.exists() and f.stat().st_size>1000,f'Missing/empty media: {f}'
 if shutil.which('node'):
- for name in ['app.js','data.js']:subprocess.run(['node','--check',str(DIST/name)],check=True)
+ for name in ['app.js','data.js','lab.mjs','simulation.mjs']:subprocess.run(['node','--check',str(DIST/name)],check=True)
+ subprocess.run(['node',str(ROOT/'tests/simulation.test.mjs'),str(DIST/'simulation.mjs')],check=True,stdout=subprocess.DEVNULL)
 with zipfile.ZipFile(DIST/'assets/edition-001.zip') as z:
  assert z.testzip() is None
  assert len(z.namelist())>=20

@@ -1,21 +1,28 @@
-# Diffusion distributions — 60-second narration and shot list
+# This edition: fewer steps, different camera move
 
-The downloadable MP4 is a 15-second silent, captioned loop. This script is for a separate narrated 60-second cut.
+Research: FlashRender (3 Sep 2026), https://arxiv.org/abs/2609.03563v1; companion ViRDM (24 Sep 2026), https://arxiv.org/abs/2609.28923v1.
 
-00–10 s — Show three colored peaks, slider at 100%.
-“Start with three populations of data. Each color has its own peak. The dark curve is their combined distribution.”
+The downloadable flow GIF / MP4 is a six-second silent loop of the new analytic 2D sampler, with Heun, 64 steps, 128 evaluations and seed 42. It is a mechanism illustration, not video-model output.
 
-10–25 s — Move toward 0%.
-“Now shrink the data signal and add independent Gaussian noise. The peaks overlap. At the end, they become indistinguishable.”
+## Optional 45–60 second narration
 
-25–40 s — Reverse slowly toward 100%.
-“Generation goes in the other direction conceptually. But reversing this slider is not learned denoising. This toy already knows the clean distribution.”
+“Lowering the generation steps shouldn't change the camera move you asked for. That's a failure case explored in September's FlashRender paper.
 
-40–52 s — Pause at overlapping modes.
-“A real model has to learn useful directions from training data. One noisy observation can have several plausible clean explanations.”
+To see the numerical issue, watch these dots. Each is following a direction field. Take enough small steps and it can follow the turns. Switch to Euler and use just four steps: some samples miss the finer path.
 
-52–60 s — Show the source link and lab.
-“In AI video, a prompt, a reference face, and a reference performance condition that distribution differently. That is the next layer to explore.”
+Heun takes a second look before correcting each step. That helps here, but it costs another field evaluation. The grey dots use a much finer numerical reference.
 
-On-screen label throughout: “Educational illustration, not model output.”
-Sources: https://arxiv.org/abs/2011.13456 and https://arxiv.org/abs/2609.13264v1
+This is a small analytic distribution, not FlashRender running in your browser. It makes one part of the paper easier to inspect: how the path and the sampling budget interact.
+
+Last week's ViRDM looks at a different part of fast video generation—post-training and preserving motion. A sharp frame alone doesn't tell us if the whole shot works.”
+
+## Shot list
+
+1. Title with paper name and submission date (0–5 seconds).
+2. Lab: Flow matching, Six islands, Heun, 64 steps; play (5–15 seconds).
+3. Pause at the end; change Euler to 4 steps, keeping seed 42 (15–25 seconds).
+4. Compare the endpoint error and grey reference; increase to 128 steps (25–35 seconds).
+5. Switch back to Heun and point out field-evaluation cost (35–45 seconds).
+6. Show source links and “analytic mechanism, not model reproduction” (45–55 seconds).
+
+Capture this narrated sequence separately. The six-second loop does not contain the full shot list or narration. Attention and LoRA assets remain 15-second silent background explainers.

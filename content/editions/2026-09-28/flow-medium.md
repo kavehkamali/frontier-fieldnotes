@@ -1,75 +1,53 @@
-# Watch a distribution change: a visual route into diffusion
+# Fewer steps, different camera move
 
-*From three colored peaks to Gaussian noise—and why running the animation backward is not a generative model.*
+*A recent video paper gives us a useful reason to look inside the sampler.*
 
-A noisy image is a useful starting point for explaining diffusion. It is also easy to misread. When we see a picture becoming clear, we can come away thinking that generation simply restores an original image hidden inside the noise.
+Lowering the step count shouldn't quietly change the camera move you asked for.
 
-A distribution view makes a different idea visible. We are learning how to produce plausible samples from a population, potentially conditioned on a prompt or reference. There need not be one original picture waiting inside a particular noise draw.
+[FlashRender](https://arxiv.org/abs/2609.03563v1), submitted September 3, 2026, investigates exactly that failure in video retakes. The authors find that coarse sampling can change the realized camera motion. Their response combines geometry-aligned representations, MeanFlow training and on-policy distillation. This is a recent research result, checked on September 28, rather than an independently verified claim about a production tool.
 
-The [interactive lab](https://kavehkamali.github.io/frontier-fieldnotes/) begins with three colored populations. Each has a different mean. Together, they form a distribution with three peaks. A slider controls how much data signal remains relative to independent Gaussian noise.
+The interesting question is what makes a shorter sampling route preserve the control you wanted. A finished clip hides most of that journey.
 
-## What the graph actually computes
+That's easier to see with a cloud of dots than with a finished video. In the [interactive lab](https://kavehkamali.github.io/frontier-fieldnotes/#lab), each dot is a sample moving through a two-dimensional probability distribution. The target has several clusters. The directions come from an analytic field we can calculate, which lets us inspect a sampling problem without also wondering whether a neural network learned it correctly.
 
-Let the data population be an equally weighted mixture of three one-dimensional Gaussians. Their means are −2.5, 0 and 2.5, and each has standard deviation 0.4.
+Start with plenty of steps and follow one sample. Then reduce the step count while keeping the seed fixed. Look for places where the route changes direction. A large step uses less information about what happens along the way, so it can cut across a bend.
 
-For a data sample x and an independent standard Gaussian sample ε, define:
+Even with a correct direction field, a computer still has to approximate a continuous journey using a finite number of updates. That's the numerical part of generation.
 
-xα = αx + √(1 − α²)ε.
+There's a subtle point about flow matching here. For a simple linear training path, take a noise sample z and a data sample y, then write:
 
-When α = 1, we keep the data. When α = 0, we have only standard Gaussian noise. Between those endpoints, each component remains Gaussian: its mean is multiplied by α, and its variance becomes α² × 0.16 + (1 − α²).
+x(t) = (1 − t)z + ty.
 
-That gives us an exact density to draw. We do not need to train a neural network to calculate it.
+This example travels in a straight line, with velocity y − z. Training can teach a model to predict these conditional velocities from the intermediate position and time. But the model does not receive the hidden pair z and y during ordinary sampling. The field it learns averages over the possible pairs consistent with its input. This is part of the conditional-to-marginal construction behind [Flow Matching](https://arxiv.org/abs/2210.02747), introduced in 2022.
 
-The cyan, violet and orange curves represent the three weighted components. Their sum is the dark curve. The dots show a fixed set of samples coupled across slider positions so we can follow them visually. They are not independent fresh draws on every animation frame.
+Straight lines in the training construction therefore do not guarantee straight paths through the marginal field. Imagine several possible journeys passing through the same neighborhood and pointing in different directions. Their average depends on where you are and when you are there. Following those changing averages can produce a curve.
 
-This construction lets a simple question become visible: at what noise level do distinct populations become hard to tell apart?
+The lab uses known distributions to calculate such directions. No neural network is being trained in the browser, and no clean endpoint is handed to each sample to pull it along a prearranged line. That distinction matters: animating a collection of matched endpoints would make a different demonstration.
 
-## What disappears as noise grows
+Now try the solver control. Euler looks at the local direction and takes a step. Heun makes a provisional step, evaluates the direction there, and uses both directions to correct the update. On a changing field, that second look can help. It also costs another field evaluation. Comparing equal step counts is useful for understanding the methods, but comparing efficiency requires counting those evaluations too.
 
-At low noise, a sample near one peak gives useful evidence about which population it came from. As the peaks overlap, that evidence becomes less decisive. At the pure-noise endpoint, all three component distributions coincide.
+The deterministic modes use a 256-step numerical reference from the same initial samples. The distance to that reference tells you how much the displayed approximation differs from a finer calculation of the same field. The reference is still numerical. It isn't an exact solution, an image-quality score, or a measurement of a commercial model.
 
-This is a useful intuition for information loss. Adding noise is easy because we deliberately discard distinctions. Recovering useful structure requires knowledge of the data distribution.
+The stochastic mode needs a different reading. A reverse-time SDE includes random increments during sampling. Individual paths can wander, and two valid paths need not end at the same point. Their distance from a deterministic trajectory would be a misleading correctness score.
 
-Notice that the dots are not each assigned a single inevitable destination by the noisy point alone. In an overlapping region, several clean explanations may be plausible. Generative modeling has to deal with that ambiguity rather than simply undoing a deterministic blur.
+The [score-based SDE framework](https://arxiv.org/abs/2011.13456) connects a reverse-time SDE with a probability-flow ODE. With exact scores, the appropriate starting distribution and continuous-time dynamics, they share the same time-dependent marginal distributions while tracing different individual paths. Numerical approximations and learned-score errors can disturb that agreement. So in the stochastic view, watch the population: where it gathers and whether its shape matches the intended distribution.
 
-## Why the reverse animation is not a model
+This also helps untangle the names. A diffusion model can have a deterministic probability-flow sampler. A flow-matching model learns a velocity field through a training objective. “Random versus smooth” doesn't separate the two families cleanly.
 
-The slider can be moved in either direction because the illustration already knows the clean mixture and the sampled noise. That makes the picture reversible as a user-interface operation.
+There is also a useful September reading companion for this particular visual.
 
-A model does not get those privileged ingredients at generation time. It receives a noisy state, time information and possibly conditioning, then uses learned information to determine how sampling should proceed.
+[A Lagrangian View of Flow Matching](https://arxiv.org/abs/2609.00198v2), revised September 5, looks at generation from the perspective of individual particles. Its two-mode example illustrates how the estimated clean target can shift along a path, particularly near an ambiguous boundary. The paper's straight-path argument depends on specific assumptions about the field and target invariance. It offers an interesting lens; it doesn't establish that every flow model generates well in one step.
 
-This is the distinction I want an introductory visual to preserve. Knowing a convenient formula for a toy marginal is not the same as learning a sampler for images, audio or video.
+Then there is last week's [ViRDM](https://arxiv.org/abs/2609.28923v1), submitted September 24. It tackles a different part of the few-step video problem: post-training an existing causal generator against a precomputed representation distribution, without an online diffusion-score teacher or learned critic. Frozen feature encoders still play a role. The paper also finds that matching those representations can leave motion underconstrained, motivating an additional dynamics term. Its headline training budget concerns post-training an existing generator, not building one from scratch.
 
-The [score-based SDE framework](https://arxiv.org/abs/2011.13456) connects forward noising, learned scores and reverse-time generation. It also develops a probability-flow ODE formulation. That is why “diffusion means a random path, flow means a smooth path” is too crude as a general explanation.
+These papers deserve separate evaluation. FlashRender's video-retake task and ViRDM's causal-video task don't form a shared leaderboard. Their author-reported results suggest different things to inspect in a faster system: camera control, motion, and the cost of preparing the model.
 
-## Where flow matching fits
+The lab explains the sampling mechanism that makes the FlashRender story interesting. It neither implements FlashRender or ViRDM nor reproduces their video results. For an actual tool comparison, a convincing frame is only part of the evidence. The shot also needs to follow the camera instruction and sustain the intended motion.
 
-A second mode in the lab shows a transport picture. Start with a simple distribution, then follow a time-dependent direction field toward a data distribution.
+For a short post, the clearest export is a small comparison: the same starting samples, the same field, and two step counts. Pause where the coarse path departs from the reference. Keep the step and solver labels in frame. If you switch from Euler to Heun, include the evaluation counts so the extra work is visible.
 
-[Flow matching](https://arxiv.org/abs/2210.02747) provides a way to learn such vector fields from specified conditional probability paths. There are relationships between diffusion and flow formulations; they are not two unrelated boxes.
-
-The transport mode is intentionally only a schematic. Its hand-defined paths are not the learned field from an experiment. Comparing that drawing with the density view cannot establish which method produces better images or runs faster.
-
-For an actual comparison, I would want the model, training setup, sampler, number of evaluations, quality metric and hardware held in view together.
-
-## The connection to current AI filmmaking
-
-Once the distribution idea is clear, conditioning becomes a more interesting question. What information changes the set of outputs the generator should consider plausible?
-
-For a face, one image can describe appearance. It cannot fully describe the characteristic way that person moves or expresses emotion over time. [BEACON](https://arxiv.org/abs/2609.13264v1), a September 2026 paper, explores separate reference-image and reference-video signals for appearance and facial behavior.
-
-That is a research connection, not a claim that this toy reproduces BEACON. Its facial-video evaluation also does not establish reliable full-film storytelling, multi-shot continuity or arbitrary body motion.
-
-For a filmmaker, the questions become concrete. Is the reference intended to preserve a face, transfer a performance, guide a camera move, or maintain a location across cuts? “More control” is vague until we say which variable the control affects.
-
-## How I would use this in a short explanation
-
-I would begin with the three peaks and ask viewers to follow one color. Then I would move toward noise and pause when the components heavily overlap. Finally, I would return toward data and explain why the animation has access to information a real generator must learn.
-
-Only after that would I introduce a newer method. The fundamentals earn their place by making the current result easier to interrogate.
-
-A useful visual should leave the reader with a sharper question, not merely a memorable animation. In this case: which distribution is changing, what information is being supplied, and what has actually been learned?
+The dots won't tell you which video generator to buy. They make one part of a new paper easier to read: what changed in the field, the sampler, or the training so that a larger jump became useful?
 
 — Kaveh / Frontier Fieldnotes
 
-*Checked September 28, 2026. Original educational visualization. No model training, generated-film evaluation or independent benchmark reproduction was performed.*
+*Research checked September 28, 2026. The visualization is an analytic teaching model. No neural-model training or independent reproduction of the cited video results was performed.*

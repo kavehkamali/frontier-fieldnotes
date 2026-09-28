@@ -1,21 +1,37 @@
-# Context is not a weight update
+# What happens when a model “learns your character”?
 
-A reference image, a prompt and a learned adapter can all change a generator’s behavior. They do not act in the same way.
+You upload a few reference images. The next result looks more like your character. Somewhere in the interface, the tool says it has learned them.
 
-Conditioning provides information to an otherwise fixed computation. Adaptation changes parameters that determine that computation. Keeping these separate makes model comparisons clearer.
+That word can cover several different operations.
 
-LoRA expresses a weight update as the product of two matrices. For an output-by-input matrix, B has shape output-by-rank and A has shape rank-by-input. Their product has the shape needed to update the original matrix. The parameter count is rank × (input + output).
+A model can use a reference image as an input while its weights stay fixed. The image supplies context for this generation. A trained adapter changes part of the computation itself, using an optimization process before you generate with it. A system can use both.
 
-This only saves parameters relative to a full update when that quantity is smaller than input × output. “Low rank” is meaningful relative to the original dimensions; it is not a magic label guaranteeing efficiency at every setting.
+That difference is useful when deciding what to prepare for a project. Supplying a new reference and training a reusable adaptation have different workflows, even when the buttons look similar.
 
-[IC-LoRA](https://arxiv.org/abs/2410.23775v3) provides a useful foundation for discussing how joint image context and task-specific adaptation can work together. It was introduced in 2024. This article treats it as background, not a current frontier claim.
+LoRA is one way to make the learned update relatively small. Instead of learning a full update to a weight matrix W, it factors an update into two matrices:
 
-At inference, the reference content helps specify what to generate. The learned adapter shapes how the model uses such inputs. Supplying a new reference does not itself imply another optimization run.
+ΔW = B × A.
 
-The lab separates the matrix-factorization view from the joint-context view. Neither is a quality benchmark. They explain two distinct mechanisms so that newer papers can be read more critically.
+If W maps d input features to m output features, A has r rows and d columns, while B has m rows and r columns. Their product fits the original matrix. The rank of that product is at most r. A practical implementation may also apply a scaling factor. The base model's weights can stay frozen while the adapter is trained. [LoRA paper, 2021](https://arxiv.org/abs/2106.09685)
 
-When a method claims in-context ability, ask which parameters are fixed, which were adapted, what data the adaptation used, and what the model receives at inference. That is a more informative starting point than the label alone.
+Here's the arithmetic for one illustrative layer. A 4,096-by-4,096 full matrix has 16,777,216 entries. With rank 16, the two adapter matrices together have 16 × (4,096 + 4,096) = 131,072 entries. That's 128 times fewer entries to learn for this update.
+
+The original matrix hasn't vanished. You still need the base computation, and this arithmetic alone doesn't predict training time, generation speed or visual quality. It just shows why the parameter count can be attractive.
+
+Increasing the rank gives the update more room to express changes. It doesn't promise that the images will improve. The training data, objective and optimization still matter. At a large enough rank, even the simple parameter-count advantage can disappear.
+
+The [interactive diagram](https://kavehkamali.github.io/frontier-fieldnotes/#basics) lets you inspect the factorization and change the rank. It is a drawing of the mechanism, not an experiment measuring character consistency.
+
+[IC-LoRA](https://arxiv.org/abs/2410.23775v3) brings adaptation and context together in diffusion transformers. The method arranges images jointly, uses captions describing the combined content, and applies task-specific LoRA tuning. The resulting model can then use reference content when generating. The training changes how it works with that context; providing another reference does not by itself imply that training runs again.
+
+This is a foundation from 2024, not a new release. It earns its place in a current discussion because the same ambiguity keeps appearing in reference-driven image and video tools: what was learned beforehand, and what is being supplied for this output?
+
+For a character workflow, those questions become practical. Can you swap a reference for the next shot? Does a reusable adapter have to be trained first? Which inputs guide appearance, pose or composition? What evidence shows that the identity survives a different angle or lighting setup?
+
+You don't need the tool to expose every internal detail. You do need enough information to know what the preparation step buys you and how to change the result when it goes wrong.
+
+The next time an interface says it has “learned” a subject, look at the operation behind the word. That will tell you more about how to use it than the label alone.
 
 — Kaveh / Frontier Fieldnotes
 
-*Short article draft. Checked September 28, 2026. [Explore the lab](https://kavehkamali.github.io/frontier-fieldnotes/).*
+*Checked September 28, 2026. The numerical example is simple matrix arithmetic. No adapter training or generated-image comparison was performed for this article.*

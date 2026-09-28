@@ -3,6 +3,28 @@
   "scope": "Curated creative AI research: 3D Gaussian splatting, video, voice, diffusion and efficient generation. No robotics or physical AI.",
   "papers": [
     {
+      "id": "2609.28923",
+      "version": "v1",
+      "date": "24 Sep 2026",
+      "category": "Video",
+      "title": "ViRDM: can a faster video model keep the motion?",
+      "summary": "Post-trains an existing few-step causal video generator against cached real-video feature distributions, with dynamics regularization to constrain motion.",
+      "caveat": "Fresh technical report; author-reported results. Teacher-free here does not mean no pretrained encoders. The reported compute covers post-training, not building a generator from scratch.",
+      "url": "https://arxiv.org/abs/2609.28923v1",
+      "review_depth": "Primary abstract and method verification; no reproduction"
+    },
+    {
+      "id": "2609.03563",
+      "version": "v1",
+      "date": "03 Sep 2026",
+      "category": "Video",
+      "title": "FlashRender: fewer steps, but keep the camera move.",
+      "summary": "Connects camera-control inconsistency to discretization. Combines geometry-aligned representations, MeanFlow and distillation for few-step video retakes.",
+      "caveat": "Earlier this month, not a release this week. Author-reported camera-controlled rendering results; the linked lab illustrates a numerical mechanism and does not reproduce the model.",
+      "url": "https://arxiv.org/abs/2609.03563v1",
+      "review_depth": "Primary abstract and method verification; no reproduction"
+    },
+    {
       "id": "2609.16989",
       "version": "v1",
       "date": "15 Sep 2026",
@@ -67,28 +89,6 @@
       "caveat": "Theory preprint. Forward-pass complexity is not a production wall-clock benchmark or a universal ranking of deployed models.",
       "url": "https://arxiv.org/abs/2609.20539v2",
       "review_depth": "Abstract and submission history; proofs not independently checked"
-    },
-    {
-      "id": "2609.02748",
-      "version": "v1",
-      "date": "02 Sep 2026",
-      "category": "Generation",
-      "title": "Change what the loss can see.",
-      "summary": "Frequency-aware training targets an imbalance between coarse structure and fine detail in pixel-space flow matching.",
-      "caveat": "Early-month context, not this week\u2019s release. Convergence claims depend on the tested models and training setup.",
-      "url": "https://arxiv.org/abs/2609.02748v1",
-      "review_depth": "Abstract and submission history; no reproduction"
-    },
-    {
-      "id": "2410.23775",
-      "version": "v3",
-      "date": "05 Nov 2024",
-      "category": "Foundations",
-      "title": "IC-LoRA: make the context joint.",
-      "summary": "Joint image composition, joint captions and task-specific low-rank tuning expose useful in-context generation behavior in diffusion transformers.",
-      "caveat": "Foundation from 2024. Included to teach conditioning versus adaptation; not labeled a current breakthrough.",
-      "url": "https://arxiv.org/abs/2410.23775v3",
-      "review_depth": "Abstract, method summary and revision history; no reproduction"
     }
   ]
 }

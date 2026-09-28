@@ -1,40 +1,43 @@
 # Weekly brief — 28 September 2026
 
+This edition leads with recent few-step video research. Publication dates matter: ViRDM is from last week; FlashRender is earlier this month. These are scoped, author-reported research contributions, not an independent ranking of all video generators.
+
 ## List 1: Frontier / SOTA candidates
 
-This is a curated research shortlist, not an exhaustive leaderboard. New results are author-reported unless independently reproduced. All entries were checked on 28 September; some were released earlier in September.
+| Priority | Paper / checked version | Date | What changed | Evidence boundary |
+|---|---|---|---|---|
+| 1 | [ViRDM v1](https://arxiv.org/abs/2609.28923v1) | Submitted 24 Sep | Generator-only post-training against cached representation distributions; dynamics regularization for motion | Technical report; existing pretrained generator and encoders. Compute claims cover post-training |
+| 2 | [FlashRender v1](https://arxiv.org/abs/2609.03563v1) | Submitted 3 Sep | Addresses sampling-dependent camera control with geometry alignment, MeanFlow and distillation | Camera-controlled video retakes; author results, no independent reproduction |
+| 3 | [ETA v2](https://arxiv.org/abs/2609.20888v2) | Revised 25 Sep | Adaptive block-sparse decoding | Specific model, context and implementation; not a universal speedup |
+| 4 | [LACI](https://arxiv.org/abs/2609.16989v1) | 15 Sep | Error recovery during long narration | Specific TTS systems and long-prompt evaluation |
+| 5 | [VS-Splat](https://arxiv.org/abs/2609.12343v1) | 11 Sep | Object-aware allocation of Gaussian primitives | Selected sparse-view reconstruction benchmarks |
+| 6 | [StepAudio 3 Gen](https://arxiv.org/abs/2609.12945v1) | 11 Sep | Shared discrete representation for audio generation | Technical report; no independent listening comparison here |
+| 7 | [BEACON](https://arxiv.org/abs/2609.13264v1) | 7 Sep | Separates appearance from facial behavior conditioning | Facial-video datasets, not general film continuity |
+| 8 | [Parallelism in diffusion LMs v2](https://arxiv.org/abs/2609.20539v2) | Revised 18 Sep | Separates language-diffusion formulations theoretically | Oracle and distribution assumptions; not wall-clock production performance |
 
-| Priority | Research | Why it matters | Evidence boundary |
-|---|---|---|---|
-| 1 | [VS-Splat](https://arxiv.org/abs/2609.12343v1) | Object-aware allocation of Gaussian primitives in sparse-view reconstruction | Selected reconstruction benchmarks; no reproduction here |
-| 2 | [BEACON](https://arxiv.org/abs/2609.13264v1) | Separates appearance from facial behavior conditioning | Facial-video datasets, not general film continuity |
-| 3 | [LACI / Taming Long-form TTS](https://arxiv.org/abs/2609.16989v1) | Error recovery during long narration | Specific systems and long-prompt evaluation |
-| 4 | [StepAudio 3 Gen](https://arxiv.org/abs/2609.12945v1) | Unified discrete audio generation | Technical report; independently comparable quality remains to be assessed |
-| 5 | [ETA v2](https://arxiv.org/abs/2609.20888v2) | Adaptive block-sparse attention | Model/hardware/context-dependent results |
-| 6 | [Parallelism in diffusion LMs](https://arxiv.org/abs/2609.20539v2) | Distinguishes diffusion formulations theoretically | Assumptions and forward-pass complexity are not deployment speed |
-| 7 | [Frequency and pixel losses](https://arxiv.org/abs/2609.02748v1) | Different supervision for detail versus coarse structure | Early-month context; no reproduction |
-
-IC-LoRA is retained separately as a 2024 foundation, not a frontier candidate.
+Primary research checks and limitations are in research.json and fresh-paper-notes.md. Older foundations are cited only to explain mechanisms. IC-LoRA remains a dated 2024 reference-library story.
 
 ## List 2: Fundamentals to turn into graphics
 
-| Priority | Topic | Graphic and controls | Current status |
+| Priority | Topic and recent connection | Interaction | Status |
 |---|---|---|---|
-| 1 | Diffusion distributions | Colored mixture densities; signal/noise slider and play/pause | Implemented |
-| 2 | 3D Gaussian splatting | Camera orbit, covariance ellipses, opacity compositing | Proposed next build |
-| 3 | Identity versus motion | Separate reference channels across a temporal diagram | Proposed |
-| 4 | Speech tokens and prosody | Token/codebook timeline; pauses and pitch contours | Proposed |
-| 5 | Space/time attention | Frame–patch–text connectivity and masks | Basic masks implemented; video extension proposed |
-| 6 | LoRA versus context | Rank slider and reference slots | Implemented |
+| 1 | Sampler discretization → FlashRender | 800 samples; flow / ODE / SDE; Euler / Heun; 4–128 steps; same-seed reference; three shapes | Advanced lab implemented, GIF / PNG export ready |
+| 2 | Gaussian projection and compositing → VS-Splat | Orbit a camera, change covariance and opacity, inspect splat footprints | Proposed next build |
+| 3 | Appearance versus motion conditioning → BEACON | Independently switch reference channels along a timeline | Proposed |
+| 4 | Audio tokens and prosody → StepAudio / LACI | Codebook timeline, pauses, pitch and recovery points | Proposed |
+| 5 | Space/time attention → ETA | Frame–patch–text connectivity, block sparsity and retained information | Basic masks ready; video extension proposed |
+| 6 | Matching frames versus matching motion → ViRDM | Construct clips with similar frame statistics but different temporal dynamics | Proposed |
 
-Recommendation: next build the Gaussian projection/opacity explainer and pair it with VS-Splat. The current launch kit explains diffusion distributions, attention, and IC-LoRA. BEACON is a timely bridge from distributions to creative conditioning.
+Recommendation: publish the FlashRender-led sampler explanation now, with ViRDM as last week's companion. Then prioritize ViRDM's motion-versus-appearance interaction or a fresh 3DGS result, after checking the new week's papers. Do not repeat generic diffusion introductions as news.
+
+## Ready-to-post kit
+
+The flow story has casual LinkedIn and X drafts, a longer Medium article, a matching square PNG, a six-second GIF, and a six-second silent MP4. All are original analytic diagrams. The lab exports your selected process, shape, seed, solver, step count and visible layers in square or wide format. The GIF has source/context labels; use the MP4 alternative where video works better.
+
+Attention and LoRA drafts were also rewritten in a conversational voice. LoRA is reference material, not this edition's headline. The older attention/LoRA animations remain 15-second silent diagrams. No posts have been sent to social accounts.
 
 ## Product and community changes
 
-See competitors.json and community.json for verified links and evidence labels. Higgsfield and OpenArt are prioritized; ElevenLabs covers voice. These entries are dated product updates, not a ranking or hands-on product review.
+See competitors.json and community.json for dated links and evidence labels. Higgsfield and OpenArt are priorities, with ElevenLabs covering voice. These are product announcements and community leads, not a hands-on ranking.
 
-Reddit discovery used public/search-indexed threads plus the last30days engine. Its direct Reddit endpoint was partially blocked; the engine returned only one relevant Reddit thread and several largely off-topic HN stories. The final shortlist uses separately reviewed search results instead of inflating those counts into comprehensive coverage. X and YouTube were not part of the engine scan. No continuous coverage is claimed.
-
-## Publication status
-
-Prepared drafts and original diagrams. Not posted to LinkedIn, X or Medium. No voice clone, paid generation run, model training or external benchmark reproduction was performed. The MP4 assets are silent 15-second captioned animations; a separate narration script is provided.
+Reddit discovery used public/search-indexed threads and the last30days engine. Direct Reddit access was partially blocked; the engine yielded one relevant Reddit thread and mostly off-topic HN results. The shortlist uses separately reviewed search results. X and YouTube were not included in that scan. No continuous or exhaustive coverage is claimed.

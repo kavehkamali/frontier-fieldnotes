@@ -8,12 +8,14 @@ Focus: 3D Gaussian splatting, video, voice generation, AI filmmaking, diffusion,
 
 ## What is here
 
-- Interactive diffusion distributions: exact marginals of a toy Gaussian mixture, colored components and sample trajectories.
-- Separate schematic transport, attention masking and LoRA/context explanations.
-- Four-step presentation view, PNG export and editable channel drafts.
-- Eight dated research entries, six prioritized fundamentals/graphic proposals, three product updates and three Reddit leads in the first edition.
-- Three LinkedIn drafts, three X threads, one longer Medium article and two short article drafts.
-- Original PNG diagrams, looping GIFs and 15-second silent captioned MP4s; narration/shot list for a separate 60-second cut.
+- A new light, minimal sampler studio linked to recent video research: FlashRender (3 Sep 2026) and ViRDM (24 Sep 2026).
+- 800 samples integrated through exact 2D Gaussian-mixture fields: flow matching, probability-flow diffusion ODE and reverse diffusion SDE.
+- Three target shapes; Euler/Heun; 4–128 numerical steps; trajectory, field and reference layers; seeded replay, timeline and focus mode.
+- One-click, locally encoded six-second GIF and PNG from the current settings in square or wide format. No upload or API key. The default posting kit includes an MP4 conversion.
+- Eight dated frontier entries, six research-linked interactive proposals, plus product and Reddit leads.
+- Casual LinkedIn/X drafts and Medium articles. Older attention/LoRA material stays in a clearly dated reference library.
+
+The fields are analytic teaching models, not trained video models or paper reproductions. Deterministic errors compare the same initial samples against 256-step Heun. Stochastic mode shows a distribution statistic instead; coarse Euler–Maruyama can have large variance bias. See [the numerical notes](docs/simulation.md).
 
 ## Weekly research contract
 
@@ -36,7 +38,7 @@ python3 scripts/build_content.py --edition 2026-09-28
 python3 scripts/check.py
 ```
 
-`render_media.py` requires Pillow and ffmpeg. Set `FIELDNOTES_FONT` to a local TrueType font if needed. The media are original programmatic scientific diagrams, not copied paper figures or model outputs.
+`render_media.py` creates the original background explainers and requires Pillow and ffmpeg; do not use it to overwrite the advanced flow kit. Export the advanced flow GIF/PNG from the browser, then convert GIF to MP4 with ffmpeg. Set `FIELDNOTES_FONT` to a local TrueType font if needed. The media are original programmatic scientific diagrams, not copied paper figures or model outputs.
 
 ## Publication
 
@@ -46,4 +48,4 @@ Drafts are prepared for editorial review. No social account posting is automated
 
 ## Licensing and attribution
 
-Project code and original diagrams: MIT, see LICENSE. Research papers, product names and external content remain the property of their respective owners and retain their original licenses. Source links and caveats accompany research records. No copied paper figures are redistributed.
+Project code and original diagrams: MIT, see LICENSE. Vendored gifenc 1.0.3 is MIT; its license is under dist/vendor/. Research papers, product names and external content remain the property of their respective owners and retain their original licenses. Source links and caveats accompany research records. No copied paper figures are redistributed.

@@ -1,20 +1,17 @@
-Diffusion is easier to understand when you watch a distribution, not just a noisy image.
+Lowering the step count shouldn't quietly change your camera move.
 
-Imagine three populations of data. Each creates its own peak on a graph.
+That's a failure case in FlashRender, submitted September 3: coarse sampling can change the motion of a generated video retake. The paper works on keeping that control consistent while reducing the sampling budget.
 
-As we add enough Gaussian noise and shrink the signal, those peaks blur together. Eventually the three populations become indistinguishable.
+The useful bit to unpack is the path. A sampler follows directions through a changing field. If a large step cuts across a bend, the result can move away from what the finer calculation would produce.
 
-Generation asks a harder question: how can a learned model guide noise back toward the kinds of data we want?
+The interactive lab lets you see this with colored samples, solver controls and a fixed seed. It's an analytic example of the mechanism. It doesn't run FlashRender or reproduce its video results.
 
-I built a small interactive illustration with colored distributions and moving samples. Drag the slider to see where the peaks merge and where they separate.
+Last week's ViRDM paper, submitted September 24, tackles another part of few-step video generation: post-training an existing causal generator without an online score teacher or learned critic. Its motion regularization is a reminder that good-looking frames don't tell the whole story.
 
-One important detail: running this slider backward is not the same as solving the generative problem. The toy knows the data distribution. A real model has to learn useful denoising directions.
+Both are research reports with author-reported evidence. They address different tasks, so the results need separate comparisons.
 
-This distinction matters in AI video too. A reference image can specify appearance, but it cannot fully specify motion or performance. The recent BEACON paper explores separate appearance and facial-behavior conditioning—a good next layer after understanding the distribution.
+Try the lab: https://kavehkamali.github.io/frontier-fieldnotes/#lab
+FlashRender: https://arxiv.org/abs/2609.03563v1
+ViRDM: https://arxiv.org/abs/2609.28923v1
 
-Try it: https://kavehkamali.github.io/frontier-fieldnotes/
-Recent paper: https://arxiv.org/abs/2609.13264v1
-
-The graphic is an educational model, not generated footage or a benchmark.
-
-#GenerativeAI #AIFilmmaking #MachineLearning
+Research checked September 28, 2026.
