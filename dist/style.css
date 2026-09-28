@@ -3,3 +3,4 @@
 
 .experiment{box-shadow:0 12px 35px #22334d08}.paper{box-shadow:0 4px 18px #22334d03}.brand .mark{background:#efedfb}.selected{color:white!important}.lesson-note .chip{color:#5145cd}#toast{color:white}button{transition:background .15s,border-color .15s}.filter-row button:hover,.channel-tabs button:hover{background:#efedfb}header{background:#ffffff}.eyebrow{font-weight:600}.experiment canvas{background:#ffffff}
 .community-title{margin:32px 0 20px}
+@media(max-width:740px){canvas{aspect-ratio:1200/650}.section-top>button{white-space:nowrap;padding:10px 12px}.section-top{gap:12px}.lesson{flex-shrink:0;min-width:190px}.lesson small{white-space:normal}.section-top h1{font-size:28px}}
