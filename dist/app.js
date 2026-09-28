@@ -34,7 +34,18 @@ function drawCompactDensity(t){
  label('● A',160,630,44,colors[0]);label('● B',385,630,44,colors[1]);label('● C',610,630,44,colors[2]);label('— Sum',1080,630,44,'#18243b','right');
 }
 function setTopic(v){topic=v;playing=false;$('#play').textContent='▶ Play';let l=lessons[v];$('#mode').innerHTML=l.options.map(([v,t])=>`<option value="${v}">${t}</option>`).join('');$('#lesson-title').textContent=l.title;$('#lesson-copy').textContent=l.copy;$('#lesson-source').href=l.source;$('#lesson-source').textContent=v==='attention'?'Recent connection: ETA v2 ↗':'Foundational reading ↗';$('#visual-label').textContent=l.label;$('#visual-caveat').textContent=l.caveat;$('#slider-name').textContent=v==='flow'?'Generation progress':v==='attention'?'Keys retained (sparse)':'Adapter rank';$$('.lesson').forEach(b=>b.classList.toggle('active',b.dataset.topic===v));$('#step-number').textContent='0'+(Object.keys(lessons).indexOf(v)+1);update()}
-function update(){$('#value').textContent=$('#progress').value+'%';draw()}
+function update(){
+ $('#value').textContent=$('#progress').value+'%';
+ if(topic==='flow'){
+  const mode=$('#mode').value,l=lessons.flow;
+  $('#lesson-title').textContent=mode==='density'?l.title:'Follow a path from noise toward structure.';
+  $('#lesson-copy').textContent=mode==='density'?l.copy:'This hand-defined particle transport illustrates a change from a simple cloud toward structured populations. Flow matching learns a velocity field; this sketch does not. The noisy-path option is a visual analogy, not a diffusion solver.';
+  $('#lesson-source').href=mode==='density'?'https://arxiv.org/abs/2011.13456':'https://arxiv.org/abs/2210.02747';
+  $('#visual-caveat').textContent=mode==='density'?l.caveat:'Hand-defined endpoints and paths. Neither a trained flow field nor a DDPM solver. Real diffusion models can also use deterministic samplers; this is not a method-quality comparison.';
+  $('#visual-label').textContent=mode==='density'?l.label:'Noise-to-structure transport · illustrative paths';
+ }
+ draw()
+}
 $$('.lesson').forEach(b=>b.onclick=()=>setTopic(b.dataset.topic));$('#progress').oninput=update;$('#mode').onchange=update;
 $('#play').onclick=()=>{if(topic!=='flow'){toast('Animation is available in Noise → structure.');return}playing=!playing;$('#play').textContent=playing?'Ⅱ Pause':'▶ Play'};
 function animate(time){if(playing&&time-frame>45){frame=time;$('#progress').value=(Number($('#progress').value)+1)%101;update()}requestAnimationFrame(animate)}requestAnimationFrame(animate);
