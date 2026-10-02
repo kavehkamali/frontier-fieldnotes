@@ -1,42 +1,56 @@
 [
   {
+    "title": "One 3D fill, many camera views",
+    "priority": "01 · Proposed next build",
+    "idea": "Orbit a masked Gaussian scene. Compare separate per-view fills with shared 3D completion; inspect a held-out camera and an occlusion boundary.",
+    "connection": "WINGS (29 Sep): 3D-native inpainting. Illustrate consistency without claiming to run its trained prior.",
+    "url": "https://arxiv.org/abs/2609.37816v1"
+  },
+  {
+    "title": "Camera guidance without collapsing diversity",
+    "priority": "02 · Proposed",
+    "idea": "Follow candidate camera paths; adjust reward strength, particle count and restart budget. Show resampling ancestry and surviving diversity.",
+    "connection": "PartiCam (30 Sep): global/local reward guidance. Training-free is not computation-free.",
+    "url": "https://arxiv.org/abs/2609.39504v1"
+  },
+  {
+    "title": "Sound that stays attached to the scene",
+    "priority": "03 · Proposed",
+    "idea": "Move a listener past sound emitters and walls. Compare a fixed soundtrack with spatial cues, distance and occlusion linked to geometry.",
+    "connection": "Audible World Models (29 Sep): persistent sound sources. A future analytic demo would not reproduce its offline generative pipeline.",
+    "url": "https://arxiv.org/abs/2609.38444v1"
+  },
+  {
     "title": "Where a fast sampler misses the turn",
-    "priority": "01 \u00b7 Advanced lab ready",
-    "idea": "Follow 800 samples through exact 2D fields. Switch flow/ODE/SDE, Euler/Heun, 4\u2013128 steps and three distributions. Export your settings as a GIF.",
+    "priority": "04 · Advanced lab ready",
+    "idea": "Follow 800 samples through exact 2D fields. Switch flow/ODE/SDE, Euler/Heun, 4–128 steps and three distributions. Export your settings as a GIF.",
     "connection": "FlashRender (3 Sep): sampling discretization and camera control. ViRDM (24 Sep): preserving motion during few-step post-training. Mechanism illustration, not paper reproduction.",
     "url": "https://arxiv.org/abs/2609.03563v1"
   },
   {
     "title": "3D Gaussian splatting: projection & opacity",
-    "priority": "02 \u00b7 Next build",
+    "priority": "05 · Proposed",
     "idea": "Orbit a camera around colored ellipsoids; adjust covariance and opacity to see projected footprints blend.",
     "connection": "Connect to VS-Splat and sparse-view reconstruction.",
     "url": "https://arxiv.org/abs/2609.12343v1"
   },
   {
-    "title": "Identity versus motion conditioning",
-    "priority": "03 \u00b7 Proposed",
-    "idea": "Switch appearance and motion reference channels independently in a labeled temporal diagram.",
-    "connection": "Connect to BEACON without implying full-film consistency.",
-    "url": "https://arxiv.org/abs/2609.13264v1"
-  },
-  {
     "title": "Audio tokens, timing and prosody",
-    "priority": "04 \u00b7 Proposed",
+    "priority": "06 · Proposed",
     "idea": "Inspect text-to-codebook alignment and a synthetic timeline; vary pause duration and pitch contours.",
     "connection": "Connect to StepAudio 3 Gen and long-form TTS reliability.",
     "url": "https://arxiv.org/abs/2609.12945v1"
   },
   {
     "title": "Attention across space and time",
-    "priority": "05 \u00b7 Basic masks ready",
+    "priority": "07 · Basic masks ready",
     "idea": "Show how a token reads frames, spatial patches and text; compare causal and sparse masks.",
     "connection": "Extend the current matrix into a video-attention view.",
     "url": "https://arxiv.org/abs/2609.20888v2"
   },
   {
     "title": "When good-looking frames still have weak motion",
-    "priority": "06 \u00b7 Proposed",
+    "priority": "08 · Proposed",
     "idea": "Separate per-frame appearance statistics from temporal differences; let users build a clip with identical frame statistics but different motion.",
     "connection": "ViRDM (24 Sep) adds dynamics regularization because representation matching can underconstrain motion.",
     "url": "https://arxiv.org/abs/2609.28923v1"

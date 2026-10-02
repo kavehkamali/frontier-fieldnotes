@@ -3,6 +3,48 @@
   "scope": "Curated creative AI research: 3D Gaussian splatting, video, voice, diffusion and efficient generation. No robotics or physical AI.",
   "papers": [
     {
+      "id": "2609.37816",
+      "version": "v1",
+      "date": "29 Sep 2026",
+      "submitted_at": "2026-09-29",
+      "revised_at": null,
+      "checked_at": "2026-10-02",
+      "category": "3D Gaussian",
+      "title": "WINGS: fill the missing region in 3D.",
+      "summary": "Uses a 3D-native prior to complete geometry and appearance in masked Gaussian-splat regions, without inpainted reference views.",
+      "caveat": "Preprint; author evaluation on 29 scenes. View-dependent appearance and axis-alignment limitations; not real-time. Runnable public code not verified.",
+      "url": "https://arxiv.org/abs/2609.37816v1",
+      "review_depth": "Primary abstract, method, evaluation and limitations; no reproduction"
+    },
+    {
+      "id": "2609.39504",
+      "version": "v1",
+      "date": "30 Sep 2026",
+      "submitted_at": "2026-09-30",
+      "revised_at": null,
+      "checked_at": "2026-10-02",
+      "category": "Video",
+      "title": "PartiCam: guide the camera without retraining.",
+      "summary": "Combines global particle guidance with local refinement to steer video generation toward a requested camera path.",
+      "caveat": "Small static/dynamic evaluation; gains are not uniform across camera metrics. Training-free still costs inference-time search. Public code not verified; the listed project link resolves elsewhere.",
+      "url": "https://arxiv.org/abs/2609.39504v1",
+      "review_depth": "Primary abstract, method, evaluation and author project link; no reproduction"
+    },
+    {
+      "id": "2609.38444",
+      "version": "v1",
+      "date": "29 Sep 2026",
+      "submitted_at": "2026-09-29",
+      "revised_at": null,
+      "checked_at": "2026-10-02",
+      "category": "Audio",
+      "title": "Audible World Models: sound that stays in the scene.",
+      "summary": "Places generated sounds on a 3D scene proxy, then renders spatial audio as the listener moves. No new model training is required.",
+      "caveat": "Author evaluation on 80 generated scenes. Offline pipeline with static reconstructed geometry and fixed automatic source placement; not real-time or dynamic action–sound synchronization. Public code availability not verified.",
+      "url": "https://arxiv.org/abs/2609.38444v1",
+      "review_depth": "Primary abstract, methods and limitations; no independent reproduction"
+    },
+    {
       "id": "2609.28923",
       "version": "v1",
       "date": "24 Sep 2026",
@@ -11,17 +53,6 @@
       "summary": "Post-trains an existing few-step causal video generator against cached real-video feature distributions, with dynamics regularization to constrain motion.",
       "caveat": "Fresh technical report; author-reported results. Teacher-free here does not mean no pretrained encoders. The reported compute covers post-training, not building a generator from scratch.",
       "url": "https://arxiv.org/abs/2609.28923v1",
-      "review_depth": "Primary abstract and method verification; no reproduction"
-    },
-    {
-      "id": "2609.03563",
-      "version": "v1",
-      "date": "03 Sep 2026",
-      "category": "Video",
-      "title": "FlashRender: fewer steps, but keep the camera move.",
-      "summary": "Connects camera-control inconsistency to discretization. Combines geometry-aligned representations, MeanFlow and distillation for few-step video retakes.",
-      "caveat": "Earlier this month, not a release this week. Author-reported camera-controlled rendering results; the linked lab illustrates a numerical mechanism and does not reproduce the model.",
-      "url": "https://arxiv.org/abs/2609.03563v1",
       "review_depth": "Primary abstract and method verification; no reproduction"
     },
     {
@@ -42,19 +73,8 @@
       "category": "Voice",
       "title": "StepAudio 3 Gen: one discrete audio vocabulary.",
       "summary": "A shared residual-quantization representation supports speech, voice design and other audio generation tasks with autoregressive modeling.",
-      "caveat": "Technical report. SOTA is the authors\u2019 claim on selected tasks; no independent listening test or reproduction here.",
+      "caveat": "Technical report. SOTA is the authors’ claim on selected tasks; no independent listening test or reproduction here.",
       "url": "https://arxiv.org/abs/2609.12945v1",
-      "review_depth": "Abstract and submission history; no reproduction"
-    },
-    {
-      "id": "2609.13264",
-      "version": "v1",
-      "date": "07 Sep 2026",
-      "category": "Video",
-      "title": "BEACON: identity is not expression.",
-      "summary": "Reference images provide appearance; reference video supplies facial behavior. Separate conditioning addresses an important gap in subject-specific video generation.",
-      "caveat": "Preprint evaluated on MEAD and RAVDESS. Do not extrapolate facial-expression results to complete film or multi-shot consistency.",
-      "url": "https://arxiv.org/abs/2609.13264v1",
       "review_depth": "Abstract and submission history; no reproduction"
     },
     {
@@ -74,21 +94,12 @@
       "date": "25 Sep 2026",
       "category": "Attention",
       "title": "Learn which context to keep.",
-      "summary": "Elastic Threshold Attention learns contextual thresholds for block-sparse decoding. Its latest abstract reports up to 2.15\u00d7 end-to-end speedup over FlashAttention-2.",
+      "summary": "Elastic Threshold Attention learns contextual thresholds for block-sparse decoding. Its latest abstract reports up to 2.15× end-to-end speedup over FlashAttention-2.",
       "caveat": "Author-reported, 1.45B model, contexts up to 512K. Do not substitute older v1 claims or interpret this as a universal speedup.",
       "url": "https://arxiv.org/abs/2609.20888v2",
       "review_depth": "Versioned abstract and submission history; no reproduction"
-    },
-    {
-      "id": "2609.20539",
-      "version": "v2",
-      "date": "18 Sep 2026",
-      "category": "Generation",
-      "title": "Parallel tokens are not free.",
-      "summary": "A theoretical comparison separates masked, uniform and Gaussian language diffusion under specific distribution and score-oracle assumptions.",
-      "caveat": "Theory preprint. Forward-pass complexity is not a production wall-clock benchmark or a universal ranking of deployed models.",
-      "url": "https://arxiv.org/abs/2609.20539v2",
-      "review_depth": "Abstract and submission history; proofs not independently checked"
     }
-  ]
+  ],
+  "updated_at": "2026-10-02",
+  "latest_delta": "delta-2026-10-02.md"
 }

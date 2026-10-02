@@ -1,23 +1,37 @@
 [
   {
-    "title": "Higgsfield \u00b7 3D Jutsu",
+    "title": "Higgsfield · Ads Studio",
+    "date": "01 Oct 2026 · announced",
+    "summary": "Reusable brand kits and product inputs generate batches of static-ad concepts and variations.",
+    "implication": "Workflow launch, not a new video model. Compare brand consistency and useful variation; authenticated availability and output quality have not been tested.",
+    "url": "https://higgsfield.ai/blog/higgsfield-ads-studio"
+  },
+  {
+    "title": "OpenArt · FLUX 3 Image",
+    "date": "01 Oct 2026 · availability guide",
+    "summary": "OpenArt documents multi-reference image generation/editing and 2K/4K output.",
+    "implication": "Newly documented integration relative to this watchlist. Global launch date and exact integration time are unverified; identity and edit-preservation quality remain vendor claims.",
+    "url": "https://openart.ai/blog/flux-3-image-overview/"
+  },
+  {
+    "title": "Higgsfield · 3D Jutsu",
     "date": "05 Sep 2026",
     "summary": "Officially announced an editable 3D scene workspace with object, camera, lighting and animation controls.",
     "implication": "Investigate repeatable camera moves and scene edits. The announcement does not establish that it uses Gaussian splatting.",
     "url": "https://higgsfield.ai/blog/higgsfield-3d-jutsu"
   },
   {
-    "title": "OpenArt \u00b7 Chat Mode",
+    "title": "OpenArt · Chat Mode",
     "date": "03 Sep 2026",
     "summary": "A conversational interface selects generation settings and supports follow-up edits across creative media.",
     "implication": "Compare iteration control, model transparency and usable-shot cost. Product announcement; no hands-on comparison yet.",
     "url": "https://openart.ai/blog/chat-mode-overview/"
   },
   {
-    "title": "ElevenLabs \u00b7 Eleven v4",
-    "date": "Checked 28 Sep 2026",
+    "title": "ElevenLabs · Eleven v4",
+    "date": "28 Sep 2026 · launch; page updated 01 Oct",
     "summary": "The official announcement describes expressive speech, delivery instructions and multi-speaker consistency.",
-    "implication": "Prioritize scene-level dialogue and pronunciation tests. Vendor preference and latency claims require their stated conditions.",
+    "implication": "Already tracked: the page update and new guides do not establish another model launch. Scene-level delivery and pronunciation need listening tests; vendor performance claims remain conditional.",
     "url": "https://elevenlabs.io/blog/eleven-v4"
   }
 ]

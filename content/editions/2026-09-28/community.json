@@ -1,6 +1,13 @@
 [
   {
-    "title": "AI video \u2192 Gaussian splats",
+    "title": "FLUX 3 Image: check access before comparisons",
+    "date": "02 Oct 2026 · discovery; time unverified",
+    "summary": "A StableDiffusion thread discusses FLUX 3 Image. Official BFL/OpenArt pages corroborate the product; the thread is a lead.",
+    "implication": "No verified same-day release time or independent quality result. Do not describe promised open weights as already downloadable.",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1wvgsg7/introducing_flux_3_image/"
+  },
+  {
+    "title": "AI video → Gaussian splats",
     "date": "September discovery",
     "summary": "A StableDiffusion tutorial shares a workflow for reconstructing splats from generated video.",
     "implication": "Investigation lead: camera consistency and reconstruction artifacts. Tutorial evidence is not a general fidelity benchmark.",
