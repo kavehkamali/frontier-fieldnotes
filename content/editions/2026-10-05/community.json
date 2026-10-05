@@ -1,0 +1,23 @@
+[
+  {
+    "title": "An AI orbit video becomes a Gaussian splat",
+    "date": "02 Oct 2026 · post; discussion through 04 Oct",
+    "summary": "A GaussianSplatting creator shares an image-to-orbit-video reconstruction. Follow-up comments discuss incomplete camera coverage, soft unseen sides and reconstruction failures.",
+    "implication": "New community workflow lead, not a reconstruction benchmark. Comments include tool promotion. WINGS motivates a related consistency question but studies masked 3D inpainting, not this single-image workflow; exact post time is unverified.",
+    "url": "https://www.reddit.com/r/GaussianSplatting/comments/1ww427o/update_image_to_ai_360_orbital_to_guassian_splat/"
+  },
+  {
+    "title": "konte · song timing drives a video project",
+    "date": "04 Oct 2026 · creator demonstration",
+    "summary": "The author demonstrates a beat-timed music-video workflow with persisted review corrections. Public tool and example repositories corroborate inspectable production records.",
+    "implication": "New open-workflow signal. This is a pre-1.0 technical preview; shot count, production time and generation speed are author reports, not independent reproduction. Code availability does not establish stable production readiness.",
+    "url": "https://www.reddit.com/r/comfyui/comments/1wxftkt/i_made_a_3minute_music_video_locally_with_claude/"
+  },
+  {
+    "title": "Qwen Image 2.1 · community adapter and sampler experiments",
+    "date": "03 Oct 2026 · creator announcement",
+    "summary": "A StableDiffusion author shares Fix v2.0 and Opinionated adapters plus ComfyUI samplers; linked Hugging Face and GitHub artifacts are public.",
+    "implication": "New community artifacts, not an official Qwen release or verified quality win. The sampler README explicitly lacks comparative benchmarks; RES variants omit a final correction and retain residual noise. Exact upload/commit time is unverified.",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1wwi34c/qwen_image_21_fix_v20_updated_due_to_feedback/"
+  }
+]

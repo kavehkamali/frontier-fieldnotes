@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-05",
+  "label": "05 OCT 2026",
+  "number": "002",
+  "title": "One scene. Every viewpoint.",
+  "archive": "edition-002.zip",
+  "brief_url": "https://github.com/kavehkamali/frontier-fieldnotes/blob/main/content/editions/2026-10-05/weekly-brief.md",
+  "stories": [
+    {
+      "id": "gaussian",
+      "label": "This week · WINGS & multi-view consistency",
+      "alt": "Two synthetic Gaussian-splat arches compare a view-dependent repair with a fixed shared 3D repair",
+      "caption": "Original synthetic Gaussian scene. Deliberately inconsistent hypotheses versus a fixed shared repair; not WINGS inference or benchmark evidence.",
+      "narration": "assets/gaussian-video-script.md"
+    }
+  ],
+  "interactive_files": [
+    "gaussian.html",
+    "gaussian.css",
+    "gaussian.mjs",
+    "gaussian-math.mjs",
+    "favicon.svg",
+    "vendor/gifenc.esm.js",
+    "vendor/gifenc-LICENSE.md"
+  ]
+}
