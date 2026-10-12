@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Higgsfield Ad Multiplier gets a visual workflow",
+    "date": "06 Oct 2026 · release and announcement",
+    "summary": "A new visual interface in Ads Studio turns a reference video into ad variations with changed products, cast, setting, script, hooks or CTAs. This expands access to an existing workflow; it is not a newly established model release.",
+    "implication": "Useful for planning repeatable ad variants. Availability is documented by the vendor; retention of timing and structure is a vendor claim, with no independent output test here.",
+    "url": "https://higgsfield.ai/blog/ad-multiplier-ads-studio"
+  },
+  {
+    "title": "Higgsfield Katana brings preset video edits to Claude",
+    "date": "08 Oct 2026 · release; guide 12 Oct",
+    "summary": "Higgsfield lists Katana as released October 8: preset-driven edits from reference images through its Claude MCP skill. The October 12 article explains the workflow; it is not the launch date.",
+    "implication": "A workflow and integration change worth tracking for repeatable motion styles. Access instructions are public, but no account, generation or quality test was performed.",
+    "url": "https://higgsfield.ai/creator-hub/changelog"
+  },
+  {
+    "title": "ElevenCreative Brand Kit stores shared visual direction",
+    "date": "09 Oct 2026 · published; updated 12 Oct",
+    "summary": "ElevenLabs says Brand Kit is available now: teams can reuse visual assets and rules across Image & Video, Flows and the ElevenCreative agent. Voice and sound support are explicitly future work.",
+    "implication": "Relevant to a consistent look across a film or campaign. This is a visual workflow feature, not evidence of a better speech model. Plan access and brand consistency were not independently tested.",
+    "url": "https://elevenlabs.io/blog/introducing-brand-kit"
+  },
+  {
+    "title": "Hume · TTS and EVI API sunset",
+    "date": "02 Oct 2026 · notice; discovered 12 Oct",
+    "summary": "Hume says TTS and EVI API access ends 13 November 2026 at 12:01 a.m. EST. Account data will be permanently deleted after 13 November.",
+    "implication": "An older notice missing from the previous review, not a new launch. Workflows using these APIs need a replacement and a plan for needed account data before the deadline. The notice says both APIs remain fully supported until then.",
+    "url": "https://dev.hume.ai/voice/changelog"
+  },
+  {
+    "title": "OpenArt · guide update, no new release verified",
+    "date": "12 Oct 2026 · checked",
+    "summary": "Recent cinematic-video guides and promotions were found. No additional dated product launch was established since the previous review.",
+    "implication": "The public update feed returned no readable entries. A guide date is not a launch date; coverage is incomplete and does not establish vendor inactivity.",
+    "url": "https://openart.ai/blog/how-to-create-multi-cut-cinematic-ai-videos/"
+  }
+]

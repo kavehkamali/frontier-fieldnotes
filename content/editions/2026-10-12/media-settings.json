@@ -1,0 +1,34 @@
+{
+  "story": "loop",
+  "caption": "Intentional position-closed, velocity-discontinuous motion; fixed camera. Analytic teaching scene, not model output.",
+  "settings": {
+    "phase": 0,
+    "period": 6,
+    "amplitude": 1,
+    "harmonic": 0.55,
+    "orbit": 22,
+    "elevation": 15,
+    "mode": "endpoint",
+    "cameraMode": "fixed",
+    "footprints": false
+  },
+  "png": {
+    "width": 800,
+    "height": 800
+  },
+  "gif": {
+    "width": 800,
+    "height": 800,
+    "frames": 60,
+    "duration_seconds": 6,
+    "duplicate_endpoint": false
+  },
+  "mp4": {
+    "width": 800,
+    "height": 800,
+    "fps": 30,
+    "duration_seconds": 6,
+    "audio": false
+  },
+  "generation": "Actual local browser PNG/GIF exports; MP4 transcode of that GIF. No paid services."
+}

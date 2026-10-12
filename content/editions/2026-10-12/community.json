@@ -1,0 +1,16 @@
+[
+  {
+    "title": "ComfyUI 0.39.0: practical H3 and video-export fixes",
+    "date": "06 Oct 2026 · Reddit; release 05 Oct",
+    "summary": "An r/comfyui H3 roundup points to ComfyUI 0.39.0. The official release corroborates VAE offload and memory-lifetime fixes plus higher-quality Save Video defaults. Release page: https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.39.0",
+    "implication": "A useful local-video workflow update, supported by release notes. No measured VRAM reduction or output-quality benchmark was established, and no update was installed.",
+    "url": "https://www.reddit.com/r/comfyui/comments/1wz9gmw/a_quick_minimax_h3_news_roundup_6th_october_2026/"
+  },
+  {
+    "title": "H3 long-take refinement exposes continuity tradeoffs",
+    "date": "Found 12 Oct 2026 · exact post date unverified",
+    "summary": "An r/StableDiffusion author shared experimental H3 refinement nodes and a workflow. The public repository documents refinement and blending, with background changes, dissolves and audio artifacts among its limitations: https://github.com/xyzDist/H3-LongTakeNoCuts",
+    "implication": "A discovery lead for explaining long-video drift and refinement tradeoffs. Code availability is verified; effectiveness is an author claim, with no independent reproduction or confirmed release date.",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1x0nbr5/h3_degradation_my_turn_attempts_to_fixing/"
+  }
+]

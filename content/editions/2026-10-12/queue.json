@@ -1,0 +1,77 @@
+[
+  {
+    "title": "A scene can close its loop and still jerk",
+    "priority": "01 · Interactive ready",
+    "idea": "Scrub a synthetic Gaussian scene under Fourier-periodic, endpoint-only and drifting motion. Inspect analytic position/velocity seam errors separately from camera closure.",
+    "controls": "Phase, harmonics, period, deformation mode, camera path/orbit; PNG/GIF export in square or wide format.",
+    "misconception": "Matching the first and last rendered frames does not ensure a smooth 3D loop; a mathematically closed loop can still move implausibly.",
+    "connection": "OuroWorld · 8 Oct 2026. Implemented analytic teaching lab; not OuroWorld inference, learned deformation or an evaluation.",
+    "audience": "ML engineers, 3D artists and filmmakers",
+    "url": "https://arxiv.org/abs/2610.12461v1",
+    "visual_url": "loop.html"
+  },
+  {
+    "title": "Separate tracks without changing the original mix",
+    "priority": "02 · Proposed",
+    "idea": "Show two captioned stem streams and a protected mix as an attention matrix. Toggle the forbidden stem-to-mix edge and mix-token LoRA gate, tracing how information could alter the scene stream.",
+    "controls": "Attention edges, stem-only adapter gate, per-stem captions, aligned versus concatenated time positions, clean versus noisy mix conditioning.",
+    "misconception": "Blocking an attention edge alone does not freeze a stream if shared adapter updates still alter its token projections.",
+    "connection": "SepGen · 8 Oct 2026. Proposed synthetic token calculation; no claimed audio separation score or generated waveform. Actual source timing and audio quality need the model.",
+    "audience": "Audio/video model engineers and creative technologists",
+    "url": "https://arxiv.org/abs/2610.11361v1"
+  },
+  {
+    "title": "Why moving noise makes it fade",
+    "priority": "03 · Proposed",
+    "idea": "Track a pixel footprint across a seeded noise grid. Compare ordinary averaging with variance-normalized projection; show histogram and cross-frame correlation.",
+    "controls": "Zoom, footprint shape, camera motion, sample count, histogram bins, normalization; propose PNG/GIF/MP4 exports.",
+    "misconception": "Warping standard Gaussian noise does not automatically preserve its variance. Unit variance also does not imply independent pixels.",
+    "connection": "Tabula Rasa · 8 Oct 2026. Proposed analytic teaching model, not its renderer or generated footage.",
+    "audience": "ML engineers and filmmakers",
+    "url": "https://arxiv.org/abs/2610.11653v1"
+  },
+  {
+    "title": "An edit needs two scorecards",
+    "priority": "04 · Proposed",
+    "idea": "Manipulate a synthetic scene and soundtrack. Plot intended change versus collateral change, then compare arithmetic and harmonic scoring.",
+    "controls": "Object edit, background drift, sound timing, preservation, judge uncertainty; propose PNG/GIF exports.",
+    "misconception": "An unchanged clip preserves everything but performs no edit; a convincing new clip can ignore preservation.",
+    "connection": "CrossEdit · 7 Oct 2026. Proposed synthetic illustration of editing evaluation; no model output or reproduced benchmark.",
+    "audience": "Filmmakers and ML practitioners",
+    "url": "https://arxiv.org/abs/2610.10264v1"
+  },
+  {
+    "title": "The future you can still change",
+    "priority": "05 · Proposed",
+    "idea": "Animate user and assistant token lanes, separating played audio from tentative future frames. Trigger an interruption and inspect discarded predictions and compute calls.",
+    "controls": "Prediction horizon, confidence threshold, interruption timing, Listen/Speak policy; propose PNG/GIF exports.",
+    "misconception": "Fewer model calls do not necessarily mean lower response latency or unchanged speech quality.",
+    "connection": "DiffuPlex · 8 Oct 2026. Proposed scheduling schematic; synthetic tokens and timing, not a speech-model reproduction.",
+    "audience": "Voice-product designers and ML engineers",
+    "url": "https://arxiv.org/abs/2610.12214v1"
+  },
+  {
+    "title": "Shared references are guidance, not a guarantee",
+    "priority": "06 · Proposed",
+    "idea": "Use a synthetic three-shot storyboard to show how a shared palette, character descriptor and reference bank reach each generation. Toggle shared versus per-shot inputs and display the exact conditioning each shot receives. Illustrative output swatches must be labeled as schematic, not vendor generations.",
+    "controls": "Share reference bank; change one reference; per-shot override; guidance-strength schematic; reveal conditioning inputs; compare palette and identity labels across shots.",
+    "misconception": "Saving a brand kit does not impose a hard mathematical identity constraint or guarantee every generated frame follows it. Shared inputs reduce one source of variation; model behavior remains a separate question.",
+    "connection": "ElevenCreative Brand Kit, published 9 October 2026 and updated 12 October. Visual assets/rules are available across its image/video workflows; voice and sound are future work.",
+    "audience": "Creative teams and ML practitioners designing multi-shot workflows",
+    "status": "Proposed; no model outputs or consistency scores implemented",
+    "recommendation": "A useful follow-up to the 3D consistency lab. Teach the difference between common conditioning and enforced invariants; do not simulate a vendor quality benchmark.",
+    "url": "https://elevenlabs.io/blog/introducing-brand-kit"
+  },
+  {
+    "title": "A preset needs a provenance trail",
+    "priority": "07 · Proposed",
+    "idea": "Build a small visual dependency graph from reference assets through preset, model configuration, edits and export. Replay a deterministic toy transformation while selectively changing a dependency, so the viewer can see which outputs must be recomputed and why a seed alone cannot identify a complete workflow.",
+    "controls": "Pin or change preset revision; swap reference asset; hold seed fixed; change model-version label; reveal dependency hashes; replay saved manifest; highlight affected descendants.",
+    "misconception": "A seed or a named preset is enough to reproduce an output. Reproduction also depends on inputs, versions, settings and execution behavior; complete provenance still cannot guarantee deterministic external services.",
+    "connection": "Higgsfield Katana released 8 October 2026, with a 12 October guide, brings reference-driven presets to Claude/MCP. Ad Multiplier gained a visual workflow on 6 October. Both make reusable workflows a timely topic; no claim that either currently provides this proposed provenance interface.",
+    "audience": "AI filmmakers, creative technologists and pipeline engineers",
+    "status": "Proposed; deterministic teaching graph only, no live vendor integration",
+    "recommendation": "Keep the visual concrete: one changed reference should light up the affected shots. Show a compact export manifest rather than presenting a generic agent diagram.",
+    "url": "https://higgsfield.ai/creator-hub/changelog"
+  }
+]

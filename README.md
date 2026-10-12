@@ -8,6 +8,9 @@ Focus: 3D Gaussian splatting, video, voice generation, AI filmmaking, diffusion,
 
 ## What is here
 
+- [October 12 weekly edition](content/editions/2026-10-12/weekly-brief.md): fresh frontier research/features, the graphics queue and a complete new publishing kit.
+- [Periodic 3D motion lab](https://kavehkamali.github.io/frontier-fieldnotes/loop.html): separate shape closure, velocity continuity and camera closure; export your settings as PNG/GIF. [Download edition 003](https://kavehkamali.github.io/frontier-fieldnotes/assets/edition-003.zip).
+
 - [Edition 002 3D lab](https://kavehkamali.github.io/frontier-fieldnotes/gaussian.html): orbit a synthetic Gaussian-splat arch, compare a fixed repair with deliberately view-dependent hypotheses, and inspect projection, opacity and anisotropy.
 - [October 12 delta](content/editions/2026-10-05/delta-2026-10-12.md): looping 3D scenes, separate audio stems, product updates and corrected records.
 - [October 5 edition](content/editions/2026-10-05/weekly-brief.md): eight fresh research candidates, eight fundamentals-to-graphics ideas, dated competitor changes and source coverage.
@@ -24,7 +27,7 @@ The previous sampler uses analytic fields, not trained video models. See [numeri
 
 Every weekly edition contains **two lists**: frontier/SOTA candidates and fundamentals worth turning into interactive graphics. Each proposed teaching topic connects to recent research. A dated competitor/community section tracks Higgsfield, OpenArt and relevant peers. Primary sources support technical claims; community posts are discovery leads.
 
-The current watchlists include a delta checked October 12, 2026; the October 5 publishing kit and dated snapshots are preserved. Carryover rows retain their own review dates. It is not an exhaustive benchmark leaderboard. Nothing here claims independent model reproduction or universal SOTA. Robotics and physical AI are excluded from the current agenda.
+The current weekly edition covers October 5–12, 2026. Prior kits, source snapshots and the same-day delta are preserved. It is not an exhaustive benchmark leaderboard. Nothing here claims independent model reproduction or universal SOTA. Robotics and physical AI are excluded from the current agenda.
 
 ## Run locally
 
@@ -37,7 +40,7 @@ Open http://localhost:8765. No API key, server database or installation is neede
 Canonical content is under `content/editions/`. Each edition’s edition.json selects its stories, media and archive name. To rebuild the dashboard data and its own downloadable kit (without overwriting earlier kits):
 
 ```sh
-python3 scripts/build_content.py --edition 2026-10-05
+python3 scripts/build_content.py --edition 2026-10-12
 python3 scripts/check.py
 ```
 

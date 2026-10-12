@@ -44,6 +44,7 @@ if shutil.which('node'):
  for f in [*DIST.glob('*.js'),*DIST.glob('*.mjs')]:subprocess.run(['node','--check',str(f)],check=True)
  subprocess.run(['node',str(ROOT/'tests/simulation.test.mjs'),str(DIST/'simulation.mjs')],check=True,stdout=subprocess.DEVNULL)
  subprocess.run(['node',str(ROOT/'tests/gaussian.test.mjs')],check=True)
+ subprocess.run(['node',str(ROOT/'tests/loop-math.test.mjs')],check=True)
 for archive in (DIST/'assets').glob('edition-*.zip'):
  with zipfile.ZipFile(archive) as z:assert z.testzip() is None
 with zipfile.ZipFile(DIST/'assets'/meta['archive']) as z:
@@ -56,4 +57,4 @@ with zipfile.ZipFile(DIST/'assets'/meta['archive']) as z:
 for pattern in ['ghp_[A-Za-z0-9]{20,}','gho_[A-Za-z0-9]{20,}','sk-[A-Za-z0-9]{20,}']:
  for f in [*DIST.glob('*.js'),*DIST.glob('*.mjs'),*DIST.glob('*.html'),*ROOT.glob('*.md'),*edition.glob('*.md'),*edition.glob('*.json')]:
   assert not re.search(pattern,f.read_text()),f'Possible credential in {f}'
-print('PASS: links, light theme, canonical edition/drafts, X sizes, media, JS syntax, both numerical labs and archived content.')
+print('PASS: links, light theme, canonical edition/drafts, X sizes, media, JS syntax, all numerical labs and archived content.')

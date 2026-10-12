@@ -71,13 +71,14 @@ function showDraft(){
  $('#media-caption').textContent=metadata.caption;$('#narration-link').href=metadata.narration;
 }
 $('#story').onchange=()=>{persist();story=$('#story').value;showDraft()};$$('[data-channel]').forEach(b=>b.onclick=()=>{persist();channel=b.dataset.channel;$$('[data-channel]').forEach(x=>x.classList.toggle('selected',x===b));showDraft()});$('#draft').oninput=()=>{persist();$('#draft-count').textContent=$('#draft').value.length+' characters'};$('#copy').onclick=async()=>{try{await navigator.clipboard.writeText($('#draft').value);toast('Draft copied')}catch{$('#draft').select();toast('Select all and copy the draft.')}};$('#download-draft').onclick=()=>saveBlob(new Blob([$('#draft').value],{type:'text/plain'}),`${story}-${channel}.txt`);
+$$('[data-filter]').forEach(b=>{if(b.dataset.filter!=='all')b.hidden=!PAPERS.some(p=>p.category===b.dataset.filter)});
 setTopic('flow');renderPapers();showDraft();document.fonts.ready.then(draw);new ResizeObserver(draw).observe(canvas);
 function extraCards(target,items,isQueue=false){const root=$(target);items.forEach(p=>{let card=document.createElement('article');card.className='paper';const rows=isQueue?[['div',p.priority,'meta'],['h3',p.title],['p',p.idea],['p',p.misconception||'', 'caution'],['p',p.controls?'Controls: '+p.controls:''],['p',p.connection,'caution'],['p',p.audience?'For '+p.audience:'']]:[['div',p.date,'meta'],['h3',p.title],['p',p.summary],['p',p.implication,'caution']];rows.forEach(([tag,text,cls])=>{let n=document.createElement(tag);n.textContent=text;if(cls)n.className=cls;card.append(n)});let a=document.createElement('a');a.href=p.url;a.textContent=isQueue?'Research connection ↗':'Read source ↗';card.append(a);root.append(card)})}
 extraCards('#queue-items',QUEUE,true);extraCards('#competitor-items',COMPETITORS);extraCards('#community-items',COMMUNITY);
 
 const weeklyFrame=document.getElementById('weekly-frame');
 window.addEventListener('message',event=>{
- if(event.source===weeklyFrame.contentWindow&&event.origin===location.origin&&event.data?.type==='gaussian-height'){
+ if(event.source===weeklyFrame.contentWindow&&event.origin===location.origin&&['gaussian-height','loop-height'].includes(event.data?.type)){
   const height=Number(event.data.height);if(Number.isFinite(height))weeklyFrame.style.height=Math.min(6000,Math.max(500,height))+'px';
  }
 });

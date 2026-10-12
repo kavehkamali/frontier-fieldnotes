@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-12",
+  "label": "12 OCT 2026",
+  "number": "003",
+  "title": "A loop is more than matching frames.",
+  "archive": "edition-003.zip",
+  "brief_url": "https://github.com/kavehkamali/frontier-fieldnotes/blob/main/content/editions/2026-10-12/weekly-brief.md",
+  "stories": [
+    {
+      "id": "loop",
+      "label": "This week · OuroWorld & periodic 3D motion",
+      "alt": "Original synthetic Gaussian ribbons with a phase timeline and separate position, velocity and camera loop diagnostics",
+      "caption": "Original analytic scene: positions meet but velocity jumps at the seam. This deliberate counterexample is not OuroWorld output. Explore the smooth Fourier mode in the interactive.",
+      "narration": "assets/loop-video-script.md"
+    }
+  ],
+  "interactive_files": [
+    "loop.html",
+    "loop.css",
+    "loop.mjs",
+    "loop-math.mjs",
+    "gaussian-math.mjs",
+    "favicon.svg",
+    "vendor/gifenc.esm.js",
+    "vendor/gifenc-LICENSE.md"
+  ]
+}
