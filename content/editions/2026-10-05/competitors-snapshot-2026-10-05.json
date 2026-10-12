@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Higgsfield · AI Influencer rebuild",
+    "date": "03 Oct 2026 · update announced",
+    "summary": "New since the 2 October check: a 19-setting character builder, paired portrait/full-body output and Genjutsu motion tools in the same studio.",
+    "implication": "Workflow update. The vendor documents present availability and reuse in Cinema Studio; account access, identity consistency and motion quality have not been tested.",
+    "url": "https://higgsfield.ai/blog/new-ai-influencer"
+  },
+  {
+    "title": "Runway · Seedance 2.5 Draft Mode",
+    "date": "02 Oct 2026 · available, All Plans",
+    "summary": "Newly verified in the official changelog: Agent can generate 480p drafts and enhance them after generation, with a toggle for Draft Mode.",
+    "implication": "Generation-workflow integration, not a new base model. Faster/cheaper iteration is a vendor claim; draft-to-final continuity and cost per accepted shot remain untested.",
+    "url": "https://runway.com/changelog"
+  },
+  {
+    "title": "Runway · ElevenLabs v4 integration",
+    "date": "29 Sep 2026 · available, Paid Plans",
+    "summary": "New to this watchlist: Runway documents ElevenLabs v4 support for audio generation. The integration predates the 2 October check.",
+    "implication": "Access expansion, not another voice-model launch. Eleven v4 launched on 28 September and was already covered; no listening test or independent quality comparison was performed.",
+    "url": "https://runway.com/changelog"
+  },
+  {
+    "title": "OpenArt · FLUX 3 Image",
+    "date": "01 Oct 2026 · availability guide; carryover",
+    "summary": "Already covered on 2 October: OpenArt documents multi-reference image generation/editing and 2K/4K output.",
+    "implication": "Carryover documentation, not fresh October 5 release news. The global launch date and exact integration time are unverified; edit-preservation and identity quality remain vendor claims.",
+    "url": "https://openart.ai/blog/flux-3-image-overview/"
+  },
+  {
+    "title": "Higgsfield · Ads Studio",
+    "date": "01 Oct 2026 · announced; carryover",
+    "summary": "Already covered on 2 October: reusable brand kits and product inputs generate batches of static-ad concepts and variations.",
+    "implication": "Carryover workflow launch, not a new video model. Compare brand consistency and useful variation; authenticated availability and output quality have not been tested.",
+    "url": "https://higgsfield.ai/blog/higgsfield-ads-studio"
+  }
+]

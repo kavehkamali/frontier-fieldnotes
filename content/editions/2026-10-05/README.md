@@ -1,5 +1,7 @@
 # Edition 002 — 5 October 2026
 
+[Read the 12 October delta](delta-2026-10-12.md) for new research, product changes, corrected dates and proposed visuals. The dashboard watchlists now include this delta. Original 5 October watchlists are preserved as dated JSON snapshots; the publishing kit is still edition 002.
+
 [Read the weekly brief](weekly-brief.md) for the two prioritized lists, recommendation, competitor changes and source gaps.
 
 Publishing kit: gaussian-linkedin.md, gaussian-x.md, gaussian-medium.md, original PNG/GIF/MP4 and narration. The interactive is a synthetic teaching renderer, not WINGS inference.

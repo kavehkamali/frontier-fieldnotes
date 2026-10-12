@@ -1,6 +1,6 @@
 # Frontier Fieldnotes — 5 October 2026
 
-**Edition 002 · One repair. Every angle.** Research window: September 28–October 5, checked at the Monday review. All eight papers below were submitted in that window; no 30-day fallback was needed. Dates are original submissions, not crawl dates. All currently have v1 only; no revised version was found. These are scoped research candidates, not an independent SOTA leaderboard.
+**Edition 002 · One repair. Every angle.** Research window: September 28–October 5, checked at the Monday review. All eight papers below were submitted in that window; no 30-day fallback was needed. Dates are original submissions, not crawl dates. This review read v1 papers. **Correction added 12 October:** Custom Forcing v2 was already submitted on 5 October at 05:25:58 UTC, before the saved review cutoff; the original all-v1 statement was incorrect. See the [12 October delta](delta-2026-10-12.md) for the corrected record and subsequent changes. These are scoped research candidates, not an independent SOTA leaderboard.
 
 **Recommended pairing:** WINGS + multi-view consistency, covariance projection and opacity. The new [interactive Gaussian lab](https://kavehkamali.github.io/frontier-fieldnotes/gaussian.html) uses a synthetic arch to make a difficult constraint visible: plausible images need not describe one scene. A shared repair can still be wrong.
 
@@ -20,9 +20,9 @@ WINGS, PartiCam and Audible World Models were already flagged in the October 2 d
 
 ### 2. [Custom Forcing: Training-Free Subject Customization for Autoregressive Video Generation](https://arxiv.org/abs/2610.02914v1)
 
-**Submitted 2 Oct 2026 · v1 · no later revision found.** Persistent reference anchors, drift-adaptive value amplification and anchor contrastive guidance preserve a subject in long autoregressive video without fine-tuning the generator.
+**Submitted 2 Oct 2026 · v1 reviewed; v2 submitted 5 Oct at 05:25:58 UTC (record corrected 12 Oct).** Persistent reference anchors, drift-adaptive value amplification and anchor contrastive guidance preserve a subject in long autoregressive video without fine-tuning the generator.
 
-**What changed:** New Oct 2 paper; not covered in the previous edition or Friday delta. No later arXiv revision found.
+**What changed:** New Oct 2 paper; not covered in the previous edition or Friday delta. The v2 record predates this review and was missed; this section describes the original v1 review, not a verified v1–v2 result comparison.
 **Evaluation:** Frozen RollingForcing/Wan2.1 T2V 1.3B; 10 DreamBooth subjects, 10 prompts each; 30-second and 2-minute outputs. Author comparisons, not universal model rankings.
 **Boundary:** Whole-subject customization, not precise part editing; no multi-subject evaluation. Excessively strong anchoring can suppress motion or make the subject dominate the frame.
 **Access:** Paper and official project page available at https://gustn9609.github.io/custom-forcing/ . Runnable public code not verified.

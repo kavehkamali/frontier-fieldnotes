@@ -8,7 +8,8 @@ Focus: 3D Gaussian splatting, video, voice generation, AI filmmaking, diffusion,
 
 ## What is here
 
-- [This week’s 3D lab](https://kavehkamali.github.io/frontier-fieldnotes/gaussian.html): orbit a synthetic Gaussian-splat arch, compare a fixed repair with deliberately view-dependent hypotheses, and inspect projection, opacity and anisotropy.
+- [Edition 002 3D lab](https://kavehkamali.github.io/frontier-fieldnotes/gaussian.html): orbit a synthetic Gaussian-splat arch, compare a fixed repair with deliberately view-dependent hypotheses, and inspect projection, opacity and anisotropy.
+- [October 12 delta](content/editions/2026-10-05/delta-2026-10-12.md): looping 3D scenes, separate audio stems, product updates and corrected records.
 - [October 5 edition](content/editions/2026-10-05/weekly-brief.md): eight fresh research candidates, eight fundamentals-to-graphics ideas, dated competitor changes and source coverage.
 - A casual WINGS-inspired LinkedIn draft, five-post X thread, Medium article, original PNG, six-second GIF/MP4, and narration. [Download edition 002](https://kavehkamali.github.io/frontier-fieldnotes/assets/edition-002.zip).
 - One-click PNG/GIF export from the 3D lab in square or wide format. GIF adds a ±30° orbit around the selected camera while preserving the other settings.
@@ -23,7 +24,7 @@ The previous sampler uses analytic fields, not trained video models. See [numeri
 
 Every weekly edition contains **two lists**: frontier/SOTA candidates and fundamentals worth turning into interactive graphics. Each proposed teaching topic connects to recent research. A dated competitor/community section tracks Higgsfield, OpenArt and relevant peers. Primary sources support technical claims; community posts are discovery leads.
 
-The current edition is checked October 5, 2026; earlier dated snapshots are preserved. It is not an exhaustive benchmark leaderboard. Nothing here claims independent model reproduction or universal SOTA. Robotics and physical AI are excluded from the current agenda.
+The current watchlists include a delta checked October 12, 2026; the October 5 publishing kit and dated snapshots are preserved. Carryover rows retain their own review dates. It is not an exhaustive benchmark leaderboard. Nothing here claims independent model reproduction or universal SOTA. Robotics and physical AI are excluded from the current agenda.
 
 ## Run locally
 

@@ -8,7 +8,7 @@
   "stories": [
     {
       "id": "gaussian",
-      "label": "This week · WINGS & multi-view consistency",
+      "label": "Edition 002 · WINGS & multi-view consistency",
       "alt": "Two synthetic Gaussian-splat arches compare a view-dependent repair with a fixed shared 3D repair",
       "caption": "Original synthetic Gaussian scene. Deliberately inconsistent hypotheses versus a fixed shared repair; not WINGS inference or benchmark evidence.",
       "narration": "assets/gaussian-video-script.md"
@@ -22,5 +22,7 @@
     "favicon.svg",
     "vendor/gifenc.esm.js",
     "vendor/gifenc-LICENSE.md"
-  ]
+  ],
+  "review_label": "12 OCT 2026",
+  "delta_url": "https://github.com/kavehkamali/frontier-fieldnotes/blob/main/content/editions/2026-10-05/delta-2026-10-12.md"
 }

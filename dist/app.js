@@ -57,8 +57,8 @@ function renderPapers(filter='all'){$('#papers').replaceChildren();PAPERS.filter
 $$('[data-filter]').forEach(b=>b.onclick=()=>{$$('[data-filter]').forEach(x=>x.classList.toggle('selected',x===b));renderPapers(b.dataset.filter)});
 const storySelect=$('#story');storySelect.replaceChildren(...EDITION.stories.map(s=>new Option(s.label,s.id)));
 $('#edition-label').textContent='EDITION '+EDITION.number+' · '+EDITION.label;
-$('#research-date').textContent='CHECKED '+EDITION.label;$('#competitor-date').textContent='CHECKED '+EDITION.label;
-$('#weekly-brief').href=EDITION.brief_url;$('#weekly-brief').textContent='Read the weekly edition ↗';
+$('#research-date').textContent='REVIEWED '+(EDITION.review_label||EDITION.label);$('#competitor-date').textContent='REVIEWED '+(EDITION.review_label||EDITION.label);
+$('#weekly-brief').href=EDITION.delta_url||EDITION.brief_url;$('#weekly-brief').textContent=EDITION.delta_url?'Read the latest changes ↗':'Read the weekly edition ↗';
 $('#edition-download').href='assets/'+EDITION.archive;
 let channel='linkedin',story=EDITION.stories[0].id;
 function key(){return story+':'+channel}
