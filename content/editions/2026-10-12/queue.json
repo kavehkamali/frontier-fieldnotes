@@ -11,8 +11,32 @@
     "visual_url": "loop.html"
   },
   {
+    "title": "One pixel of error depends on the camera",
+    "priority": "02 · Proposed · added 14 Oct",
+    "idea": "Quantize a synthetic Gaussian scene and compare original and decoded centers and footprints. Show measured screen displacement alongside an analytic position bound; refine a toy bit stream in discrete valid steps.",
+    "controls": "Position precision, pixel tolerance, camera distance, focal length, frustum half-angle, declared near plane; separate footprint/color perturbations; proposed PNG/GIF export.",
+    "misconception": "A good average image score does not bound each splat. Parameter guarantees do not automatically bound the final composited image, and a guarantee can stop applying outside its declared camera domain.",
+    "connection": "PLEDGE · 13 Oct 2026, discovered 14 Oct. Proposed analytic teaching lab, not its codec. Keep pruning loss, missing primitives and quantization error separate; do not invent real compressed-byte counts.",
+    "audience": "3D artists, graphics engineers and ML practitioners",
+    "status": "Proposed; not implemented",
+    "recommendation": "Best new pairing. Extend the existing Gaussian projection teaching machinery with camera-domain and quantization controls.",
+    "url": "https://arxiv.org/abs/2610.17605v1"
+  },
+  {
+    "title": "The sound moves the right way but misses the target",
+    "priority": "03 · Proposed · added 14 Oct",
+    "idea": "Animate a small bank of damped sinusoids beside a spectrum and decay envelope. Compare requested frequency/decay with achieved values when size and thickness change together; toggle known versus hidden thickness.",
+    "controls": "Size, thickness ratio, damping, excitation, target tolerances and paired random seed; proposed audio audition and PNG/GIF export.",
+    "misconception": "A monotonic slider response is not calibrated control. A model can rank targets correctly while missing their values, and measured effective damping is not necessarily material loss.",
+    "connection": "PhysicsSliders · 13 Oct 2026, discovered 14 Oct. Proposed analytic resonator, not trained flow-model output or a reproduction of the paper's success rate.",
+    "audience": "Sound designers, filmmakers and ML engineers",
+    "status": "Proposed; not implemented",
+    "recommendation": "Use a synthetic counterexample to separate direction, calibration and two-target success. Do not label invented samples as paper audio.",
+    "url": "https://arxiv.org/abs/2610.18597v1"
+  },
+  {
     "title": "Separate tracks without changing the original mix",
-    "priority": "02 · Proposed",
+    "priority": "04 · Proposed",
     "idea": "Show two captioned stem streams and a protected mix as an attention matrix. Toggle the forbidden stem-to-mix edge and mix-token LoRA gate, tracing how information could alter the scene stream.",
     "controls": "Attention edges, stem-only adapter gate, per-stem captions, aligned versus concatenated time positions, clean versus noisy mix conditioning.",
     "misconception": "Blocking an attention edge alone does not freeze a stream if shared adapter updates still alter its token projections.",
@@ -22,7 +46,7 @@
   },
   {
     "title": "Why moving noise makes it fade",
-    "priority": "03 · Proposed",
+    "priority": "05 · Proposed",
     "idea": "Track a pixel footprint across a seeded noise grid. Compare ordinary averaging with variance-normalized projection; show histogram and cross-frame correlation.",
     "controls": "Zoom, footprint shape, camera motion, sample count, histogram bins, normalization; propose PNG/GIF/MP4 exports.",
     "misconception": "Warping standard Gaussian noise does not automatically preserve its variance. Unit variance also does not imply independent pixels.",
@@ -32,7 +56,7 @@
   },
   {
     "title": "An edit needs two scorecards",
-    "priority": "04 · Proposed",
+    "priority": "06 · Proposed",
     "idea": "Manipulate a synthetic scene and soundtrack. Plot intended change versus collateral change, then compare arithmetic and harmonic scoring.",
     "controls": "Object edit, background drift, sound timing, preservation, judge uncertainty; propose PNG/GIF exports.",
     "misconception": "An unchanged clip preserves everything but performs no edit; a convincing new clip can ignore preservation.",
@@ -42,7 +66,7 @@
   },
   {
     "title": "The future you can still change",
-    "priority": "05 · Proposed",
+    "priority": "07 · Proposed",
     "idea": "Animate user and assistant token lanes, separating played audio from tentative future frames. Trigger an interruption and inspect discarded predictions and compute calls.",
     "controls": "Prediction horizon, confidence threshold, interruption timing, Listen/Speak policy; propose PNG/GIF exports.",
     "misconception": "Fewer model calls do not necessarily mean lower response latency or unchanged speech quality.",
@@ -51,32 +75,8 @@
     "url": "https://arxiv.org/abs/2610.12214v1"
   },
   {
-    "title": "Shared references are guidance, not a guarantee",
-    "priority": "06 · Proposed",
-    "idea": "Use a synthetic three-shot storyboard to show how a shared palette, character descriptor and reference bank reach each generation. Toggle shared versus per-shot inputs and display the exact conditioning each shot receives. Illustrative output swatches must be labeled as schematic, not vendor generations.",
-    "controls": "Share reference bank; change one reference; per-shot override; guidance-strength schematic; reveal conditioning inputs; compare palette and identity labels across shots.",
-    "misconception": "Saving a brand kit does not impose a hard mathematical identity constraint or guarantee every generated frame follows it. Shared inputs reduce one source of variation; model behavior remains a separate question.",
-    "connection": "ElevenCreative Brand Kit, published 9 October 2026 and updated 12 October. Visual assets/rules are available across its image/video workflows; voice and sound are future work.",
-    "audience": "Creative teams and ML practitioners designing multi-shot workflows",
-    "status": "Proposed; no model outputs or consistency scores implemented",
-    "recommendation": "A useful follow-up to the 3D consistency lab. Teach the difference between common conditioning and enforced invariants; do not simulate a vendor quality benchmark.",
-    "url": "https://elevenlabs.io/blog/introducing-brand-kit"
-  },
-  {
-    "title": "A preset needs a provenance trail",
-    "priority": "07 · Proposed",
-    "idea": "Build a small visual dependency graph from reference assets through preset, model configuration, edits and export. Replay a deterministic toy transformation while selectively changing a dependency, so the viewer can see which outputs must be recomputed and why a seed alone cannot identify a complete workflow.",
-    "controls": "Pin or change preset revision; swap reference asset; hold seed fixed; change model-version label; reveal dependency hashes; replay saved manifest; highlight affected descendants.",
-    "misconception": "A seed or a named preset is enough to reproduce an output. Reproduction also depends on inputs, versions, settings and execution behavior; complete provenance still cannot guarantee deterministic external services.",
-    "connection": "Higgsfield Katana released 8 October 2026, with a 12 October guide, brings reference-driven presets to Claude/MCP. Ad Multiplier gained a visual workflow on 6 October. Both make reusable workflows a timely topic; no claim that either currently provides this proposed provenance interface.",
-    "audience": "AI filmmakers, creative technologists and pipeline engineers",
-    "status": "Proposed; deterministic teaching graph only, no live vendor integration",
-    "recommendation": "Keep the visual concrete: one changed reference should light up the affected shots. Show a compact export manifest rather than presenting a generic agent diagram.",
-    "url": "https://higgsfield.ai/creator-hub/changelog"
-  },
-  {
     "title": "3B active does not mean a 3B-sized model",
-    "priority": "08 · Proposed · added 13 Oct",
+    "priority": "08 · Proposed",
     "idea": "Animate tokens routing through an expert bank while separating stored weights, active computation and attention-cache growth. Plot calculated memory components beside the routing view.",
     "controls": "Sequence length, weight/cache precision, hypothetical expert count and active experts, full-attention fraction; proposed PNG/GIF export.",
     "misconception": "Sparse activation lowers work per token but does not erase inactive expert weights. A smaller full-attention fraction reduces one growing memory component, not every memory cost.",

@@ -1,5 +1,19 @@
 [
   {
+    "title": "Cartesia · older Sonic models approach retirement",
+    "date": "July 2026 notice · discovered 14 Oct; sunset after 20 Oct",
+    "summary": "The official changelog names Sonic-2, Sonic-turbo and Sonic-3-2025-10-27 for sunset after October 20, 2026. This is an older notice missing from the previous review.",
+    "implication": "If a workflow calls these models, plan migration and retest voices, scripts and timing before the stated date. Exact cutoff time/timezone and automatic replacement are not specified. No account usage was inspected.",
+    "url": "https://docs.cartesia.ai/changelog/2026"
+  },
+  {
+    "title": "Legacy Luma Ray 2 nodes · October 24 endpoint removal",
+    "date": "02 Oct 2026 Comfy change · discovered 14 Oct; removal 24 Oct",
+    "summary": "Comfy's merged deprecation change and legacy-node guides say the Ray 2 endpoints used by its old image/text-to-video nodes are removed October 24. The guides point to separate Ray 3.2 nodes.",
+    "implication": "Inspect saved workflows for legacy nodes before the deadline. This is Comfy's integration guidance; Luma-owned confirmation and a drop-in migration were not verified. Do not infer all Luma services are ending.",
+    "url": "https://docs.comfy.org/tutorials/partner-nodes/luma/luma-image-to-video"
+  },
+  {
     "title": "Fish Audio Drama 3 · directed TTS is available",
     "date": "13 Oct 2026 · release",
     "summary": "Speech generation is live on Fish Audio web, mobile and API. Hosted revision and inpainting are still invite-only. Public weights and code use a restricted community license.",

@@ -7,3 +7,5 @@
 Original analytic Gaussian motion, not OuroWorld inference. LinkedIn/X/Medium drafts are for review; no social posting.
 
 [13 October delta](delta-2026-10-13.md) · [Delta coverage](coverage-2026-10-13.md). Drama 3 joins the frontier watchlist; dated October 12 snapshots preserve the original selection.
+
+[14 October delta](delta-2026-10-14.md) · [Delta coverage](coverage-2026-10-14.md). PLEDGE and PhysicsSliders join the research/graphics lists; older Cartesia and legacy Luma retirement notices are now tracked.
