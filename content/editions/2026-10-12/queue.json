@@ -73,5 +73,17 @@
     "status": "Proposed; deterministic teaching graph only, no live vendor integration",
     "recommendation": "Keep the visual concrete: one changed reference should light up the affected shots. Show a compact export manifest rather than presenting a generic agent diagram.",
     "url": "https://higgsfield.ai/creator-hub/changelog"
+  },
+  {
+    "title": "3B active does not mean a 3B-sized model",
+    "priority": "08 · Proposed · added 13 Oct",
+    "idea": "Animate tokens routing through an expert bank while separating stored weights, active computation and attention-cache growth. Plot calculated memory components beside the routing view.",
+    "controls": "Sequence length, weight/cache precision, hypothetical expert count and active experts, full-attention fraction; proposed PNG/GIF export.",
+    "misconception": "Sparse activation lowers work per token but does not erase inactive expert weights. A smaller full-attention fraction reduces one growing memory component, not every memory cost.",
+    "connection": "Drama 3 · 13 Oct 2026. Its card describes 35B total / about 3B active parameters and hybrid attention. Proposed analytic model with explicit assumptions, not measured VRAM or Drama 3 inference.",
+    "audience": "ML engineers and creators comparing self-hosted voice options",
+    "status": "Proposed; no new visual implemented in this delta",
+    "recommendation": "Use separate weight and cache axes; show an overhead bucket and avoid claiming a hardware requirement from this toy alone.",
+    "url": "https://huggingface.co/fishaudio/drama-3"
   }
 ]

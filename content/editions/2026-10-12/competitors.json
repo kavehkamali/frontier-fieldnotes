@@ -1,5 +1,33 @@
 [
   {
+    "title": "Fish Audio Drama 3 · directed TTS is available",
+    "date": "13 Oct 2026 · release",
+    "summary": "Speech generation is live on Fish Audio web, mobile and API. Hosted revision and inpainting are still invite-only. Public weights and code use a restricted community license.",
+    "implication": "A new option for scripted performances, with no independent quality test here. Local installation specifies at least 48 GB FP8 GPU memory on NVIDIA. Do not equate the pronunciation claim with overall acting quality.",
+    "url": "https://fish.audio/blog/fish-audio-drama-3/"
+  },
+  {
+    "title": "OpenArt · Drama 3 now appears in its model directory",
+    "date": "13 Oct 2026 · observed; exact integration time unknown",
+    "summary": "The official directory lists Fish Audio Drama 3 for directed dialogue and multi-character scenes. Fish Audio independently dates the underlying launch October 13.",
+    "implication": "Relevant for creators keeping image, video and dialogue in one workspace. OpenArt plan access, credits and actual generation were not tested. This is a verified listing, not a verified rollout timestamp.",
+    "url": "https://openart.ai/ai-model/"
+  },
+  {
+    "title": "ComfyUI 0.40.0 · cameras and creative-service nodes",
+    "date": "13 Oct 2026 · tagged release",
+    "summary": "The release includes CameraAngle/CreateCameraInfo, standard 3D outputs, native LoRA stack loaders and partner integrations including Drama 3 and Higgsfield Genjutsu motion transfer.",
+    "implication": "CameraAngle produces camera metadata and shot text; it does not guarantee a generative model follows that camera. Partner-node availability is not local model weights. No installation or generation test performed.",
+    "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.40.0"
+  },
+  {
+    "title": "Comfy · NVIDIA VFX tools enter the workflow",
+    "date": "13 Oct 2026 · official announcement",
+    "summary": "An official custom-node pack exposes RTX super resolution, frame interpolation and SDR-to-HDR conversion. This is an integration of existing RTX effects.",
+    "implication": "Requires NVIDIA RTX and CUDA PyTorch cu130 or newer; frame generation needs RTX 40 series or later. HDR pixel values need matching downstream color metadata. No speed or quality benchmark reproduced.",
+    "url": "https://blog.comfy.org/p/nvidia-vfx-nodes-for-video-upscaling"
+  },
+  {
     "title": "Higgsfield Ad Multiplier gets a visual workflow",
     "date": "06 Oct 2026 · release and announcement",
     "summary": "A new visual interface in Ads Studio turns a reference video into ad variations with changed products, cast, setting, script, hooks or CTAs. This expands access to an existing workflow; it is not a newly established model release.",
@@ -26,12 +54,5 @@
     "summary": "Hume says TTS and EVI API access ends 13 November 2026 at 12:01 a.m. EST. Account data will be permanently deleted after 13 November.",
     "implication": "An older notice missing from the previous review, not a new launch. Workflows using these APIs need a replacement and a plan for needed account data before the deadline. The notice says both APIs remain fully supported until then.",
     "url": "https://dev.hume.ai/voice/changelog"
-  },
-  {
-    "title": "OpenArt · guide update, no new release verified",
-    "date": "12 Oct 2026 · checked",
-    "summary": "Recent cinematic-video guides and promotions were found. No additional dated product launch was established since the previous review.",
-    "implication": "The public update feed returned no readable entries. A guide date is not a launch date; coverage is incomplete and does not establish vendor inactivity.",
-    "url": "https://openart.ai/blog/how-to-create-multi-cut-cinematic-ai-videos/"
   }
 ]

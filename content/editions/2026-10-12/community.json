@@ -1,5 +1,12 @@
 [
   {
+    "title": "OBVPM Timeline · live preview and audio joins",
+    "date": "13 Oct 2026 · Reddit / release posting; release body says 08 Oct",
+    "summary": "An r/StableDiffusion workflow update points to OBVPM Timeline v0.1.4. The official release documents H3 live denoising preview with pinned endpoints and audio-join fixes: https://github.com/chanon/comfyui-obvpm-timeline/releases/tag/v0.1.4",
+    "implication": "Useful for inspecting joins before a take finishes. The GitHub posting date and the body release date differ, so first availability is unresolved. Claimed timing fixes are author tests, not independently reproduced.",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1x4z41u/updated_obvpm_timeline_workflow_v014007/"
+  },
+  {
     "title": "ComfyUI 0.39.0: practical H3 and video-export fixes",
     "date": "06 Oct 2026 · Reddit; release 05 Oct",
     "summary": "An r/comfyui H3 roundup points to ComfyUI 0.39.0. The official release corroborates VAE offload and memory-lifetime fixes plus higher-quality Save Video defaults. Release page: https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.39.0",
