@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Cartesia · older Sonic models approach retirement",
+    "date": "July 2026 notice · discovered 14 Oct; sunset after 20 Oct",
+    "summary": "The official changelog names Sonic-2, Sonic-turbo and Sonic-3-2025-10-27 for sunset after October 20, 2026. This is an older notice missing from the previous review.",
+    "implication": "If a workflow calls these models, plan migration and retest voices, scripts and timing before the stated date. Exact cutoff time/timezone and automatic replacement are not specified. No account usage was inspected.",
+    "url": "https://docs.cartesia.ai/changelog/2026"
+  },
+  {
+    "title": "Legacy Luma Ray 2 nodes · October 24 endpoint removal",
+    "date": "02 Oct 2026 Comfy change · discovered 14 Oct; removal 24 Oct",
+    "summary": "Comfy's merged deprecation change and legacy-node guides say the Ray 2 endpoints used by its old image/text-to-video nodes are removed October 24. The guides point to separate Ray 3.2 nodes.",
+    "implication": "Inspect saved workflows for legacy nodes before the deadline. This is Comfy's integration guidance; Luma-owned confirmation and a drop-in migration were not verified. Do not infer all Luma services are ending.",
+    "url": "https://docs.comfy.org/tutorials/partner-nodes/luma/luma-image-to-video"
+  },
+  {
+    "title": "Fish Audio Drama 3 · directed TTS is available",
+    "date": "13 Oct 2026 · release",
+    "summary": "Speech generation is live on Fish Audio web, mobile and API. Hosted revision and inpainting are still invite-only. Public weights and code use a restricted community license.",
+    "implication": "A new option for scripted performances, with no independent quality test here. Local installation specifies at least 48 GB FP8 GPU memory on NVIDIA. Do not equate the pronunciation claim with overall acting quality.",
+    "url": "https://fish.audio/blog/fish-audio-drama-3/"
+  },
+  {
+    "title": "OpenArt · Drama 3 now appears in its model directory",
+    "date": "13 Oct 2026 · observed; exact integration time unknown",
+    "summary": "The official directory lists Fish Audio Drama 3 for directed dialogue and multi-character scenes. Fish Audio independently dates the underlying launch October 13.",
+    "implication": "Relevant for creators keeping image, video and dialogue in one workspace. OpenArt plan access, credits and actual generation were not tested. This is a verified listing, not a verified rollout timestamp.",
+    "url": "https://openart.ai/ai-model/"
+  },
+  {
+    "title": "ComfyUI 0.40.0 · cameras and creative-service nodes",
+    "date": "13 Oct 2026 · tagged release",
+    "summary": "The release includes CameraAngle/CreateCameraInfo, standard 3D outputs, native LoRA stack loaders and partner integrations including Drama 3 and Higgsfield Genjutsu motion transfer.",
+    "implication": "CameraAngle produces camera metadata and shot text; it does not guarantee a generative model follows that camera. Partner-node availability is not local model weights. No installation or generation test performed.",
+    "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.40.0"
+  },
+  {
+    "title": "Comfy · NVIDIA VFX tools enter the workflow",
+    "date": "13 Oct 2026 · official announcement",
+    "summary": "An official custom-node pack exposes RTX super resolution, frame interpolation and SDR-to-HDR conversion. This is an integration of existing RTX effects.",
+    "implication": "Requires NVIDIA RTX and CUDA PyTorch cu130 or newer; frame generation needs RTX 40 series or later. HDR pixel values need matching downstream color metadata. No speed or quality benchmark reproduced.",
+    "url": "https://blog.comfy.org/p/nvidia-vfx-nodes-for-video-upscaling"
+  },
+  {
+    "title": "Higgsfield Ad Multiplier gets a visual workflow",
+    "date": "06 Oct 2026 · release and announcement",
+    "summary": "A new visual interface in Ads Studio turns a reference video into ad variations with changed products, cast, setting, script, hooks or CTAs. This expands access to an existing workflow; it is not a newly established model release.",
+    "implication": "Useful for planning repeatable ad variants. Availability is documented by the vendor; retention of timing and structure is a vendor claim, with no independent output test here.",
+    "url": "https://higgsfield.ai/blog/ad-multiplier-ads-studio"
+  },
+  {
+    "title": "Higgsfield Katana brings preset video edits to Claude",
+    "date": "08 Oct 2026 · release; guide 12 Oct",
+    "summary": "Higgsfield lists Katana as released October 8: preset-driven edits from reference images through its Claude MCP skill. The October 12 article explains the workflow; it is not the launch date.",
+    "implication": "A workflow and integration change worth tracking for repeatable motion styles. Access instructions are public, but no account, generation or quality test was performed.",
+    "url": "https://higgsfield.ai/creator-hub/changelog"
+  },
+  {
+    "title": "ElevenCreative Brand Kit stores shared visual direction",
+    "date": "09 Oct 2026 · published; updated 12 Oct",
+    "summary": "ElevenLabs says Brand Kit is available now: teams can reuse visual assets and rules across Image & Video, Flows and the ElevenCreative agent. Voice and sound support are explicitly future work.",
+    "implication": "Relevant to a consistent look across a film or campaign. This is a visual workflow feature, not evidence of a better speech model. Plan access and brand consistency were not independently tested.",
+    "url": "https://elevenlabs.io/blog/introducing-brand-kit"
+  },
+  {
+    "title": "Hume · TTS and EVI API sunset",
+    "date": "02 Oct 2026 · notice; discovered 12 Oct",
+    "summary": "Hume says TTS and EVI API access ends 13 November 2026 at 12:01 a.m. EST. Account data will be permanently deleted after 13 November.",
+    "implication": "An older notice missing from the previous review, not a new launch. Workflows using these APIs need a replacement and a plan for needed account data before the deadline. The notice says both APIs remain fully supported until then.",
+    "url": "https://dev.hume.ai/voice/changelog"
+  }
+]

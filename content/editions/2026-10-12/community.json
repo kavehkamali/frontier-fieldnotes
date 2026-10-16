@@ -1,5 +1,26 @@
 [
   {
+    "title": "Drama3 gets an experimental audio.cpp implementation",
+    "date": "16 Oct 2026 · maintainer announcement; main branch, not tagged release",
+    "summary": "Primary repository docs verify quantized packages, expert offloading and streaming. They also report dialogue omissions, prolonged reactions and generation caps for some prompts.",
+    "implication": "Implementation progress, not a new model launch or established output parity. Maintainer GPU results are not independent benchmarks; the exact first implementation commit was not verified.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x75uyi/drama3_in_audiocpp_up_to_5_faster_than_real_time/"
+  },
+  {
+    "title": "TaoMate FL2VA conversion is not the full streaming runtime",
+    "date": "15 Oct 2026 · r/StableDiffusion",
+    "summary": "The conversion author explicitly says the BF16 ComfyUI adapter conversion does not add streaming or KV caching. Official TaoMate source documents those separate runtime mechanisms.",
+    "implication": "Useful portability signal. Comments mixing older T2AV and new FL2VA cannot establish the new adapter's quality.",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1x6jwi2/new_taomate_h3_fl2va_lora_is_out_heres_a_comfyui/"
+  },
+  {
+    "title": "ComfyUI 0.41 discussion surfaces LightVAE support",
+    "date": "16 Oct 2026 · r/StableDiffusion; release 15 Oct",
+    "summary": "A fresh release discussion highlights H3 LightVAE; the official release and PR confirm support.",
+    "implication": "Community awareness is not an independent performance test. An older slowdown comment does not prove a 0.41 regression.",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1x78lco/comfyui_v0410_released/"
+  },
+  {
     "title": "ComfyUI 0.40 discussion surfaces a legacy Ray 2 deadline",
     "date": "14 Oct 2026 · Reddit; underlying deprecation change 02 Oct",
     "summary": "A fresh r/comfyui release discussion points back to an older Luma endpoint retirement: https://github.com/Comfy-Org/ComfyUI/pull/16741 . Comfy's official legacy-node guides corroborate October 24 removal.",

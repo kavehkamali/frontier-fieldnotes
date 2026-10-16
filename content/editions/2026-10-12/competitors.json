@@ -1,5 +1,33 @@
 [
   {
+    "title": "ElevenLabs · Instant Soundtracks adds editable music and SFX",
+    "date": "15 Oct 2026 · launch",
+    "summary": "Vendor announces video-conditioned music and timestamp-aligned sound effects in ElevenCreative, ElevenMusic and API, with separate editable tracks and optional existing-audio reference.",
+    "implication": "API supports up to 10 videos, 200 MB and 600 seconds combined. add_sfx, separate_tracks and use_audio_as_reference default false; separate_tracks returns a ZIP. Synchronization quality was not independently tested.",
+    "url": "https://elevenlabs.io/blog/introducing-instant-soundtracks"
+  },
+  {
+    "title": "Higgsfield · API base-URL migration deadline",
+    "date": "Discovered 16 Oct · migrate by 31 Oct 2026; notice date unknown",
+    "summary": "The official status banner directs API users from platform.higgsfield.ai to api.higgsfield.ai, including application, environment and SDK configuration.",
+    "implication": "Check configured base URLs if affected. The page update timestamp does not date the notice. Exact shutdown time and automatic redirects are not specified; no account usage was inspected.",
+    "url": "https://status.higgsfield.ai/"
+  },
+  {
+    "title": "ComfyUI 0.41.0 · H3 LightVAE support lands",
+    "date": "15 Oct 2026 · tagged release and merged PR",
+    "summary": "Adds MiniMax H3 LightVAE and separate encoder/decoder loading. The maintainer supplies a converted encoder because the original diffusers-format file uses different keys.",
+    "implication": "Check checkpoint format before trying a workflow. This is integration support, not a verified speed or quality gain. A commenter's two-times-faster report is anecdotal. No local generation test.",
+    "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.41.0"
+  },
+  {
+    "title": "ElevenLabs · voice effects found in earlier API update",
+    "date": "12 Oct 2026 · changelog; discovered 16 Oct",
+    "summary": "TTS/dialogue audio_effects adds filters, distance, reverb, background bed and panning. Previously missed, not an October 16 launch.",
+    "implication": "Reverb and nonzero pan require stereo-capable output; docs exclude ulaw, alaw and pcm formats for those settings. No extra request charge is a vendor statement; no API call tested.",
+    "url": "https://elevenlabs.io/docs/changelog"
+  },
+  {
     "title": "Cartesia · older Sonic models approach retirement",
     "date": "July 2026 notice · discovered 14 Oct; sunset after 20 Oct",
     "summary": "The official changelog names Sonic-2, Sonic-turbo and Sonic-3-2025-10-27 for sunset after October 20, 2026. This is an older notice missing from the previous review.",

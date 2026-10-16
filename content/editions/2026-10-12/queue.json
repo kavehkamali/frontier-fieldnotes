@@ -11,20 +11,43 @@
     "visual_url": "loop.html"
   },
   {
+    "title": "What actually needs updating in a 3D scene?",
+    "priority": "02 · Proposed",
+    "idea": "Color synthetic splats by whether their attributes change. Animate a cached lane and a per-frame update lane beside the composed image.",
+    "controls": "Update fraction, frame-group length, error threshold, position versus color changes; proposed PNG/GIF export.",
+    "misconception": "A stationary surface can change appearance. Reusing attributes does not remove the splat from rendering.",
+    "connection": "ResStreamGS · 15 Oct 2026. Analytic teaching proposal; counts are hypothetical attributes, not measured codec bytes or wireless bandwidth.",
+    "audience": "3D artists and graphics/ML engineers",
+    "status": "Proposed; not implemented",
+    "recommendation": "Best new research pairing: a visible reason to send less data, without confusing stability with background.",
+    "url": "https://arxiv.org/abs/2610.21121v1"
+  },
+  {
+    "title": "A finished latent is not a playable video",
+    "priority": "03 · Proposed",
+    "idea": "Scrub a colored block timeline with first/last-frame constraints, persistent cache, denoising, decoding and media publication. Compare chunk completion with first playable output.",
+    "controls": "Block length, cache window, endpoint deadline, denoising time, decode mode, teacher-audio preparation; proposed PNG/GIF export.",
+    "misconception": "Three denoising steps and streaming latents do not imply three-step end-to-end audio/video playback. A LoRA conversion does not reproduce a streaming runtime.",
+    "connection": "TaoMate-H3-FL2VA · 15 Oct 2026. Proposed scheduling schematic with hypothetical timings, not a performance reproduction.",
+    "audience": "Video-model engineers and filmmakers",
+    "status": "Proposed; not implemented",
+    "url": "https://github.com/TaoLiveAIGC/TaoMate-H3"
+  },
+  {
     "title": "One pixel of error depends on the camera",
-    "priority": "02 · Proposed · added 14 Oct",
+    "priority": "04 · Proposed",
     "idea": "Quantize a synthetic Gaussian scene and compare original and decoded centers and footprints. Show measured screen displacement alongside an analytic position bound; refine a toy bit stream in discrete valid steps.",
     "controls": "Position precision, pixel tolerance, camera distance, focal length, frustum half-angle, declared near plane; separate footprint/color perturbations; proposed PNG/GIF export.",
     "misconception": "A good average image score does not bound each splat. Parameter guarantees do not automatically bound the final composited image, and a guarantee can stop applying outside its declared camera domain.",
     "connection": "PLEDGE · 13 Oct 2026, discovered 14 Oct. Proposed analytic teaching lab, not its codec. Keep pruning loss, missing primitives and quantization error separate; do not invent real compressed-byte counts.",
     "audience": "3D artists, graphics engineers and ML practitioners",
     "status": "Proposed; not implemented",
-    "recommendation": "Best new pairing. Extend the existing Gaussian projection teaching machinery with camera-domain and quantization controls.",
+    "recommendation": "A strong compression follow-up; extend Gaussian projection controls with camera-domain and quantization bounds.",
     "url": "https://arxiv.org/abs/2610.17605v1"
   },
   {
     "title": "The sound moves the right way but misses the target",
-    "priority": "03 · Proposed · added 14 Oct",
+    "priority": "05 · Proposed",
     "idea": "Animate a small bank of damped sinusoids beside a spectrum and decay envelope. Compare requested frequency/decay with achieved values when size and thickness change together; toggle known versus hidden thickness.",
     "controls": "Size, thickness ratio, damping, excitation, target tolerances and paired random seed; proposed audio audition and PNG/GIF export.",
     "misconception": "A monotonic slider response is not calibrated control. A model can rank targets correctly while missing their values, and measured effective damping is not necessarily material loss.",
@@ -36,7 +59,7 @@
   },
   {
     "title": "Separate tracks without changing the original mix",
-    "priority": "04 · Proposed",
+    "priority": "06 · Proposed",
     "idea": "Show two captioned stem streams and a protected mix as an attention matrix. Toggle the forbidden stem-to-mix edge and mix-token LoRA gate, tracing how information could alter the scene stream.",
     "controls": "Attention edges, stem-only adapter gate, per-stem captions, aligned versus concatenated time positions, clean versus noisy mix conditioning.",
     "misconception": "Blocking an attention edge alone does not freeze a stream if shared adapter updates still alter its token projections.",
@@ -46,7 +69,7 @@
   },
   {
     "title": "Why moving noise makes it fade",
-    "priority": "05 · Proposed",
+    "priority": "07 · Proposed",
     "idea": "Track a pixel footprint across a seeded noise grid. Compare ordinary averaging with variance-normalized projection; show histogram and cross-frame correlation.",
     "controls": "Zoom, footprint shape, camera motion, sample count, histogram bins, normalization; propose PNG/GIF/MP4 exports.",
     "misconception": "Warping standard Gaussian noise does not automatically preserve its variance. Unit variance also does not imply independent pixels.",
@@ -55,32 +78,12 @@
     "url": "https://arxiv.org/abs/2610.11653v1"
   },
   {
-    "title": "An edit needs two scorecards",
-    "priority": "06 · Proposed",
-    "idea": "Manipulate a synthetic scene and soundtrack. Plot intended change versus collateral change, then compare arithmetic and harmonic scoring.",
-    "controls": "Object edit, background drift, sound timing, preservation, judge uncertainty; propose PNG/GIF exports.",
-    "misconception": "An unchanged clip preserves everything but performs no edit; a convincing new clip can ignore preservation.",
-    "connection": "CrossEdit · 7 Oct 2026. Proposed synthetic illustration of editing evaluation; no model output or reproduced benchmark.",
-    "audience": "Filmmakers and ML practitioners",
-    "url": "https://arxiv.org/abs/2610.10264v1"
-  },
-  {
-    "title": "The future you can still change",
-    "priority": "07 · Proposed",
-    "idea": "Animate user and assistant token lanes, separating played audio from tentative future frames. Trigger an interruption and inspect discarded predictions and compute calls.",
-    "controls": "Prediction horizon, confidence threshold, interruption timing, Listen/Speak policy; propose PNG/GIF exports.",
-    "misconception": "Fewer model calls do not necessarily mean lower response latency or unchanged speech quality.",
-    "connection": "DiffuPlex · 8 Oct 2026. Proposed scheduling schematic; synthetic tokens and timing, not a speech-model reproduction.",
-    "audience": "Voice-product designers and ML engineers",
-    "url": "https://arxiv.org/abs/2610.12214v1"
-  },
-  {
     "title": "3B active does not mean a 3B-sized model",
     "priority": "08 · Proposed",
     "idea": "Animate tokens routing through an expert bank while separating stored weights, active computation and attention-cache growth. Plot calculated memory components beside the routing view.",
     "controls": "Sequence length, weight/cache precision, hypothetical expert count and active experts, full-attention fraction; proposed PNG/GIF export.",
     "misconception": "Sparse activation lowers work per token but does not erase inactive expert weights. A smaller full-attention fraction reduces one growing memory component, not every memory cost.",
-    "connection": "Drama 3 · 13 Oct 2026. Its card describes 35B total / about 3B active parameters and hybrid attention. Proposed analytic model with explicit assumptions, not measured VRAM or Drama 3 inference.",
+    "connection": "Drama 3 · 13 Oct 2026. Its card describes 35B total / about 3B active parameters and hybrid attention. Proposed analytic model with explicit assumptions, not measured VRAM or Drama 3 inference. October 16 audio.cpp community support adds a practical memory/offloading connection; parity remains unverified.",
     "audience": "ML engineers and creators comparing self-hosted voice options",
     "status": "Proposed; no new visual implemented in this delta",
     "recommendation": "Use separate weight and cache axes; show an overhead bucket and avoid claiming a hardware requirement from this toy alone.",

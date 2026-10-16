@@ -1,0 +1,30 @@
+[
+  {
+    "title": "ComfyUI 0.40 discussion surfaces a legacy Ray 2 deadline",
+    "date": "14 Oct 2026 · Reddit; underlying deprecation change 02 Oct",
+    "summary": "A fresh r/comfyui release discussion points back to an older Luma endpoint retirement: https://github.com/Comfy-Org/ComfyUI/pull/16741 . Comfy's official legacy-node guides corroborate October 24 removal.",
+    "implication": "A useful discovery signal for saved video workflows. The 0.40 release was already covered; neither the thread nor its comments make the older deprecation a new launch. No endpoint run or independent migration test.",
+    "url": "https://www.reddit.com/r/comfyui/comments/1x5nc6x/comfyui_v0400/"
+  },
+  {
+    "title": "OBVPM Timeline · live preview and audio joins",
+    "date": "13 Oct 2026 · Reddit / release posting; release body says 08 Oct",
+    "summary": "An r/StableDiffusion workflow update points to OBVPM Timeline v0.1.4. The official release documents H3 live denoising preview with pinned endpoints and audio-join fixes: https://github.com/chanon/comfyui-obvpm-timeline/releases/tag/v0.1.4",
+    "implication": "Useful for inspecting joins before a take finishes. The GitHub posting date and the body release date differ, so first availability is unresolved. Claimed timing fixes are author tests, not independently reproduced.",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1x4z41u/updated_obvpm_timeline_workflow_v014007/"
+  },
+  {
+    "title": "ComfyUI 0.39.0: practical H3 and video-export fixes",
+    "date": "06 Oct 2026 · Reddit; release 05 Oct",
+    "summary": "An r/comfyui H3 roundup points to ComfyUI 0.39.0. The official release corroborates VAE offload and memory-lifetime fixes plus higher-quality Save Video defaults. Release page: https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.39.0",
+    "implication": "A useful local-video workflow update, supported by release notes. No measured VRAM reduction or output-quality benchmark was established, and no update was installed.",
+    "url": "https://www.reddit.com/r/comfyui/comments/1wz9gmw/a_quick_minimax_h3_news_roundup_6th_october_2026/"
+  },
+  {
+    "title": "H3 long-take refinement exposes continuity tradeoffs",
+    "date": "Found 12 Oct 2026 · exact post date unverified",
+    "summary": "An r/StableDiffusion author shared experimental H3 refinement nodes and a workflow. The public repository documents refinement and blending, with background changes, dissolves and audio artifacts among its limitations: https://github.com/xyzDist/H3-LongTakeNoCuts",
+    "implication": "A discovery lead for explaining long-video drift and refinement tradeoffs. Code availability is verified; effectiveness is an author claim, with no independent reproduction or confirmed release date.",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1x0nbr5/h3_degradation_my_turn_attempts_to_fixing/"
+  }
+]
