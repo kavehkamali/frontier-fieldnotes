@@ -44,3 +44,6 @@ Write like an informed colleague explaining the interesting part: contractions, 
 Visuals should allow substantive exploration: numerical solvers, score/velocity fields, particle trajectories, approximation errors, conditioning, temporal dynamics or actual rendering mechanisms. Aesthetic motion alone is not an explanation. Tie each advanced simulation to a recent paper, while stating clearly when it is an analytic teaching model rather than a reproduction. Navier–Stokes is an example of the desired depth; do not equate fluid flow with diffusion sampling. Keep the creative AI focus.
 
 Every new visual needs a simple sharing path: one-click GIF and PNG from the current settings, readable caption, source/context and limitations. Include a ready-to-use MP4 where practical for video-first posting. Test the actual export, including cancellation, aspect ratios and matching visual state. Do not suggest all platforms accept GIFs identically; keep a video alternative.
+
+## Video generation preference
+For model-generated video, use MiniMax-H3 Turbo 8 (`turbo8`, eight iterations) in every project. Use full-resolution Turbo 8 when quality is requested. Never automatically switch to `base29`, Turbo 4 or another variant for quality or fallback; change only on explicit user request. Programmatic teaching diagrams remain clearly labeled as analytic visuals.

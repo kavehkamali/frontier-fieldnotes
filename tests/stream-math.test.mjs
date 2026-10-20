@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {DEFAULTS,SCENE,atFrame,partition,snapshot,metrics,recordBudget,raster,imageError,exportFrame} from '../dist/stream-math.mjs';
+const full={...DEFAULTS,budget:100};assert.equal(metrics(full).rmse,0);assert.equal(metrics(full).reduction,0);
+assert.equal(metrics({...DEFAULTS,frame:0,budget:0}).rmse,0);
+assert(metrics({...DEFAULTS,frame:23,budget:0}).rmse>0);
+const colorPoint=SCENE.find(p=>p.kind==='color');assert.deepEqual(atFrame(colorPoint,0).mean,atFrame(colorPoint,45).mean);assert.notDeepEqual(atFrame(colorPoint,0).color,atFrame(colorPoint,45).color);
+const colorCfg={...DEFAULTS,frame:19,budget:60},pos=partition({...colorCfg,ranking:'position'}),all=partition(colorCfg);
+assert(all.ranked.filter(p=>SCENE[p.id].kind==='color').some(p=>p.score>0));assert(pos.ranked.filter(p=>SCENE[p.id].kind==='color').every(p=>p.score===0));
+assert(metrics({...DEFAULTS,budget:60,ranking:'all'}).rmse<metrics({...DEFAULTS,budget:60,ranking:'position'}).rmse);
+const ss=snapshot(DEFAULTS);for(let i=0;i<SCENE.length;i++)if(!ss.part.selected.has(i))assert.deepEqual(ss.reused[i].mean,atFrame(SCENE[i],ss.part.start).mean);
+assert.deepEqual(recordBudget(100,20,10),{all:1000,reuse:280,reduction:.72});
+assert.equal(imageError(raster(ss.reference),raster(ss.reference)).mse,0);
+assert.deepEqual(snapshot(DEFAULTS),snapshot(DEFAULTS));
+const frames=Array.from({length:48},(_,i)=>exportFrame(DEFAULTS,i,48).frame);assert.equal(new Set(frames).size,48);assert(frames.every(x=>x>=0&&x<96));
+console.log('PASS: full-update identity, group-boundary reset, stale-cache error, stationary color change, ranking distinction, record accounting, deterministic pixel raster and unique export frames.');

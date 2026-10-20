@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Keep the scene. Send the changes. — Frontier Fieldnotes</title>
+<meta name="description" content="An original interactive 3D Gaussian teaching scene: explore reuse, changing appearance, update budgets and image error, connected to ResStreamGS.">
+<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="./stream.css">
+</head>
+<body>
+<nav><a href="./index.html">◈ <span>FRONTIER FIELDNOTES</span></a><a href="./index.html#radar">This week’s research ↗</a></nav>
+<main>
+<header><div class="eyebrow">THE VISUAL NOTEBOOK <span>03 / SPACE & TIME</span></div><h1>Keep the scene. <br> <em>Send the changes.</em></h1><p class="intro">Most of a scene can stay in memory. <br> The interesting part is deciding what needs an update.</p><div class="chips"><span>ResStreamGS · 15 Oct 2026</span><span>Original analytic teaching scene</span></div></header>
+<section class="lab" aria-label="Interactive Gaussian reuse and update-budget lab">
+<div class="lab-toolbar"><div><span class="live-dot"></span> SCENE CACHE <span class="muted">/ drag either view to orbit</span></div><button id="play" aria-pressed="false">▶ Play 8-second cycle</button></div>
+<canvas id="scene" width="1440" height="840" tabindex="0" aria-label="Reference and cached 3D Gaussian scenes. A stationary panel changes color while a ribbon moves. Transmission lanes show records reused once per group and updates sent each frame. Drag to orbit or use the camera slider."></canvas>
+<div class="readouts"><div><span>PIXEL RMSE · 0–1</span><strong id="error-readout">0.0000</strong><small>Analytic 120 × 80 render</small></div><div><span>FEWER RECORDS / GROUP</span><strong id="reduction-readout">0%</strong><small>Equal-size record count · not bytes</small></div><div><span>UPDATED EACH FRAME</span><strong id="count-readout">0 / 466</strong><small id="cache-readout">0 records stay cached</small></div><p id="scene-note">A surface can stay in place and still need an update.</p></div>
+<div class="controls">
+<label>Frame <output id="frame-value">19 / 95</output><input id="frame" type="range" min="0" max="95" step="1" value="19"></label>
+<label>Update budget <output id="budget-value">35%</output><input id="budget" type="range" min="0" max="100" step="1" value="35"></label>
+<label>Group length <select id="gop"><option value="8">8 frames</option><option value="16">16 frames</option><option value="24" selected>24 frames</option><option value="32">32 frames</option></select></label>
+<label>Rank changes by<select id="ranking"><option value="all">Position + color</option><option value="position">Position only</option></select></label>
+<label>Camera angle <output id="orbit-value">18°</output><input id="orbit" type="range" min="-65" max="65" step="1" value="18"></label>
+<div class="toggles"><label class="check"><input id="colorChange" type="checkbox" checked> Let the stationary panel change color</label><label class="check"><input id="labels" type="checkbox" checked> Show scene labels</label></div>
+</div>
+<div class="method-note"><p><span>HOW THIS TOY CHOOSES</span> Oracle look-ahead scores position and color changes across the group. This is a synthetic ranking rule, not the paper’s learned probe.</p><button id="reset">Reset scene</button></div>
+<div class="export"><div><b>Make the explanation yours.</b><p>PNG keeps this frame. GIF runs the full 96-frame scene in 8 seconds, <br> sampled into 60 frames, with your camera and update settings.</p></div><select id="aspect" aria-label="Export aspect ratio"><option value="wide">16:9 · landscape</option><option value="square">1:1 · square</option></select><button id="png">↓ PNG</button><button class="primary" id="gif">↓ GIF</button><button id="cancel" hidden>Cancel export</button><p id="export-status" role="status" aria-live="polite"></p></div>
+</section>
+<section class="understand">
+<div><div class="eyebrow">01 / THE CACHE</div><h2>Give the receiver <br> something to keep.</h2><p>Each group starts with the complete scene. After that, the selected Gaussians get fresh records; everything else stays at its first-frame value. Scrub back to the start of a group: the two views match again.</p><div class="equation">N + M(K − 1) &nbsp; vs &nbsp; NK</div><p class="small">N is the full scene, M the update count and K the group length. This comparison assumes equal-size records. It omits headers, indices, residual coding and compression. It is not a bitrate estimate.</p></div>
+<div><div class="eyebrow">02 / THE SURPRISE</div><h2>Still in space. <br> Changing in time.</h2><p>The left panel doesn’t move. Its color does. Switch to “Position only” and those changes can be missed. Raise the update budget, or let color participate in the ranking, to see which information gets through.</p><div class="equation">A fixed position ≠ a fixed appearance</div><p class="small">Longer groups offer more reuse but can make stale values more visible. In this toy, the ranking itself also changes with group length, so the error need not increase monotonically.</p></div>
+<div><div class="eyebrow">03 / THE NEW CONNECTION</div><h2>Spend updates <br> where they matter.</h2><p><a href="https://arxiv.org/abs/2610.21121v1" target="_blank" rel="noopener">ResStreamGS (15 Oct 2026)</a> separates reusable Gaussian information from time-varying updates. Its six-sequence evaluation supports a scoped result against a controlled baseline, rather than a universal compression ranking.</p><p class="small">The lab makes the reuse trade-off visible. It does not implement the paper’s learned probe, residual representation, training or codec. <a href="https://arxiv.org/html/2610.21121v1" target="_blank" rel="noopener">Read the method ↗</a></p></div>
+</section>
+<aside><b>What you’re looking at</b><p>466 hand-designed 3D Gaussians, analytic motion and changing colors, perspective covariance projection and center-depth alpha sorting. The camera is fixed during each cycle. The toy selects whole Gaussian records using future synthetic trajectories sampled across each group; it does not learn which attributes are stable. Pixel RMSE compares two analytic 120 × 80 rasterizations on a 0–1 RGB scale; the larger display uses a visually similar Gaussian falloff. A lower record count is not measured network traffic or a compression ratio in bytes. At every group boundary the cache resets, which can create visible jumps. No generated footage, trained model, codec or paper benchmark runs here.</p></aside>
+<footer><span>FRONTIER FIELDNOTES / KAVEH</span><span>Original teaching graphic · 19 Oct 2026</span></footer>
+</main><script type="module" src="./stream.mjs"></script>
+</body></html>

@@ -78,7 +78,7 @@ extraCards('#queue-items',QUEUE,true);extraCards('#competitor-items',COMPETITORS
 
 const weeklyFrame=document.getElementById('weekly-frame');
 window.addEventListener('message',event=>{
- if(event.source===weeklyFrame.contentWindow&&event.origin===location.origin&&['gaussian-height','loop-height'].includes(event.data?.type)){
+ if(event.source===weeklyFrame.contentWindow&&event.origin===location.origin&&['gaussian-height','loop-height','stream-height'].includes(event.data?.type)){
   const height=Number(event.data.height);if(Number.isFinite(height))weeklyFrame.style.height=Math.min(6000,Math.max(500,height))+'px';
  }
 });

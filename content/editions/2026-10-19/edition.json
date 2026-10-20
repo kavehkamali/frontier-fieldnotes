@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-19",
+  "label": "19 OCT 2026",
+  "number": "004",
+  "title": "Keep the scene. Send the changes.",
+  "archive": "edition-004.zip",
+  "brief_url": "https://github.com/kavehkamali/frontier-fieldnotes/blob/main/content/editions/2026-10-19/weekly-brief.md",
+  "stories": [
+    {
+      "id": "stream",
+      "label": "This week · ResStreamGS & selective updates",
+      "alt": "Reference and cached synthetic Gaussian scenes with update lanes, pixel error and record accounting",
+      "caption": "Original analytic scene. A stationary surface can still change color. Compare position-only and color-aware update rankings; this is not ResStreamGS output or a bandwidth benchmark.",
+      "narration": "assets/stream-video-script.md"
+    }
+  ],
+  "interactive_files": [
+    "stream.html",
+    "stream.css",
+    "stream.mjs",
+    "stream-math.mjs",
+    "gaussian-math.mjs",
+    "favicon.svg",
+    "vendor/gifenc.esm.js",
+    "vendor/gifenc-LICENSE.md"
+  ],
+  "review_label": "19 OCT 2026"
+}

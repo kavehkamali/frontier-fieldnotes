@@ -55,3 +55,6 @@ Drafts are prepared for editorial review. No social account posting is automated
 ## Licensing and attribution
 
 Project code and original diagrams: MIT, see LICENSE. Vendored gifenc 1.0.3 is MIT; its license is under dist/vendor/. Research papers, product names and external content remain the property of their respective owners and retain their original licenses. Source links and caveats accompany research records. No copied paper figures are redistributed.
+
+- [Edition004 ·19October](content/editions/2026-10-19/weekly-brief.md): eight frontier items and eight visual ideas.
+- [Selective-update lab](https://kavehkamali.github.io/frontier-fieldnotes/stream.html): compare position-only and color-aware rankings, pixel error and attribute-record counts. [Download kit004](https://kavehkamali.github.io/frontier-fieldnotes/assets/edition-004.zip).
