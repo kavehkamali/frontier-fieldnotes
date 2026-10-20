@@ -1,7 +1,22 @@
 [
   {
+    "title": "Ming-3.0 TTS · public inference and serving path",
+    "date": "19 Oct code · 20 Oct 03:27 UTC Tiny serving docs · discovered 20 Oct",
+    "summary": "Ming releases task-specific voice design, reference-voice synthesis and expressive delivery code; Tiny adds dialogue. September 24 checkpoint uploads predate this code release.",
+    "implication": "The new SGLang-Omni recipe returns one finished waveform even with stream=true. Treat it as a serving option, not proof of incremental playback, full reference-task parity or measured speed.",
+    "url": "https://sgl-project.github.io/sglang-omni/cookbook/ming3_tts.html",
+    "primary_urls": [
+      "https://github.com/inclusionAI/Ming-3.0-tts/commit/14c6e082161b7d8263909cfba2829661cc5cedc2",
+      "https://huggingface.co/inclusionAI/Ming-3.0-tts-0.5B",
+      "https://huggingface.co/inclusionAI/Ming-3.0-tts-tiny",
+      "https://huggingface.co/inclusionAI/Ming-3.0-tts-tiny/commit/b170071302cb0b06435ea784787b119f40a08be8",
+      "https://sgl-project.github.io/sglang-omni/cookbook/ming3_tts.html",
+      "https://github.com/inclusionAI/Ming-3.0-tts/blob/e999c39fa676722aaa9ea29b5aa19a90525b271f/ming_tiny/task_protocol.py"
+    ]
+  },
+  {
     "title": "Higgsfield · FLUX 3 Video Upscaler build updated",
-    "date": "15 Oct 2026 · changelog; newly found this review",
+    "date": "15 Oct 2026 · discovered 19 Oct · retained",
     "summary": "A new upscaler build automatically replaces the previous one. Higgsfield attributes detail improvements to BFL and claims shorter processing and fewer credits.",
     "implication": "Retest matching footage before assuming a quality/cost gain. Exact rates are shown before generation; no measured comparison or output test here.",
     "url": "https://higgsfield.ai/creator-hub/changelog"

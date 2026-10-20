@@ -13,6 +13,51 @@
     "priority": "01 · Interactive ready"
   },
   {
+    "title": "Two velocities, two very different meanings",
+    "idea": "Advect colored smoke through a numerical 2D fluid field beside a separate latent sampling trajectory. Show what changes when a visual-quality reward favors appearance over reconstruction.",
+    "controls": "Curl, divergence, viscosity, time step, density injection, vector/color encoding and reward weights; planned PNG/GIF.",
+    "misconception": "A flow-matching velocity is the physical velocity of smoke, or a physics-inspired reward enforces Navier–Stokes.",
+    "connection": "FluidGen · 19 Oct 2026 UTC. Proposed numerical teaching model; no FluidGen inference or reproduction.",
+    "audience": "VFX artists and ML engineers",
+    "status": "Proposed",
+    "recommendation": "Best next deep visual: connects the requested fluid-dynamics depth to fresh filmmaking research.",
+    "url": "https://arxiv.org/abs/2610.25660",
+    "priority": "02 · Proposed"
+  },
+  {
+    "title": "The same rectangle can face two different ways",
+    "idea": "Stage colored 3D actor boxes, switch among three cameras and inspect projected coordinate-color maps plus global/shot/subject attention masks.",
+    "controls": "Actor position, yaw, camera pose, shot boundary and attention scope; planned PNG/GIF.",
+    "misconception": "A 2D box specifies orientation, or identity consistency in one generated sequence guarantees identity across separate edits.",
+    "connection": "Mise-en-Video · 19 Oct 2026. Proposed analytic projection/attention illustration, not generated footage.",
+    "audience": "Directors and video-model engineers",
+    "status": "Proposed",
+    "url": "https://arxiv.org/abs/2610.26801",
+    "priority": "03 · Proposed"
+  },
+  {
+    "title": "An empty first frame cannot show the effect",
+    "idea": "Scrub a transparent-visible-transparent effect and shift the visible reference to the conditioning boundary before restoring the original phase.",
+    "controls": "Visible reference, phase offset, alpha ramp, timeline and checkerboard/colored background; planned PNG/GIF.",
+    "misconception": "A transparent starting frame provides an appearance reference, or a four-step text-video result applies to image-conditioned sampling.",
+    "connection": "Wan-Alpha++ · 19 Oct 2026. Proposed analytic alpha/phase/compositing lab; new I2V weights not verified.",
+    "audience": "Compositors and video-model engineers",
+    "status": "Proposed",
+    "url": "https://arxiv.org/abs/2610.26189",
+    "priority": "04 · Proposed"
+  },
+  {
+    "title": "Generating pieces does not mean receiving them early",
+    "idea": "Put latent generation, audio decoding, buffering and playable audio on separate colored lanes. Compare incremental output with a complete-waveform response.",
+    "controls": "Latent steps, decode chunk size, buffer policy, waveform length and first-playable-sample marker; planned PNG/GIF.",
+    "misconception": "A streaming HTTP flag guarantees incremental speech playback or exposes every model task.",
+    "connection": "Ming-3.0 TTS: code 19 Oct, Tiny serving documentation 20 Oct. SGLang-Omni documents a whole-waveform response even with stream=true. Proposed analytic timeline, not latency measurements.",
+    "audience": "Voice creators and application engineers",
+    "status": "Proposed",
+    "url": "https://sgl-project.github.io/sglang-omni/cookbook/ming3_tts.html",
+    "priority": "05 · Proposed"
+  },
+  {
     "title": "One cell can contain several things",
     "idea": "Project colored splats onto three planes. Compare mean pooling with a toy multi-slot assignment and occupancy-controlled decoding.",
     "controls": "Collision density, slots per cell, attention temperature, occupancy threshold and candidate cap; planned PNG/GIF.",
@@ -21,7 +66,7 @@
     "audience": "3D artists and ML engineers",
     "status": "Proposed",
     "url": "https://arxiv.org/abs/2610.23050v1",
-    "priority": "02 · Proposed"
+    "priority": "06 · Proposed"
   },
   {
     "title": "All the words can be present—and still be wrong",
@@ -32,18 +77,7 @@
     "audience": "Designers and ML evaluators",
     "status": "Proposed",
     "url": "https://arxiv.org/abs/2610.23374v1",
-    "priority": "03 · Proposed"
-  },
-  {
-    "title": "A box tells the model where. A mask enforces where.",
-    "idea": "Drag a conditioning box over a synthetic image. Compare soft spatial influence with hard compositing and measure outside-region change.",
-    "controls": "Box size/location, influence falloff, hard-mask toggle and restoration stage; planned PNG/GIF.",
-    "misconception": "Bounding-box conditioning guarantees unchanged pixels outside the box.",
-    "connection": "FLUX 3 Image Klein · 15 Oct 2026. Proposed analytic influence field, not measured model leakage.",
-    "audience": "Image editors and creative-tool engineers",
-    "status": "Proposed",
-    "url": "https://bfl.ai/blog/flux-3-image-klein",
-    "priority": "04 · Proposed"
+    "priority": "07 · Proposed"
   },
   {
     "title": "An event, a sound, and a preserved voice are different tests",
@@ -54,39 +88,6 @@
     "audience": "Filmmakers and sound designers",
     "status": "Proposed",
     "url": "https://mirelo.ai/blog/mirelo-sfx-2-0",
-    "priority": "05 · Proposed"
-  },
-  {
-    "title": "Less uncertainty does not guarantee a better answer",
-    "idea": "Track categorical predictions through refinement, showing entropy and correctness separately, including a confidently wrong trajectory.",
-    "controls": "Residual strength, contraction target, policy refresh interval, shift and update size; planned PNG/GIF.",
-    "misconception": "Entropy contraction proves correctness, or system throughput isolates a training-method improvement.",
-    "connection": "ORL · 14 Oct 2026. Proposed synthetic dynamics; not an ORL training or speed reproduction.",
-    "audience": "ML engineers",
-    "status": "Proposed",
-    "url": "https://arxiv.org/abs/2610.20687v1",
-    "priority": "06 · Proposed"
-  },
-  {
-    "title": "Spend detail on recent frames",
-    "idea": "Pack recent and older frame tiles into different-resolution memory buckets while tracking identity reference and lip timing.",
-    "controls": "History length, patch scale by age, chunk boundary, detail frequency and audio offset; planned PNG/GIF.",
-    "misconception": "Bounded visual memory guarantees unlimited identity consistency, or fewer model calls equal proportional end-to-end speedup.",
-    "connection": "Kandinsky S2V · 13 Oct 2026. Proposed memory schematic; no generated avatar.",
-    "audience": "Filmmakers and video-model engineers",
-    "status": "Proposed",
-    "url": "https://arxiv.org/abs/2610.19290v1",
-    "priority": "07 · Proposed"
-  },
-  {
-    "title": "The right token can be the wrong next step",
-    "idea": "Show a commit-order tree and fresh target verification, counting both forward batches and candidate states.",
-    "controls": "Branch width, stale/fresh shift, temperature and shared sampling noise; planned PNG/GIF.",
-    "misconception": "A correct token at the wrong position is an acceptable draft, or fewer forward calls means less total work.",
-    "connection": "SPOT · 15 Oct 2026. Proposed synthetic categorical verifier. Exactness excludes the paper's approximate-cache transfer rows.",
-    "audience": "ML engineers and creative-assistant builders",
-    "status": "Proposed",
-    "url": "https://arxiv.org/abs/2610.22543v1",
     "priority": "08 · Proposed"
   }
 ]

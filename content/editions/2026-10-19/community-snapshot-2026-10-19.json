@@ -1,0 +1,40 @@
+[
+  {
+    "title": "MOSS-Image developer AMA and early tests",
+    "date": "2026-10-17",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1x7zf1r/hey_guys_im_one_of_the_core_developers_of/",
+    "summary": "Developer AMA supplied the primary repository for a fresh open 5B image generator. Independent-looking first-impression threads show enthusiasm and prompt experiments, but no controlled comparison.",
+    "implication": "Useful lead for layout conditioning and text-rendering evaluation. Do not repeat community 'best base model' claims as established SOTA.",
+    "primary_urls": [
+      "https://github.com/OpenMOSS/MOSS-Image",
+      "https://arxiv.org/abs/2610.23374v1",
+      "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT"
+    ],
+    "additional_community_url": "https://www.reddit.com/r/StableDiffusion/comments/1x80yc2/mossimage_some_first_impressions/"
+  },
+  {
+    "title": "ORL author release discussion",
+    "date": "2026-10-16",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1x7qgr0/research_2788_tokenss_on_a_single_rtx_5090_with_a/",
+    "summary": "Authors explain on-policy residual context and entropy contraction for faster diffusion-language decoding. LocalLLaMA cross-post covers the same work, so it is not independent corroboration.",
+    "implication": "Reported peak speeds are batch-1, benchmark/hardware/precision specific. End-to-end comparison includes model, decoder and runtime; generic endpoint throughput or writing quality is not established.",
+    "primary_urls": [
+      "https://arxiv.org/abs/2610.20687v1",
+      "https://github.com/Introspective-Diffusion/ORL",
+      "https://introspective-diffusion.github.io/orl-dlm/"
+    ],
+    "additional_community_url": "https://www.reddit.com/r/LocalLLaMA/comments/1x7polk/research_2788_tokenss_on_a_single_rtx_5090_with_a/",
+    "paper_submitted_at_utc": "2026-10-14T17:13:17Z"
+  },
+  {
+    "title": "ComfyUI 0.42.1 fixes MOSS template crashes",
+    "date": "2026-10-19",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1x9ypq9/comfyui_v0421_released/",
+    "summary": "Official releases confirm v0.42.0 on October 18 adds MOSS-image support and a Krea 3 Partner API node; v0.42.1 on October 19 fixes crashes experienced by some MOSS template users.",
+    "implication": "Native integration support is distinct from model release and hosted API availability. Community regressions are anecdotes; no local upgrade, benchmark or reproduction was performed.",
+    "primary_urls": [
+      "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.0",
+      "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.1"
+    ]
+  }
+]

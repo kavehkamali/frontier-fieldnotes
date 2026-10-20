@@ -1,5 +1,21 @@
 [
   {
+    "title": "Ming TTS delivery-control and leaderboard discussions",
+    "date": "20 Oct 2026 · exact UTC post times unverified",
+    "summary": "Two public posts discuss the vendor demo and a leaderboard claim. Neither is an independent hands-on evaluation; do not confuse standalone TTS with Ming audio-flash.",
+    "implication": "Primary commit history verifies code and serving-documentation dates. The live leaderboard could not be retrieved, so ranks are not promoted. Calendar dates alone cannot place these posts exactly inside the review window.",
+    "url": "https://www.reddit.com/r/LocalLLM/comments/1xandlh/ming30_tts_is_open_source_with_laughter_coughs/",
+    "additional_community_url": "https://www.reddit.com/r/TextToSpeech/comments/1xamvan/ming30tts05b_reaches_932_english_pronunciation/",
+    "primary_urls": [
+      "https://github.com/inclusionAI/Ming-3.0-tts/commit/14c6e082161b7d8263909cfba2829661cc5cedc2",
+      "https://huggingface.co/inclusionAI/Ming-3.0-tts-0.5B",
+      "https://huggingface.co/inclusionAI/Ming-3.0-tts-tiny",
+      "https://huggingface.co/inclusionAI/Ming-3.0-tts-tiny/commit/b170071302cb0b06435ea784787b119f40a08be8",
+      "https://sgl-project.github.io/sglang-omni/cookbook/ming3_tts.html",
+      "https://github.com/inclusionAI/Ming-3.0-tts/blob/e999c39fa676722aaa9ea29b5aa19a90525b271f/ming_tiny/task_protocol.py"
+    ]
+  },
+  {
     "title": "MOSS-Image developer AMA and early tests",
     "date": "2026-10-17",
     "url": "https://www.reddit.com/r/StableDiffusion/comments/1x7zf1r/hey_guys_im_one_of_the_core_developers_of/",

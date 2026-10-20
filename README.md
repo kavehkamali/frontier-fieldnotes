@@ -58,3 +58,5 @@ Project code and original diagrams: MIT, see LICENSE. Vendored gifenc 1.0.3 is M
 
 - [Edition004 ·19October](content/editions/2026-10-19/weekly-brief.md): eight frontier items and eight visual ideas.
 - [Selective-update lab](https://kavehkamali.github.io/frontier-fieldnotes/stream.html): compare position-only and color-aware rankings, pixel error and attribute-record counts. [Download kit004](https://kavehkamali.github.io/frontier-fieldnotes/assets/edition-004.zip).
+
+Latest review: [20 October delta](content/editions/2026-10-19/delta-2026-10-20.md) — multi-shot 3D staging, transparent effects, fluid VFX and Ming TTS serving limitations.

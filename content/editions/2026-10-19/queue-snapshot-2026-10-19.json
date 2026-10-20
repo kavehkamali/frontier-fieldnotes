@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Keep the scene. Send the changes.",
+    "idea": "Scrub a synthetic 3D set beside its cached approximation. Compare a position-only ranking with position-and-color ranking; watch a stationary surface go stale.",
+    "controls": "Update budget, frame-group length, time, ranking, color-change toggle, orbit; one-click PNG/GIF in square or wide format.",
+    "misconception": "Stationary means unchanged, or caching a splat removes its rendering cost.",
+    "connection": "ResStreamGS · 15 Oct 2026. Implemented analytic scene. Known synthetic trajectories rank updates; not its learned probe, training, codec or mobile benchmark. Record counts are not compressed bytes.",
+    "audience": "3D artists and graphics/ML engineers",
+    "status": "Interactive ready",
+    "recommendation": "Best pairing this week. A visible failure you can cause, diagnose and fix.",
+    "url": "https://arxiv.org/abs/2610.21121v1",
+    "visual_url": "stream.html",
+    "priority": "01 · Interactive ready"
+  },
+  {
+    "title": "One cell can contain several things",
+    "idea": "Project colored splats onto three planes. Compare mean pooling with a toy multi-slot assignment and occupancy-controlled decoding.",
+    "controls": "Collision density, slots per cell, attention temperature, occupancy threshold and candidate cap; planned PNG/GIF.",
+    "misconception": "One pooled feature preserves every overlapping primitive, or adaptive output counts are unlimited.",
+    "connection": "TriFold · 16 Oct 2026. Proposed analytic pooling illustration, no learned encoder or generated scene.",
+    "audience": "3D artists and ML engineers",
+    "status": "Proposed",
+    "url": "https://arxiv.org/abs/2610.23050v1",
+    "priority": "02 · Proposed"
+  },
+  {
+    "title": "All the words can be present—and still be wrong",
+    "idea": "Drag colored layout boxes and compare exact-string accuracy with multiset OCR recall on a deliberately reordered sentence.",
+    "controls": "Text, line breaks, duplicate/extra words, canvas ratio, coordinate system and box overlap; planned PNG/GIF.",
+    "misconception": "A high text-coverage score means every word is correct and in the right place.",
+    "connection": "MOSS-Image · 16 Oct 2026. Proposed layout/metric lab; no generated poster or model inference.",
+    "audience": "Designers and ML evaluators",
+    "status": "Proposed",
+    "url": "https://arxiv.org/abs/2610.23374v1",
+    "priority": "03 · Proposed"
+  },
+  {
+    "title": "A box tells the model where. A mask enforces where.",
+    "idea": "Drag a conditioning box over a synthetic image. Compare soft spatial influence with hard compositing and measure outside-region change.",
+    "controls": "Box size/location, influence falloff, hard-mask toggle and restoration stage; planned PNG/GIF.",
+    "misconception": "Bounding-box conditioning guarantees unchanged pixels outside the box.",
+    "connection": "FLUX 3 Image Klein · 15 Oct 2026. Proposed analytic influence field, not measured model leakage.",
+    "audience": "Image editors and creative-tool engineers",
+    "status": "Proposed",
+    "url": "https://bfl.ai/blog/flux-3-image-klein",
+    "priority": "04 · Proposed"
+  },
+  {
+    "title": "An event, a sound, and a preserved voice are different tests",
+    "idea": "Scrub video-event, dialogue, music and Foley lanes. Compare alignment, per-track editability and waveform differences independently.",
+    "controls": "Offset in milliseconds, mute/solo, cut position, ambience continuity and regenerated-dialogue toggle; planned PNG/GIF and synthetic audio.",
+    "misconception": "Synchronized audio is necessarily editable, or preserved dialogue means identical samples.",
+    "connection": "Instant Soundtracks · 15 Oct; Mirelo SFX 2.0 · 14 Oct 2026. Proposed synthetic timeline; no vendor outputs.",
+    "audience": "Filmmakers and sound designers",
+    "status": "Proposed",
+    "url": "https://mirelo.ai/blog/mirelo-sfx-2-0",
+    "priority": "05 · Proposed"
+  },
+  {
+    "title": "Less uncertainty does not guarantee a better answer",
+    "idea": "Track categorical predictions through refinement, showing entropy and correctness separately, including a confidently wrong trajectory.",
+    "controls": "Residual strength, contraction target, policy refresh interval, shift and update size; planned PNG/GIF.",
+    "misconception": "Entropy contraction proves correctness, or system throughput isolates a training-method improvement.",
+    "connection": "ORL · 14 Oct 2026. Proposed synthetic dynamics; not an ORL training or speed reproduction.",
+    "audience": "ML engineers",
+    "status": "Proposed",
+    "url": "https://arxiv.org/abs/2610.20687v1",
+    "priority": "06 · Proposed"
+  },
+  {
+    "title": "Spend detail on recent frames",
+    "idea": "Pack recent and older frame tiles into different-resolution memory buckets while tracking identity reference and lip timing.",
+    "controls": "History length, patch scale by age, chunk boundary, detail frequency and audio offset; planned PNG/GIF.",
+    "misconception": "Bounded visual memory guarantees unlimited identity consistency, or fewer model calls equal proportional end-to-end speedup.",
+    "connection": "Kandinsky S2V · 13 Oct 2026. Proposed memory schematic; no generated avatar.",
+    "audience": "Filmmakers and video-model engineers",
+    "status": "Proposed",
+    "url": "https://arxiv.org/abs/2610.19290v1",
+    "priority": "07 · Proposed"
+  },
+  {
+    "title": "The right token can be the wrong next step",
+    "idea": "Show a commit-order tree and fresh target verification, counting both forward batches and candidate states.",
+    "controls": "Branch width, stale/fresh shift, temperature and shared sampling noise; planned PNG/GIF.",
+    "misconception": "A correct token at the wrong position is an acceptable draft, or fewer forward calls means less total work.",
+    "connection": "SPOT · 15 Oct 2026. Proposed synthetic categorical verifier. Exactness excludes the paper's approximate-cache transfer rows.",
+    "audience": "ML engineers and creative-assistant builders",
+    "status": "Proposed",
+    "url": "https://arxiv.org/abs/2610.22543v1",
+    "priority": "08 · Proposed"
+  }
+]
