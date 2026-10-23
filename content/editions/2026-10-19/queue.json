@@ -7,10 +7,57 @@
     "connection": "ResStreamGS · 15 Oct 2026. Implemented analytic scene. Known synthetic trajectories rank updates; not its learned probe, training, codec or mobile benchmark. Record counts are not compressed bytes.",
     "audience": "3D artists and graphics/ML engineers",
     "status": "Interactive ready",
-    "recommendation": "Best pairing this week. A visible failure you can cause, diagnose and fix.",
+    "recommendation": "Existing weekly kit remains ready; retained while new topics await implementation.",
     "url": "https://arxiv.org/abs/2610.21121v1",
     "visual_url": "stream.html",
     "priority": "01 · Interactive ready"
+  },
+  {
+    "title": "Freeze time. Move the camera.",
+    "idea": "A colored Gaussian scene with fixed background splats and moving foreground splats; separate panels reveal static aggregation and dynamic interpolation.",
+    "controls": "Independent time and camera-orbit sliders; Static/dynamic probability threshold; Velocity-arrow display; Interpolation amount and occlusion overlay; planned PNG/GIF export in light, minimal theme.",
+    "misconception": "A plausible generated video already contains an explicit, reusable 4D scene.",
+    "connection": "SplatFlux · 20 Oct 2026. A shared decoder converts observed or generated video latents into 4D Gaussians, separating static structure from moving primitives. Motion interpolation supports changing time and viewpoint without rerunning a network at each timestamp. Synthetic analytic Gaussian demonstration, not SplatFlux inference or recovered geometry.",
+    "audience": "3D artists and graphics/ML engineers",
+    "status": "Proposed",
+    "recommendation": "Best new research-to-visual pairing: static/dynamic representation and independent time/camera controls. Proposed, not implemented.",
+    "url": "https://arxiv.org/abs/2610.28257v1",
+    "priority": "02 · Proposed"
+  },
+  {
+    "title": "The edit happened — but did it stay?",
+    "idea": "A small animated scene with requested-state, observed-state and preservation lanes, highlighting missed, delayed and reverted changes.",
+    "controls": "Move instruction arrivals along a timeline; Choose target object and requested appearance; Adjust response lag and retention failure; Toggle visual quality versus edit success; planned PNG/GIF export in light, minimal theme.",
+    "misconception": "High visual quality implies instruction compliance.",
+    "connection": "StreamEval · 20 Oct 2026. New benchmark for evolving instructions and preservation during streaming video, beyond scoring completed clips. Analytic state-machine teaching demo, not a StreamEval run or model output.",
+    "audience": "Creative video practitioners and ML engineers",
+    "status": "Proposed",
+    "recommendation": "Useful counterpart to vendor demos: execution and preservation are separate.",
+    "url": "https://arxiv.org/abs/2610.28402v1",
+    "priority": "03 · Proposed"
+  },
+  {
+    "title": "A wall needs fewer splats than leaves",
+    "idea": "Render a synthetic scene containing broad flat regions and fine details, compare which colored ellipses survive truncation, and plot error against budget.",
+    "controls": "Gaussian budget from 0.1% to 100%; Opacity-only versus complexity-aware ranking; Complexity heatmap; Bandwidth and current transfer time; planned PNG/GIF export in light, minimal theme.",
+    "misconception": "Keep the most opaque Gaussians and every region degrades fairly.",
+    "connection": "KoalaGS · 20 Oct 2026. Complexity-aware allocation and importance ordering keep a single trained Gaussian scene useful when only a prefix of its primitives is rendered. Analytic ranking demonstration; not trained KoalaGS, not its measured quality curve.",
+    "audience": "3D artists and graphics/ML engineers",
+    "status": "Proposed",
+    "recommendation": "A budget/error lesson that extends the existing scene-streaming lab.",
+    "url": "https://arxiv.org/abs/2610.28615v1",
+    "priority": "04 · Proposed"
+  },
+  {
+    "title": "Generating pieces does not mean receiving them early",
+    "idea": "Separate audio generation, decoding, buffering and playback on colored lanes. Contrast Phonon’s 80 ms latent frames with application buffering and Ming’s documented whole-waveform response.",
+    "controls": "Latent steps, decode chunk size, buffer policy, waveform length and first-playable-sample marker; planned PNG/GIF.",
+    "misconception": "A streaming HTTP flag guarantees incremental speech playback or exposes every model task.",
+    "connection": "Phonon v0.4.0 runtime · 20 Oct 13:36 UTC; Eleven Realtime announcements · 20/21 Oct; Ming serving limitation retained. Compare incremental latent generation, waveform decoding, transport and playback. Proposed analytic timeline, not measured latency.",
+    "audience": "Voice creators and application engineers",
+    "status": "Proposed",
+    "url": "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.0",
+    "priority": "05 · Proposed"
   },
   {
     "title": "Two velocities, two very different meanings",
@@ -20,9 +67,20 @@
     "connection": "FluidGen · 19 Oct 2026 UTC. Proposed numerical teaching model; no FluidGen inference or reproduction.",
     "audience": "VFX artists and ML engineers",
     "status": "Proposed",
-    "recommendation": "Best next deep visual: connects the requested fluid-dynamics depth to fresh filmmaking research.",
+    "recommendation": "Retained deep fluid-dynamics proposal; no new FluidGen release found.",
     "url": "https://arxiv.org/abs/2610.25660",
-    "priority": "02 · Proposed"
+    "priority": "06 · Proposed"
+  },
+  {
+    "title": "An empty first frame cannot show the effect",
+    "idea": "Scrub a transparent-visible-transparent effect and shift the visible reference to the conditioning boundary before restoring the original phase.",
+    "controls": "Visible reference, phase offset, alpha ramp, timeline and checkerboard/colored background; planned PNG/GIF.",
+    "misconception": "A transparent starting frame provides an appearance reference, or a four-step text-video result applies to image-conditioned sampling.",
+    "connection": "Wan-Alpha++ · paper 19 Oct; availability corrected 23 Oct. Ordinary RGBA I2V adapters/code are public; specialized effect weights remain pending. Proposed analytic alpha/phase/compositing lab, not model inference.",
+    "audience": "Compositors and video-model engineers",
+    "status": "Proposed",
+    "url": "https://arxiv.org/abs/2610.26189",
+    "priority": "07 · Proposed"
   },
   {
     "title": "The same rectangle can face two different ways",
@@ -33,61 +91,6 @@
     "audience": "Directors and video-model engineers",
     "status": "Proposed",
     "url": "https://arxiv.org/abs/2610.26801",
-    "priority": "03 · Proposed"
-  },
-  {
-    "title": "An empty first frame cannot show the effect",
-    "idea": "Scrub a transparent-visible-transparent effect and shift the visible reference to the conditioning boundary before restoring the original phase.",
-    "controls": "Visible reference, phase offset, alpha ramp, timeline and checkerboard/colored background; planned PNG/GIF.",
-    "misconception": "A transparent starting frame provides an appearance reference, or a four-step text-video result applies to image-conditioned sampling.",
-    "connection": "Wan-Alpha++ · 19 Oct 2026. Proposed analytic alpha/phase/compositing lab; new I2V weights not verified.",
-    "audience": "Compositors and video-model engineers",
-    "status": "Proposed",
-    "url": "https://arxiv.org/abs/2610.26189",
-    "priority": "04 · Proposed"
-  },
-  {
-    "title": "Generating pieces does not mean receiving them early",
-    "idea": "Put latent generation, audio decoding, buffering and playable audio on separate colored lanes. Compare incremental output with a complete-waveform response.",
-    "controls": "Latent steps, decode chunk size, buffer policy, waveform length and first-playable-sample marker; planned PNG/GIF.",
-    "misconception": "A streaming HTTP flag guarantees incremental speech playback or exposes every model task.",
-    "connection": "Ming-3.0 TTS: code 19 Oct, Tiny serving documentation 20 Oct. SGLang-Omni documents a whole-waveform response even with stream=true. Proposed analytic timeline, not latency measurements.",
-    "audience": "Voice creators and application engineers",
-    "status": "Proposed",
-    "url": "https://sgl-project.github.io/sglang-omni/cookbook/ming3_tts.html",
-    "priority": "05 · Proposed"
-  },
-  {
-    "title": "One cell can contain several things",
-    "idea": "Project colored splats onto three planes. Compare mean pooling with a toy multi-slot assignment and occupancy-controlled decoding.",
-    "controls": "Collision density, slots per cell, attention temperature, occupancy threshold and candidate cap; planned PNG/GIF.",
-    "misconception": "One pooled feature preserves every overlapping primitive, or adaptive output counts are unlimited.",
-    "connection": "TriFold · 16 Oct 2026. Proposed analytic pooling illustration, no learned encoder or generated scene.",
-    "audience": "3D artists and ML engineers",
-    "status": "Proposed",
-    "url": "https://arxiv.org/abs/2610.23050v1",
-    "priority": "06 · Proposed"
-  },
-  {
-    "title": "All the words can be present—and still be wrong",
-    "idea": "Drag colored layout boxes and compare exact-string accuracy with multiset OCR recall on a deliberately reordered sentence.",
-    "controls": "Text, line breaks, duplicate/extra words, canvas ratio, coordinate system and box overlap; planned PNG/GIF.",
-    "misconception": "A high text-coverage score means every word is correct and in the right place.",
-    "connection": "MOSS-Image · 16 Oct 2026. Proposed layout/metric lab; no generated poster or model inference.",
-    "audience": "Designers and ML evaluators",
-    "status": "Proposed",
-    "url": "https://arxiv.org/abs/2610.23374v1",
-    "priority": "07 · Proposed"
-  },
-  {
-    "title": "An event, a sound, and a preserved voice are different tests",
-    "idea": "Scrub video-event, dialogue, music and Foley lanes. Compare alignment, per-track editability and waveform differences independently.",
-    "controls": "Offset in milliseconds, mute/solo, cut position, ambience continuity and regenerated-dialogue toggle; planned PNG/GIF and synthetic audio.",
-    "misconception": "Synchronized audio is necessarily editable, or preserved dialogue means identical samples.",
-    "connection": "Instant Soundtracks · 15 Oct; Mirelo SFX 2.0 · 14 Oct 2026. Proposed synthetic timeline; no vendor outputs.",
-    "audience": "Filmmakers and sound designers",
-    "status": "Proposed",
-    "url": "https://mirelo.ai/blog/mirelo-sfx-2-0",
     "priority": "08 · Proposed"
   }
 ]

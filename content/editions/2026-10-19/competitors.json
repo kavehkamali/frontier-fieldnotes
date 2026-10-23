@@ -1,5 +1,53 @@
 [
   {
+    "title": "Higgsfield · Kling 4.0 and API access",
+    "date": "21 Oct platform · 23 Oct API catalog",
+    "summary": "The dated release adds multi-keyframe generation, references and finished-clip editing. Its changelog and API catalog specify 3–30 seconds at 720p or 1080p.",
+    "implication": "An undated intro page also claims native 4K/HDR; that conflicts with the dated specs. Motion/consistency gains are vendor claims, and launch discounts are temporary. No output or cost test.",
+    "url": "https://higgsfield.ai/creator-hub/changelog",
+    "primary_urls": [
+      "https://higgsfield.ai/creator-hub/changelog",
+      "https://open.higgsfield.ai/models/kling-video/v4.0/text-to-video/playground",
+      "https://higgsfield.ai/kling-4-0-intro"
+    ]
+  },
+  {
+    "title": "OpenArt · Kling 4.0 now listed",
+    "date": "Observed 23 Oct 2026 · integration date unknown",
+    "summary": "The current English model page and public home list Kling 4.0, with 3–30-second HD output, up to 10 keyframes and 15 references.",
+    "implication": "Compare the host controls and plan access. Older indexed pages advertised 4K; the current English instructions specify 720p/1080p. The 50% offer through November 20 is temporary; no generation was tested.",
+    "url": "https://openart.ai/ai-model/kling-4-0/",
+    "primary_urls": [
+      "https://openart.ai/ai-model/kling-4-0/",
+      "https://openart.ai/home"
+    ]
+  },
+  {
+    "title": "Higgsfield · Content Factory",
+    "date": "22 Oct 2026 · release",
+    "summary": "Topic-to-video workflow covers scripts, characters, scenes, voiceover and edit; 15-second to five-minute projects and one to four episodes per run. Individual voice lines can be regenerated.",
+    "implication": "Compare selective edits and rerender cost against OpenArt Director. Assembled project duration is not native model clip length; plan access, output quality and credits were not tested.",
+    "url": "https://higgsfield.ai/creator-hub/changelog",
+    "primary_urls": [
+      "https://higgsfield.ai/creator-hub/changelog",
+      "https://higgsfield.ai/content-factory"
+    ]
+  },
+  {
+    "title": "ElevenLabs · Realtime Mini/Max and Translation alpha",
+    "date": "19 Oct changelog group · 20/21 Oct announcements · discovered 23 Oct",
+    "summary": "Realtime Mini/Max package cascaded speech-agent components; Translation adds live multilingual speech through an enterprise alpha. Documentation dates and blog dates differ, so these are not claimed as October 23 launches.",
+    "implication": "Realtime API is WebSocket-only and needs browser PCM audio handling. Independent AA results support scoped speed/reasoning claims, not universal superiority. Translation quality and latency were not independently verified.",
+    "url": "https://elevenlabs.io/blog/realtime",
+    "primary_urls": [
+      "https://elevenlabs.io/blog/realtime",
+      "https://elevenlabs.io/blog/realtime-translation",
+      "https://elevenlabs.io/docs/changelog",
+      "https://elevenlabs.io/docs/eleven-agents/guides/openai-realtime-compatibility",
+      "https://artificialanalysis.ai/speech-to-speech"
+    ]
+  },
+  {
     "title": "Ming-3.0 TTS · public inference and serving path",
     "date": "19 Oct code · 20 Oct 03:27 UTC Tiny serving docs · discovered 20 Oct",
     "summary": "Ming releases task-specific voice design, reference-voice synthesis and expressive delivery code; Tiny adds dialogue. September 24 checkpoint uploads predate this code release.",
@@ -58,14 +106,14 @@
   },
   {
     "title": "Cartesia · previously reported Sonic sunset is imminent",
-    "date": "July 2026 notice · sunset after 20 Oct; rechecked 19 Oct",
+    "date": "July notice · stated deadline after 20 Oct · rechecked 23 Oct",
     "summary": "Current changelog still names Sonic-2, Sonic-turbo and Sonic-3-2025-10-27 for retirement after October 20.",
-    "implication": "Reminder for affected integrations, not new news. Exact cutoff time/timezone is unspecified; no account use inspected.",
+    "implication": "The stated deadline has passed; shutdown enforcement and exact cutoff time remain unverified. Retained migration reminder, not a confirmed outage.",
     "url": "https://docs.cartesia.ai/changelog/2026"
   },
   {
     "title": "Higgsfield · previously reported API migration",
-    "date": "Deadline 31 Oct 2026 · rechecked 19 Oct; notice date unknown",
+    "date": "Deadline 31 Oct 2026 · rechecked 23 Oct; notice date unknown",
     "summary": "Official status banner still requests migration from platform.higgsfield.ai to api.higgsfield.ai.",
     "implication": "If affected, check application, SDK and environment base URLs. Last-updated status time is not the notice publication time.",
     "url": "https://status.higgsfield.ai/"

@@ -1,5 +1,34 @@
 [
   {
+    "title": "Phonon release discussion: the 31M and 40M licenses differ",
+    "date": "20 Oct 2026 · exact UTC post time unverified",
+    "summary": "A self-described Gradium team post announces local TTS; replies mix subjective praise with license confusion. No controlled independent evaluation.",
+    "implication": "Primary sources verify the first stable runtime at October 20, 13:36:55 UTC, after the previous review. 31M English is Apache 2.0; 40M variants are gated and CC BY-NC 4.0. Model uploads predate the runtime release.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xaw2vt/phonon_is_now_opensource_31m_and_40m_tts_models/",
+    "primary_urls": [
+      "https://gradium.ai/blog/release-phonon-open-weight",
+      "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.0",
+      "https://huggingface.co/gradium/phonon-31m-en",
+      "https://huggingface.co/gradium/phonon-40m-en",
+      "https://huggingface.co/gradium/phonon-31m-en/commit/797ce9628a71157eaea578985e3b60fe78c124bc"
+    ]
+  },
+  {
+    "title": "KittenTTS 2: a new discussion, an older model and a useful new fix",
+    "date": "22 Oct 2026 · exact UTC post time unverified",
+    "summary": "Promotional headline claims open-source SOTA; listeners disagree about naturalness. Self-reported comparisons lack a reproducible protocol.",
+    "implication": "Code history places integration on October 2. The material new change is October 21 silence-token sampling correction, followed by a demo on October 22. Package and weight licenses differ; no blanket open-source or SOTA label.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xc48or/kittentts_2_new_opensource_sota_158_bit_tts/",
+    "primary_urls": [
+      "https://github.com/KittenML/KittenTTS/commit/36ef3090ca1e59122a81fc23be4a659a502b9d55",
+      "https://github.com/KittenML/KittenTTS/commit/64baa6a675dd3e7725a44676796c36f58b95ede8",
+      "https://github.com/KittenML/KittenTTS/commit/afd9dfda7ffdca35dd0151b149c221140c80ec3f",
+      "https://huggingface.co/KittenML/kitten-tts-2/raw/main/README.md",
+      "https://huggingface.co/KittenML/kitten-tts-2/blob/main/LICENSE.md",
+      "https://huggingface.co/KittenML/kitten-tts-2/commit/c93cb7c271baa51d9ae8204d5277988906f235a2"
+    ]
+  },
+  {
     "title": "Ming TTS delivery-control and leaderboard discussions",
     "date": "20 Oct 2026 · exact UTC post times unverified",
     "summary": "Two public posts discuss the vendor demo and a leaderboard claim. Neither is an independent hands-on evaluation; do not confuse standalone TTS with Ming audio-flash.",

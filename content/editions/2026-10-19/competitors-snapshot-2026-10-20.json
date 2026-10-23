@@ -1,0 +1,87 @@
+[
+  {
+    "title": "Ming-3.0 TTS · public inference and serving path",
+    "date": "19 Oct code · 20 Oct 03:27 UTC Tiny serving docs · discovered 20 Oct",
+    "summary": "Ming releases task-specific voice design, reference-voice synthesis and expressive delivery code; Tiny adds dialogue. September 24 checkpoint uploads predate this code release.",
+    "implication": "The new SGLang-Omni recipe returns one finished waveform even with stream=true. Treat it as a serving option, not proof of incremental playback, full reference-task parity or measured speed.",
+    "url": "https://sgl-project.github.io/sglang-omni/cookbook/ming3_tts.html",
+    "primary_urls": [
+      "https://github.com/inclusionAI/Ming-3.0-tts/commit/14c6e082161b7d8263909cfba2829661cc5cedc2",
+      "https://huggingface.co/inclusionAI/Ming-3.0-tts-0.5B",
+      "https://huggingface.co/inclusionAI/Ming-3.0-tts-tiny",
+      "https://huggingface.co/inclusionAI/Ming-3.0-tts-tiny/commit/b170071302cb0b06435ea784787b119f40a08be8",
+      "https://sgl-project.github.io/sglang-omni/cookbook/ming3_tts.html",
+      "https://github.com/inclusionAI/Ming-3.0-tts/blob/e999c39fa676722aaa9ea29b5aa19a90525b271f/ming_tiny/task_protocol.py"
+    ]
+  },
+  {
+    "title": "Higgsfield · FLUX 3 Video Upscaler build updated",
+    "date": "15 Oct 2026 · discovered 19 Oct · retained",
+    "summary": "A new upscaler build automatically replaces the previous one. Higgsfield attributes detail improvements to BFL and claims shorter processing and fewer credits.",
+    "implication": "Retest matching footage before assuming a quality/cost gain. Exact rates are shown before generation; no measured comparison or output test here.",
+    "url": "https://higgsfield.ai/creator-hub/changelog"
+  },
+  {
+    "title": "OpenArt · Mirelo SFX 2.0 listed",
+    "date": "Observed 19 Oct 2026 · exact integration date unknown",
+    "summary": "Official model page and directory now list Mirelo SFX 2.0 for video sound replacement and dialogue-focused output. The underlying Mirelo release is October 14.",
+    "implication": "A new listed option for finishing audio inside OpenArt. Credits, plan availability and output were not tested; don't infer the integration date from this observation.",
+    "url": "https://openart.ai/ai-model/mirelo-sfx-2-0/"
+  },
+  {
+    "title": "Runway · Mirelo SFX 2.0 and Drama 3 in MCP",
+    "date": "15 Oct / 14 Oct 2026 · paid plans",
+    "summary": "Runway dates Mirelo SFX 2.0 integration October 15, producing a separate audio track. Drama 3 directed voiceovers arrived October 14; BiRefNet v2 background removal October 15.",
+    "implication": "These are access/integration changes, not new underlying model launches. No request, timing or sound-quality test was performed.",
+    "url": "https://runway.com/changelog"
+  },
+  {
+    "title": "ElevenLabs · Instant Soundtracks",
+    "date": "15 Oct 2026 launch · page updated 19 Oct",
+    "summary": "Video-conditioned scoring and SFX can be exported as separate tracks. The October 19 page edit does not establish a second feature release.",
+    "implication": "A useful counterpart to Mirelo's audio replacement. Test synchronization separately from sound quality; no independent comparison here.",
+    "url": "https://elevenlabs.io/blog/introducing-instant-soundtracks"
+  },
+  {
+    "title": "ComfyUI · MOSS support and crash fix",
+    "date": "18 Oct v0.42.0 · 19 Oct v0.42.1",
+    "summary": "Version 0.42 adds MOSS-image support and a Krea 3 partner node. The next patch fixes a MOSS-template crash for some users.",
+    "implication": "Model access and integration maturity are separate checks. No local upgrade or generation run performed.",
+    "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.1"
+  },
+  {
+    "title": "Adobe · Lightroom mobile gets Open Eyes and Generative Expand",
+    "date": "19 Oct 2026 · announcement",
+    "summary": "Adobe introduces a blink-correction quick action and image outpainting on mobile. Open Eyes can use other library photos to guide eye appearance.",
+    "implication": "Useful for portrait repair and reframing assets. Vendor-described availability and quality; no image test. This is a workflow release, not a comparative SOTA result.",
+    "url": "https://blog.adobe.com/en/publish/2026/10/19/give-your-photos-a-second-chance-with-open-eyes-in-lightroom-on-mobile"
+  },
+  {
+    "title": "Cartesia · previously reported Sonic sunset is imminent",
+    "date": "July 2026 notice · sunset after 20 Oct; rechecked 19 Oct",
+    "summary": "Current changelog still names Sonic-2, Sonic-turbo and Sonic-3-2025-10-27 for retirement after October 20.",
+    "implication": "Reminder for affected integrations, not new news. Exact cutoff time/timezone is unspecified; no account use inspected.",
+    "url": "https://docs.cartesia.ai/changelog/2026"
+  },
+  {
+    "title": "Higgsfield · previously reported API migration",
+    "date": "Deadline 31 Oct 2026 · rechecked 19 Oct; notice date unknown",
+    "summary": "Official status banner still requests migration from platform.higgsfield.ai to api.higgsfield.ai.",
+    "implication": "If affected, check application, SDK and environment base URLs. Last-updated status time is not the notice publication time.",
+    "url": "https://status.higgsfield.ai/"
+  },
+  {
+    "title": "Legacy Luma Ray 2 nodes · October 24 endpoint removal",
+    "date": "02 Oct 2026 Comfy change · discovered 14 Oct; removal 24 Oct · prior notice retained",
+    "summary": "Comfy's merged deprecation change and legacy-node guides say the Ray 2 endpoints used by its old image/text-to-video nodes are removed October 24. The guides point to separate Ray 3.2 nodes.",
+    "implication": "Inspect saved workflows for legacy nodes before the deadline. This is Comfy's integration guidance; Luma-owned confirmation and a drop-in migration were not verified. Do not infer all Luma services are ending.",
+    "url": "https://docs.comfy.org/tutorials/partner-nodes/luma/luma-image-to-video"
+  },
+  {
+    "title": "Hume · TTS and EVI API sunset",
+    "date": "02 Oct 2026 · notice; discovered 12 Oct · prior notice retained",
+    "summary": "Hume says TTS and EVI API access ends 13 November 2026 at 12:01 a.m. EST. Account data will be permanently deleted after 13 November.",
+    "implication": "An older notice missing from the previous review, not a new launch. Workflows using these APIs need a replacement and a plan for needed account data before the deadline. The notice says both APIs remain fully supported until then.",
+    "url": "https://dev.hume.ai/voice/changelog"
+  }
+]

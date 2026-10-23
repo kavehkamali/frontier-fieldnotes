@@ -7,3 +7,5 @@ Two prioritized lists: eight frontier entries in research.json and eight fundame
 The publishing kit contains casual LinkedIn/X drafts, a Medium article, original PNG/GIF/MP4 and the interactive. Review drafts before posting. Earlier editions and human edits are preserved.
 
 Daily update: [20 October research delta](delta-2026-10-20.md) adds three video papers and Ming TTS serving guidance. Original lists are preserved in `*-snapshot-2026-10-19.json`; the publishing drafts and visual are unchanged.
+
+Daily update: [23 October delta](delta-2026-10-23.md) and [coverage](coverage-2026-10-23.md). October 20 lists are preserved as snapshots; new visual proposals and an availability correction update the watchlists.
