@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-26",
+  "label": "26 OCT 2026",
+  "number": "005",
+  "title": "Equal steps. Unequal changes.",
+  "archive": "edition-005.zip",
+  "brief_url": "https://github.com/kavehkamali/frontier-fieldnotes/blob/main/content/editions/2026-10-26/weekly-brief.md",
+  "stories": [
+    {
+      "id": "semantic",
+      "label": "This week · LLaCO & the diffusion clock",
+      "alt": "Synthetic token vectors, exact rank changes and equal versus adaptive time allocation",
+      "caption": "Original synthetic geometry: smooth paths can hide abrupt rank changes. Eight-second silent loop; no trained embeddings, text generation or LLaCO performance claim.",
+      "narration": "assets/semantic-video-script.md"
+    }
+  ],
+  "interactive_files": [
+    "semantic.html",
+    "semantic.css",
+    "semantic.mjs",
+    "semantic-math.mjs",
+    "favicon.svg",
+    "vendor/gifenc.esm.js",
+    "vendor/gifenc-LICENSE.md"
+  ]
+}

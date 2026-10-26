@@ -1,0 +1,34 @@
+[
+  {
+    "title": "FastH3 Omni announcement and local workflow discussion",
+    "date": "20 Oct 2026 · indexed calendar date; exact UTC post time unverified",
+    "summary": "Author announcement in r/comfyui links the release and workflow. Replies include self-reported local timings and image-quality complaints; they are uncontrolled anecdotes, not evidence of quality parity or a hardware-normalized benchmark.",
+    "implication": "Primary sources verify the October 20 announcement, eight-call design and scoped eight-GB200 evaluation. HF file history predates that announcement. No consumer-GPU headline extrapolated from server timings.",
+    "url": "https://www.reddit.com/r/comfyui/comments/1xb2xz6/fasth3_omni_is_out_with_day0_comfyui_support_open/",
+    "primary_urls": [
+      "https://haoailab.com/blogs/fastvideo-omniref-update/",
+      "https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-V1"
+    ]
+  },
+  {
+    "title": "Phonon follow-up: new runtime releases, not new voices",
+    "date": "20 Oct community discovery retained; primary releases 24–25 Oct 2026",
+    "summary": "The earlier LocalLLaMA announcement remains a discovery pointer. No fresh Reddit thread independently validating v0.4.1/v0.4.2 was established; earlier comments are not evidence for the new versions.",
+    "implication": "Repository follow-up verifies a normalization API and runtime compatibility changes after Friday's review. The release notes say model bundles are unchanged.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xaw2vt/phonon_is_now_opensource_31m_and_40m_tts_models/",
+    "primary_urls": [
+      "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.1",
+      "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.2"
+    ]
+  },
+  {
+    "title": "Quake 3 splat-map code goes public",
+    "date": "25 Oct 2026 · indexed calendar date; exact UTC post time unverified",
+    "summary": "The creator's follow-up says its PlayCanvas port and splat-map workflow are now public. A public repository exists; this remains work in progress and is not generative-3D research or a performance benchmark.",
+    "implication": "A useful teaching lead: rendered Gaussian appearance and baked voxel collision are separate representations. The port requires user-supplied Quake assets and reports unfinished bot behavior. No gameplay or performance test was run.",
+    "url": "https://www.reddit.com/r/GaussianSplatting/comments/1xext2v/quake_3_with_gaussian_splatting_follow_up_post/",
+    "primary_urls": [
+      "https://github.com/Loppas/playcanvas-quake3"
+    ]
+  }
+]

@@ -1,0 +1,99 @@
+[
+  {
+    "title": "A smooth path can hide a sudden identity change.",
+    "idea": "Project a seeded high-dimensional token vocabulary onto the source/noise plane while calculating rank in the original dimension. Expose pairwise crossings and compare geometric with toy semantic time allocation.",
+    "controls": "Dimension 8, 32, 128 or 512; vocabulary size; seed; noising progress; linear versus spherical path; step budget with equal/adaptive grids shown together; shrink-without-noise preset; PNG/GIF export.",
+    "misconception": "Equal geometric steps erase equal semantic information, or nearest-token changes under shrinking norms always imply directional identity loss.",
+    "connection": "LLaCO · 23 Oct 2026. Cosine similarity, spherical interpolation and rank statistics are older foundations. Implemented synthetic unit-vector lab with a toy rank schedule; not pretrained embeddings, the paper’s fitted 8B calibration or language generation.",
+    "audience": "ML engineers and technically curious creators",
+    "status": "Interactive ready",
+    "recommendation": "Recommended weekly pairing with LLaCO. The original synthetic lab makes token competition and time allocation visible; it is not model inference.",
+    "url": "https://arxiv.org/abs/2610.32604v1",
+    "priority": "01 · Interactive ready",
+    "visual_url": "semantic.html"
+  },
+  {
+    "title": "Eight calls can contain thirty-two updates",
+    "idea": "Animate a fine trajectory grid grouped into fused model calls, then separate model evaluation time from encoding and decoding overhead.",
+    "controls": "Fine-grid resolution; predictions per call; model-call cost; fixed overhead; teacher/student approximation error; planned PNG/GIF export.",
+    "misconception": "A sampling step always equals one network call, or a 50-to-8 evaluation reduction guarantees the same speedup on every device.",
+    "connection": "FastH3 Omni announcement · 20 Oct 2026. New coverage of fused PDD predictions and complete-serving comparisons. Analytic schematic, not trained FastH3 or its measured latency.",
+    "audience": "Video creators and ML engineers",
+    "status": "Proposed",
+    "recommendation": "Strong alternative for a mechanism-first follow-up: make compute units visible and keep quality uncertainty explicit.",
+    "url": "https://haoailab.com/blogs/fastvideo-omniref-update/",
+    "priority": "02 · Proposed"
+  },
+  {
+    "title": "Following a sequence and matching a population are different jobs.",
+    "idea": "Move colored generated samples toward reference feature clouds while separately preserving paired continuation arrows. Display MMD and continuation errors as gradient weights vary.",
+    "controls": "Kernel bandwidth; paired-versus-distribution loss weight; sample diversity; history perturbation; toy optimization step; PNG/GIF planned.",
+    "misconception": "A population that looks right guarantees the correct next event for a particular history, or stronger paired loss alone prevents rollout drift.",
+    "connection": "Direct Forcing · 22 Oct 2026; maximum mean discrepancy is an older foundation. Analytic feature-space toy, not video training or reported VBench reproduction.",
+    "audience": "Video-model engineers and advanced ML learners",
+    "status": "Proposed",
+    "recommendation": "Strong follow-up to explain why training objectives complement each other.",
+    "url": "https://arxiv.org/abs/2610.30861v1",
+    "priority": "03 · Proposed"
+  },
+  {
+    "title": "The shadow belongs to the edit too.",
+    "idea": "A small composited scene links object, shadow, reflection and background layers. An object-only mask leaves a ghost; an interaction mask updates connected effects.",
+    "controls": "Object position; light direction; shadow/reflection toggles; mask dilation; effect-aware removal; PNG/GIF planned.",
+    "misconception": "Removing an object is equivalent to removing only its visible pixels, or inpainted background reveals the hidden truth.",
+    "connection": "UniVOE · 22 Oct paper, 21 Oct weight files. Compositing and dependency-aware editing are the foundations; demonstration is synthetic and does not run UniVOE.",
+    "audience": "Compositors, filmmakers and video-model engineers",
+    "status": "Proposed",
+    "recommendation": "Most immediately legible filmmaking lesson; include effects beyond a simple shadow.",
+    "url": "https://arxiv.org/abs/2610.31641v1",
+    "priority": "04 · Proposed"
+  },
+  {
+    "title": "Freeze time. Move the camera.",
+    "idea": "A colored Gaussian scene with fixed background splats and moving foreground splats; separate panels reveal static aggregation and dynamic interpolation.",
+    "controls": "Independent time and camera-orbit sliders; Static/dynamic probability threshold; Velocity-arrow display; Interpolation amount and occlusion overlay; planned PNG/GIF export in light, minimal theme.",
+    "misconception": "A plausible generated video already contains an explicit, reusable 4D scene.",
+    "connection": "SplatFlux · 20 Oct 2026. A shared decoder converts observed or generated video latents into 4D Gaussians, separating static structure from moving primitives. Motion interpolation supports changing time and viewpoint without rerunning a network at each timestamp. Synthetic analytic Gaussian demonstration, not SplatFlux inference or recovered geometry.",
+    "audience": "3D artists and graphics/ML engineers",
+    "status": "Proposed",
+    "recommendation": "Retained October 23 proposal, not implemented or a new October 26 paper. Useful next 3D lesson after the existing streaming lab.",
+    "url": "https://arxiv.org/abs/2610.28257v1",
+    "priority": "05 · Proposed"
+  },
+  {
+    "title": "Sharp edges do not make an editable scene",
+    "idea": "Zoom an original colored graphic and switch between raster pixels, polygons and Bezier curves. Inspect path grouping separately from object identity and live text.",
+    "controls": "Zoom, curve tolerance, node budget, shape-selection versus object-selection, text-as-outline toggle; planned PNG/GIF export.",
+    "misconception": "An SVG is automatically semantically organized, easily editable typography or a compact file.",
+    "connection": "Ideogram Vector host integration · 23 Oct 2026. Older vector/raster representation foundations applied to a new feature; analytic original artwork, not generated model output.",
+    "audience": "Motion designers and ML engineers",
+    "status": "Proposed",
+    "recommendation": "Useful image-generation counterpart to the deeper 3D lab.",
+    "url": "https://ideogram.ai/models/vector/",
+    "priority": "06 · Proposed"
+  },
+  {
+    "title": "The voice reads a different script",
+    "idea": "Show how typed dates, prices and abbreviations become spoken text before acoustic generation; expose where a voice-quality comparison can hide preprocessing differences.",
+    "controls": "Language; number/date format; abbreviation; normalized-text diff; audio-frame duration; playback buffer; planned PNG/GIF export.",
+    "misconception": "A better voice model automatically fixes the wrong spoken interpretation, or a new runtime release means new model weights.",
+    "connection": "Phonon normalization API · v0.4.1 published 24 Oct; v0.4.2 on 25 Oct. This extends last week's streaming-audio angle with a new preflight feature. Illustrative transformations must be labeled unless tested against the API.",
+    "audience": "Narration creators and application engineers",
+    "status": "Proposed",
+    "recommendation": "Useful small explainer and practical narration checklist; lower priority than the deep weekly interactive.",
+    "url": "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.1",
+    "priority": "07 · Proposed"
+  },
+  {
+    "title": "Change one line. Which assets must change?",
+    "idea": "Build a colored dependency graph for script, actors, shots, voice lines and final edit; highlight downstream invalidation after an edit.",
+    "controls": "Dependency links, changed input, caching policy, retry count, per-node assumed cost; planned PNG/GIF export.",
+    "misconception": "A five-minute assembled film is one five-minute native generation, or every edit requires regenerating everything.",
+    "connection": "Higgsfield Content Factory · 22 Oct; Runway App Studio · 23 Oct 2026. Analytic dependency/caching lesson, not a connection to either paid product.",
+    "audience": "AI filmmakers and creative-tool builders",
+    "status": "Proposed",
+    "url": "https://help.runwayml.com/hc/en-us/articles/56447349336467-Building-apps-with-App-Studio",
+    "priority": "08 · Proposed",
+    "recommendation": "Proposed follow-up; prioritize after the current weekly publishing kit."
+  }
+]

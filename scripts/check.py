@@ -46,6 +46,7 @@ if shutil.which('node'):
  subprocess.run(['node',str(ROOT/'tests/gaussian.test.mjs')],check=True)
  subprocess.run(['node',str(ROOT/'tests/loop-math.test.mjs')],check=True)
  subprocess.run(['node',str(ROOT/'tests/stream-math.test.mjs')],check=True)
+ subprocess.run(['node',str(ROOT/'tests/semantic.test.mjs')],check=True)
 for archive in (DIST/'assets').glob('edition-*.zip'):
  with zipfile.ZipFile(archive) as z:assert z.testzip() is None
 with zipfile.ZipFile(DIST/'assets'/meta['archive']) as z:

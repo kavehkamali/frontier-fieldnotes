@@ -1,29 +1,26 @@
 {
-  "date": "2026-10-19",
-  "label": "19 OCT 2026",
-  "number": "004",
-  "title": "Keep the scene. Send the changes.",
-  "archive": "edition-004.zip",
-  "brief_url": "https://github.com/kavehkamali/frontier-fieldnotes/blob/main/content/editions/2026-10-19/weekly-brief.md",
+  "date": "2026-10-26",
+  "label": "26 OCT 2026",
+  "number": "005",
+  "title": "Equal steps. Unequal changes.",
+  "archive": "edition-005.zip",
+  "brief_url": "https://github.com/kavehkamali/frontier-fieldnotes/blob/main/content/editions/2026-10-26/weekly-brief.md",
   "stories": [
     {
-      "id": "stream",
-      "label": "This week · ResStreamGS & selective updates",
-      "alt": "Reference and cached synthetic Gaussian scenes with update lanes, pixel error and record accounting",
-      "caption": "Original analytic scene. A stationary surface can still change color. Compare position-only and color-aware update rankings; this is not ResStreamGS output or a bandwidth benchmark.",
-      "narration": "assets/stream-video-script.md"
+      "id": "semantic",
+      "label": "This week · LLaCO & the diffusion clock",
+      "alt": "Synthetic token vectors, exact rank changes and equal versus adaptive time allocation",
+      "caption": "Original synthetic geometry: smooth paths can hide abrupt rank changes. Eight-second silent loop; no trained embeddings, text generation or LLaCO performance claim.",
+      "narration": "assets/semantic-video-script.md"
     }
   ],
   "interactive_files": [
-    "stream.html",
-    "stream.css",
-    "stream.mjs",
-    "stream-math.mjs",
-    "gaussian-math.mjs",
+    "semantic.html",
+    "semantic.css",
+    "semantic.mjs",
+    "semantic-math.mjs",
     "favicon.svg",
     "vendor/gifenc.esm.js",
     "vendor/gifenc-LICENSE.md"
-  ],
-  "review_label": "23 OCT 2026",
-  "delta_url": "https://github.com/kavehkamali/frontier-fieldnotes/blob/main/content/editions/2026-10-19/delta-2026-10-23.md"
+  ]
 }

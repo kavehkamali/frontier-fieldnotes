@@ -8,6 +8,11 @@ Focus: 3D Gaussian splatting, video, voice generation, AI filmmaking, diffusion,
 
 ## What is here
 
+- [October 26 weekly edition](content/editions/2026-10-26/weekly-brief.md): eight frontier entries, eight visual ideas and dated competitor changes.
+- [Diffusion-clock lab](https://kavehkamali.github.io/frontier-fieldnotes/semantic.html): explore synthetic token competition, norm decay and adaptive time allocation. Export current settings as PNG/GIF in wide or square format. [Download edition 005](https://kavehkamali.github.io/frontier-fieldnotes/assets/edition-005.zip) for casual LinkedIn/X drafts, a Medium article, original PNG/GIF/MP4 and narration. [Geometry and validation notes](docs/semantic.md).
+
+Earlier editions and labs:
+
 - [October 12 weekly edition](content/editions/2026-10-12/weekly-brief.md): fresh frontier research/features, the graphics queue and a complete new publishing kit.
 - [Periodic 3D motion lab](https://kavehkamali.github.io/frontier-fieldnotes/loop.html): separate shape closure, velocity continuity and camera closure; export your settings as PNG/GIF. [Download edition 003](https://kavehkamali.github.io/frontier-fieldnotes/assets/edition-003.zip).
 
@@ -27,7 +32,7 @@ The previous sampler uses analytic fields, not trained video models. See [numeri
 
 Every weekly edition contains **two lists**: frontier/SOTA candidates and fundamentals worth turning into interactive graphics. Each proposed teaching topic connects to recent research. A dated competitor/community section tracks Higgsfield, OpenArt and relevant peers. Primary sources support technical claims; community posts are discovery leads.
 
-The current weekly edition is October 19, with daily research updates through October 23, 2026. Prior kits, source snapshots and the same-day delta are preserved. It is not an exhaustive benchmark leaderboard. Nothing here claims independent model reproduction or universal SOTA. Robotics and physical AI are excluded from the current agenda.
+The current weekly edition is October 26, 2026, covering October 19–26 and comparing changes with the October 23 review. Prior kits, source snapshots and the same-day delta are preserved. It is not an exhaustive benchmark leaderboard. Nothing here claims independent model reproduction or universal SOTA. Robotics and physical AI are excluded from the current agenda.
 
 ## Run locally
 
@@ -40,7 +45,7 @@ Open http://localhost:8765. No API key, server database or installation is neede
 Canonical content is under `content/editions/`. Each edition’s edition.json selects its stories, media and archive name. To rebuild the dashboard data and its own downloadable kit (without overwriting earlier kits):
 
 ```sh
-python3 scripts/build_content.py --edition 2026-10-12
+python3 scripts/build_content.py --edition 2026-10-26
 python3 scripts/check.py
 ```
 
@@ -59,4 +64,4 @@ Project code and original diagrams: MIT, see LICENSE. Vendored gifenc 1.0.3 is M
 - [Edition004 ·19October](content/editions/2026-10-19/weekly-brief.md): eight frontier items and eight visual ideas.
 - [Selective-update lab](https://kavehkamali.github.io/frontier-fieldnotes/stream.html): compare position-only and color-aware rankings, pixel error and attribute-record counts. [Download kit004](https://kavehkamali.github.io/frontier-fieldnotes/assets/edition-004.zip).
 
-Latest review: [23 October delta](content/editions/2026-10-19/delta-2026-10-23.md) — Kling 4.0, editable filmmaking workflows, streaming video/3D research, voice updates and the Wan-Alpha++ availability correction. [Previous delta](content/editions/2026-10-19/delta-2026-10-20.md).
+Previous review: [23 October delta](content/editions/2026-10-19/delta-2026-10-23.md) — Kling 4.0, editable filmmaking workflows, streaming video/3D research, voice updates and the Wan-Alpha++ availability correction. [Previous delta](content/editions/2026-10-19/delta-2026-10-20.md).

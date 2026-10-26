@@ -1,0 +1,120 @@
+[
+  {
+    "title": "Higgsfield · Ideogram Vector 1.0",
+    "date": "23 Oct 2026 · host integration · newly discovered 26 Oct",
+    "summary": "Adds prompt-to-SVG and image-to-SVG workflows. Official Ideogram documentation confirms editable vector output and separate generation/conversion endpoints.",
+    "implication": "Evaluate path structure and text editability, not just scale sharpness. Examples are vendor-selected; no output or benchmark test. Do not equate the host date with a verified original model-release timestamp.",
+    "url": "https://higgsfield.ai/creator-hub/changelog",
+    "primary_urls": [
+      "https://ideogram.ai/models/vector/",
+      "https://developer.ideogram.ai/api-reference/vectors/image-to-svg"
+    ]
+  },
+  {
+    "title": "Runway · App Studio",
+    "date": "23 Oct 2026 · paid plans · newly discovered 26 Oct",
+    "summary": "Prompt-built hosted creative apps with model selection per generation step and downloadable published source.",
+    "implication": "Build sessions consume credits. Current guide says no delete/unpublish control; restrict audience to stop workspace access. No actual app, cost or reliability test.",
+    "url": "https://runway.com/changelog",
+    "primary_urls": [
+      "https://help.runwayml.com/hc/en-us/articles/56447349336467-Building-apps-with-App-Studio"
+    ]
+  },
+  {
+    "title": "Higgsfield · Kling 4.0 specifications still conflict",
+    "date": "21 Oct platform · 23 Oct API catalog · rechecked 26 Oct",
+    "summary": "Current dated specs remain 3–30 seconds at 720p/1080p with keyframe/reference control and editing. Undated introductory marketing still advertises native 4K/HDR.",
+    "implication": "Retained in-window release, not new October 26 news. Higher resolution and quality claims remain unverified; discounts are temporary.",
+    "url": "https://higgsfield.ai/creator-hub/changelog",
+    "primary_urls": [
+      "https://open.higgsfield.ai/models/kling-video/v4.0/text-to-video/playground",
+      "https://higgsfield.ai/kling-4-0-intro"
+    ]
+  },
+  {
+    "title": "OpenArt · Kling 4.0 listing retained",
+    "date": "Observed 23 Oct · rechecked 26 Oct · integration date unknown",
+    "summary": "Current English instructions still specify 720p/1080p, 3–30-second output, ten keyframes and fifteen references.",
+    "implication": "No additional dated rollout verified. The public What's New feed is not readable beyond navigation; new tutorial dates do not prove feature launches.",
+    "url": "https://openart.ai/ai-model/kling-4-0/",
+    "primary_urls": [
+      "https://openart.ai/suite/whats-new",
+      "https://openart.ai/blog/"
+    ]
+  },
+  {
+    "title": "Higgsfield · Content Factory",
+    "date": "22 Oct 2026 · retained from Friday review",
+    "summary": "Topic-to-video workflow generates scripts, characters, scenes, voice lines and edits. Individual voiceover lines can be regenerated.",
+    "implication": "Assembled duration and native-model clip length are separate. Useful workflow competitor to OpenArt Director and Runway App Studio; no measured cost or quality comparison.",
+    "url": "https://higgsfield.ai/creator-hub/changelog"
+  },
+  {
+    "title": "ElevenLabs · Realtime and Translation alpha",
+    "date": "19 Oct changelog group · 20/21 Oct announcements · rechecked 26 Oct",
+    "summary": "Realtime packages cascaded speech components; Translation remains an enterprise alpha. No additional launch verified after Friday.",
+    "implication": "Retained weekly development. Existing independent AA evidence from the October 23 review is task-specific; no new benchmark or listening test here. API WebSocket/buffering limits still matter.",
+    "url": "https://elevenlabs.io/docs/changelog",
+    "primary_urls": [
+      "https://elevenlabs.io/blog/realtime",
+      "https://elevenlabs.io/blog/realtime-translation"
+    ]
+  },
+  {
+    "title": "Higgsfield · API migration reminder",
+    "date": "Deadline 31 Oct 2026 · rechecked 26 Oct · original notice date unknown",
+    "summary": "Status banner still requests migration from platform.higgsfield.ai to api.higgsfield.ai.",
+    "implication": "Retained actionable deadline for affected integrations. Status page update time is not the notice publication date; no user's integration was inspected.",
+    "url": "https://status.higgsfield.ai/"
+  },
+  {
+    "title": "Cartesia · prior Sonic sunset deadline has passed",
+    "date": "July notice · deadline after 20 Oct · rechecked 26 Oct",
+    "summary": "Changelog still lists Sonic-2, Sonic-turbo and Sonic-3-2025-10-27 for retirement after October 20.",
+    "implication": "No new enforcement or outage verified. Preserve as migration background, not a new release.",
+    "url": "https://docs.cartesia.ai/changelog/2026"
+  },
+  {
+    "title": "Legacy Comfy Luma Ray 2 nodes · removal date passed",
+    "date": "02 Oct notice · stated removal 24 Oct · retained background",
+    "summary": "Previously reviewed Comfy integration guidance named October 24 for legacy Ray 2 endpoint removal.",
+    "implication": "Actual enforcement and Luma-owned confirmation remain unverified. No claim that all Luma services ended or that migration is drop-in.",
+    "url": "https://docs.comfy.org/tutorials/partner-nodes/luma/luma-image-to-video"
+  },
+  {
+    "title": "Hume · TTS and EVI API sunset",
+    "date": "02 Oct notice · 13 Nov deadline · retained background, not rechecked 26 Oct",
+    "summary": "Hume says TTS and EVI API access ends 13 November 2026 at 12:01 a.m. EST. Account data will be permanently deleted after 13 November.",
+    "implication": "Previously verified migration notice retained for continuity; no new status or enforcement claim. Affected workflows need a replacement and any required account data before the stated deadline. This review did not access accounts or test either API.",
+    "url": "https://dev.hume.ai/voice/changelog"
+  },
+  {
+    "title": "FastVideo FastH3 Omni reference-to-video/audio release announcement",
+    "date": "20 Oct 2026 · checked 26 Oct",
+    "summary": "Reference-conditioned video/audio distillation combines 32 fine-grid predictions into eight fused transformer calls. PDD supervises the internal predictions; DMD supervises complete generated outputs. This makes the distinction between solver updates and expensive network evaluations concrete.",
+    "implication": "Editorial inference: promising for faster reference-guided shot iteration. Compare final-shot quality, reference adherence and total latency, not just step counts. Complete serving recipes differ, so this is not an isolated distillation ablation. Base uses lossless rather than exact precision policy. Qualitative matched examples do not establish quality parity; optional 36-layer VAE comparisons are excluded from timing. Do not transfer server results to one consumer GPU.",
+    "url": "https://haoailab.com/blogs/fastvideo-omniref-update/",
+    "primary_urls": [
+      "https://haoailab.com/blogs/fastvideo-omniref-update/",
+      "https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-V1",
+      "https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-V1/commit/62c89dc29c97d65202dccf7f575b1d657677f664",
+      "https://huggingface.co/FastVideo/FastVideo-FastH3-Omni-8-Step-V1/commit/d91ad121fb02bdd4513366b5313b5fdca7d5af2e",
+      "https://github.com/hao-ai-lab/FastVideo",
+      "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/video_fasth3_ominiref_r2v.json"
+    ]
+  },
+  {
+    "title": "Phonon Python normalization API and runtime releases v0.4.1–v0.4.2",
+    "date": "24–25 Oct 2026 · checked 26 Oct",
+    "summary": "Creators can inspect the exact normalized script before speech generation. The runtime can also accommodate distilled decoders narrower than the latent representation; this does not itself announce a new model.",
+    "implication": "Editorial inference: preflight dates, prices and abbreviations before rendering narration. Keep script normalization, acoustic generation and playback buffering separate in the workflow. Release notes explicitly say attached CoreML/QNN model bundles are unchanged from v0.4.0. Do not imply improved voices or newly trained weights. GitHub created_at precedes published_at for v0.4.1; October 24 is the release-publication date.",
+    "url": "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.2",
+    "primary_urls": [
+      "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.1",
+      "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.2",
+      "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.0",
+      "https://huggingface.co/gradium/phonon-31m-en",
+      "https://huggingface.co/gradium/phonon-40m-en"
+    ]
+  }
+]
