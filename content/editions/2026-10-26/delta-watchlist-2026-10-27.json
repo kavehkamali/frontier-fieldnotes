@@ -1,0 +1,99 @@
+{
+  "review_date": "2026-10-27",
+  "cutoff": "2026-10-27T12:56:12Z",
+  "status": "Newly discovered candidates for editorial selection; original weekly eight retained. Visuals are proposed, not implemented.",
+  "papers": [
+    {
+      "id": "2610.34233",
+      "arxiv_id": "2610.34233",
+      "category": "3D Gaussian",
+      "priority": 2,
+      "title": "BoundedGS: the memory peak depends on what stays alive together.",
+      "full_title": "BoundedGS: Memory-Efficient High-Resolution Training for 3D Gaussian Splatting",
+      "date": "25 Oct 2026 · newly discovered 27 Oct",
+      "submitted_at": "2026-10-25",
+      "submitted_at_utc": "2026-10-25T12:00:20Z",
+      "version": "v1",
+      "revised_at": null,
+      "checked_at": "2026-10-27",
+      "change": "New to coverage via the October 27 arXiv listing, but submitted October 25 before the previous cutoff. Official implementation is present; initial commit October 25 at 11:13:06 UTC. A link-only commit October 27 is not a new algorithm release.",
+      "summary": "Completes local rasterization/backward work and frees those caches before processing another region. Gradients accumulate across the full view, followed by one update. Adaptive regions, compact projection/gradients and bounded image supply control different memory peaks.",
+      "evaluation": "Authors train once per scene on 13 scenes using an RTX 4090 and a shared modified baseline. Five 5K outdoor scenes average 9.97→1.76 GiB temporary rendering working set; PSNR 24.44→24.42 and training 36.7→33.9 minutes. Fixed-model resolution sweeps are separate diagnostics.",
+      "caveat": "The 82.3% reduction is temporary rendering state, excluding model parameters, Adam state and persistent statistics—not total VRAM. CPU-assisted rebuilding raises host memory and costs time; no independent replication or broad GPU comparison.",
+      "access": "Official training/evaluation code and ablation configs verified. Authors tested Linux/RTX4090; Windows compilation/training is untested. Original BoundedGS code is MIT; inherited 3DGS/ImprovedGS components keep separate licenses. No installation or run.",
+      "creator_implication": "Potentially useful for high-resolution captured-scene training. This is reconstruction/rendering infrastructure, not generative 3D or a promise of 16K training in 1 GiB total memory.",
+      "url": "https://arxiv.org/abs/2610.34233v1",
+      "paper_html": "https://arxiv.org/html/2610.34233v1",
+      "code_url": "https://github.com/XiaoBin2001/BoundedGS",
+      "project_url": "https://xiaobin2001.github.io/BoundedGS-Web/",
+      "primary_urls": [
+        "https://arxiv.org/abs/2610.34233",
+        "https://arxiv.org/html/2610.34233v1",
+        "https://xiaobin2001.github.io/BoundedGS-Web/",
+        "https://github.com/XiaoBin2001/BoundedGS",
+        "https://github.com/XiaoBin2001/BoundedGS/commit/2fab0ba7348ac3deefb9c3bda359f5e2e9ff6d6b"
+      ],
+      "visual_angle": "Proposed memory-lifetime lab: colored projection, raster, gradient and persistent-state blocks alongside image tiles. Change region budget/density/resolution; compare whole-frame versus sequential backward, accumulated gradients and one final update. Synthetic accounting, not measured BoundedGS.",
+      "review_depth": "Full paper methods/evaluation/accounting, official project and code/commit metadata; no execution."
+    },
+    {
+      "id": "2610.35684",
+      "arxiv_id": "2610.35684",
+      "category": "Video",
+      "priority": 3,
+      "title": "OmniShowcase: four photos still need a shared 3D story.",
+      "full_title": "OmniShowcase: Omnidirectional Subject-Consistent Video Generation from Multi-View Images",
+      "date": "26 Oct paper · 27 Oct repository scaffold",
+      "submitted_at": "2026-10-26",
+      "submitted_at_utc": "2026-10-26T16:19:59Z",
+      "version": "v1",
+      "revised_at": null,
+      "checked_at": "2026-10-27",
+      "change": "Newly discovered in the October 27 listing; paper submission predates the October 26 cutoff. Official repository initial commit is October 27 at 10:42:26 UTC, but it contains README/assets and pending release checkboxes, not inference code.",
+      "summary": "Reconstructs geometry from reference views and supplies a surface-normal turntable as a video condition without requiring framewise alignment. Uses synthetic geometry-consistent camera trajectories and LoRA adaptation of Wan2.1-I2V-14B.",
+      "evaluation": "Authors compare four baselines using the same four references on 50 held-out ShowcaseBench subjects and 35 NAVI subjects. Held-out DINO: 0.799 versus 3DreamBooth 0.707; normalized/aligned geometry distance: 0.0824 versus 0.1717. Aesthetic score is lower, 0.574 versus 0.598.",
+      "caveat": "Selected subject-orbit evaluation is not general video SOTA. Masked metrics exclude backgrounds; geometry alignment normalizes scale. Synthetic backgrounds can look flat. References with changing poses fail under the static reconstruction condition; non-rigid subjects remain future work.",
+      "access": "Official project and repository verified; Showcase-4K, ShowcaseBench, inference, weights and training code all remain unchecked release items. No runnable release, checkpoint license or independent reproduction verified.",
+      "creator_implication": "Promising research for product turntables and orbit shots of rigid assets; it does not yet solve dynamic character identity or provide a ready-to-use tool.",
+      "url": "https://arxiv.org/abs/2610.35684v1",
+      "paper_html": "https://arxiv.org/html/2610.35684v1",
+      "code_url": "https://github.com/justin4ai/OmniShowcase",
+      "project_url": "https://justin4ai.github.io/OmniShowcase/",
+      "primary_urls": [
+        "https://arxiv.org/abs/2610.35684",
+        "https://arxiv.org/html/2610.35684v1",
+        "https://justin4ai.github.io/OmniShowcase/",
+        "https://github.com/justin4ai/OmniShowcase",
+        "https://github.com/justin4ai/OmniShowcase/commit/91ee06bdab01c88496d3693affeb0df3dc157105"
+      ],
+      "visual_angle": "Proposed normal-map lab: orbit an asymmetric synthetic object, compare sparse RGB views with colored normals, expose unseen surfaces, and deliberately mismatch poses. Controls: reference count/angles, camera orbit, normal/RGB condition and pose disagreement. Analytic rendering, not model output.",
+      "review_depth": "Primary full paper including metrics/failure analysis and official project/repository release status; no execution."
+    }
+  ],
+  "visual_queue": [
+    {
+      "title": "The peak depends on which caches coexist.",
+      "idea": "Image regions produce colored memory blocks, release their local caches and accumulate gradients before a single full-view update.",
+      "controls": "Image resolution; Gaussian density; region budget; cache release order; persistent versus temporary memory; planned PNG/GIF.",
+      "misconception": "An 82% temporary-memory reduction means 82% less total VRAM, or computing regions separately requires updating after every region.",
+      "connection": "BoundedGS · 25 Oct paper, discovered 27 Oct. Proposed analytic memory-accounting lesson; not measured training.",
+      "audience": "Graphics engineers and captured-scene creators",
+      "status": "Proposed",
+      "recommendation": "Strong next 3D mechanism graphic; prioritize temporary-versus-total memory and gradient accumulation.",
+      "url": "https://arxiv.org/abs/2610.34233v1",
+      "priority": "Proposed"
+    },
+    {
+      "title": "Several views still need to agree on one shape.",
+      "idea": "Reveal an asymmetric object through reference cameras and normal-map turntable, then show inconsistent poses breaking a shared static shape.",
+      "controls": "Reference count/angles; orbit; normals/RGB; pose disagreement; unseen-surface overlay; planned PNG/GIF.",
+      "misconception": "Adding reference images guarantees a shared 3D identity or resolves deformation across poses.",
+      "connection": "OmniShowcase · 26 Oct paper, discovered 27 Oct. Synthetic projection/normal rendering, not inference.",
+      "audience": "Filmmakers and video-model engineers",
+      "status": "Proposed",
+      "recommendation": "Useful orbit-shot explainer; label rigid-object scope prominently.",
+      "url": "https://arxiv.org/abs/2610.35684v1",
+      "priority": "Proposed"
+    }
+  ]
+}

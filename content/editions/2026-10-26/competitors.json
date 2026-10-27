@@ -1,5 +1,18 @@
 [
   {
+    "title": "ComfyUI · v0.43.0 filmmaking integrations",
+    "date": "27 Oct 2026 · published 02:40:46 UTC",
+    "summary": "Kling 4.0 partner nodes now cover text, keyframe, reference and edit workflows. New stable packaging also includes ACEScg conversion/EXR export and MiniMax-H3 PDD-aware single-head LoRA mapping.",
+    "implication": "Hosted partner nodes are not local/open Kling weights. No generation or purchase was run. Kling's seed only controls node reruns; outputs remain nondeterministic. ACEScg's EXR preview currently treats pixels as Rec.709 linear and may look desaturated; the PR says the saved file is correct. PDD compatibility is not universal LoRA quality assurance.",
+    "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0",
+    "primary_urls": [
+      "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0",
+      "https://github.com/Comfy-Org/ComfyUI/pull/17364",
+      "https://github.com/Comfy-Org/ComfyUI/pull/17023",
+      "https://github.com/Comfy-Org/ComfyUI/pull/17239"
+    ]
+  },
+  {
     "title": "Higgsfield · Ideogram Vector 1.0",
     "date": "23 Oct 2026 · host integration · newly discovered 26 Oct",
     "summary": "Adds prompt-to-SVG and image-to-SVG workflows. Official Ideogram documentation confirms editable vector output and separate generation/conversion endpoints.",
@@ -11,18 +24,20 @@
     ]
   },
   {
-    "title": "Runway · App Studio",
-    "date": "23 Oct 2026 · paid plans · newly discovered 26 Oct",
-    "summary": "Prompt-built hosted creative apps with model selection per generation step and downloadable published source.",
-    "implication": "Build sessions consume credits. Current guide says no delete/unpublish control; restrict audience to stop workspace access. No actual app, cost or reliability test.",
-    "url": "https://runway.com/changelog",
+    "title": "Runway · App Studio sharing and hosting costs",
+    "date": "23 Oct changelog; 26 Oct 20:31 UTC announcement; checked 27 Oct",
+    "summary": "Runway documents public links for paid builders; visitors sign in and pay for their own generations. Free users can use shared/built-in apps. Building, running and hosting consume credits. Existing Agent sessions or Workflows can become apps.",
+    "implication": "Review sharing scope and ongoing hosting costs before packaging a creative workflow. No app, spend or reliability test was performed. Vendor examples are not measured production results. Building requires a paid plan; public access still requires Runway sign-in. The help guide still lacks delete/unpublish controls.",
+    "url": "https://runway.com/news/company-news/introducing-runway-app-studio",
     "primary_urls": [
+      "https://runway.com/news/company-news/introducing-runway-app-studio",
+      "https://runway.com/changelog",
       "https://help.runwayml.com/hc/en-us/articles/56447349336467-Building-apps-with-App-Studio"
     ]
   },
   {
     "title": "Higgsfield · Kling 4.0 specifications still conflict",
-    "date": "21 Oct platform · 23 Oct API catalog · rechecked 26 Oct",
+    "date": "21 Oct platform · 23 Oct API catalog · rechecked 27 Oct",
     "summary": "Current dated specs remain 3–30 seconds at 720p/1080p with keyframe/reference control and editing. Undated introductory marketing still advertises native 4K/HDR.",
     "implication": "Retained in-window release, not new October 26 news. Higher resolution and quality claims remain unverified; discounts are temporary.",
     "url": "https://higgsfield.ai/creator-hub/changelog",
@@ -33,7 +48,7 @@
   },
   {
     "title": "OpenArt · Kling 4.0 listing retained",
-    "date": "Observed 23 Oct · rechecked 26 Oct · integration date unknown",
+    "date": "Observed 23 Oct · rechecked 27 Oct · integration date unknown",
     "summary": "Current English instructions still specify 720p/1080p, 3–30-second output, ten keyframes and fifteen references.",
     "implication": "No additional dated rollout verified. The public What's New feed is not readable beyond navigation; new tutorial dates do not prove feature launches.",
     "url": "https://openart.ai/ai-model/kling-4-0/",
@@ -51,7 +66,7 @@
   },
   {
     "title": "ElevenLabs · Realtime and Translation alpha",
-    "date": "19 Oct changelog group · 20/21 Oct announcements · rechecked 26 Oct",
+    "date": "19 Oct changelog group · 20/21 Oct announcements · rechecked 27 Oct",
     "summary": "Realtime packages cascaded speech components; Translation remains an enterprise alpha. No additional launch verified after Friday.",
     "implication": "Retained weekly development. Existing independent AA evidence from the October 23 review is task-specific; no new benchmark or listening test here. API WebSocket/buffering limits still matter.",
     "url": "https://elevenlabs.io/docs/changelog",
@@ -62,14 +77,14 @@
   },
   {
     "title": "Higgsfield · API migration reminder",
-    "date": "Deadline 31 Oct 2026 · rechecked 26 Oct · original notice date unknown",
+    "date": "Deadline 31 Oct 2026 · rechecked 27 Oct · original notice date unknown",
     "summary": "Status banner still requests migration from platform.higgsfield.ai to api.higgsfield.ai.",
     "implication": "Retained actionable deadline for affected integrations. Status page update time is not the notice publication date; no user's integration was inspected.",
     "url": "https://status.higgsfield.ai/"
   },
   {
     "title": "Cartesia · prior Sonic sunset deadline has passed",
-    "date": "July notice · deadline after 20 Oct · rechecked 26 Oct",
+    "date": "July notice · deadline after 20 Oct · rechecked 27 Oct",
     "summary": "Changelog still lists Sonic-2, Sonic-turbo and Sonic-3-2025-10-27 for retirement after October 20.",
     "implication": "No new enforcement or outage verified. Preserve as migration background, not a new release.",
     "url": "https://docs.cartesia.ai/changelog/2026"
@@ -83,9 +98,9 @@
   },
   {
     "title": "Hume · TTS and EVI API sunset",
-    "date": "02 Oct notice · 13 Nov deadline · retained background, not rechecked 26 Oct",
+    "date": "02 Oct notice · 13 Nov deadline · rechecked 27 Oct",
     "summary": "Hume says TTS and EVI API access ends 13 November 2026 at 12:01 a.m. EST. Account data will be permanently deleted after 13 November.",
-    "implication": "Previously verified migration notice retained for continuity; no new status or enforcement claim. Affected workflows need a replacement and any required account data before the stated deadline. This review did not access accounts or test either API.",
+    "implication": "Notice rechecked and unchanged. Affected workflows need a replacement and any required account data before the stated deadline; no account or API was accessed.",
     "url": "https://dev.hume.ai/voice/changelog"
   },
   {
@@ -104,17 +119,20 @@
     ]
   },
   {
-    "title": "Phonon Python normalization API and runtime releases v0.4.1–v0.4.2",
-    "date": "24–25 Oct 2026 · checked 26 Oct",
-    "summary": "Creators can inspect the exact normalized script before speech generation. The runtime can also accommodate distilled decoders narrower than the latent representation; this does not itself announce a new model.",
-    "implication": "Editorial inference: preflight dates, prices and abbreviations before rendering narration. Keep script normalization, acoustic generation and playback buffering separate in the workflow. Release notes explicitly say attached CoreML/QNN model bundles are unchanged from v0.4.0. Do not imply improved voices or newly trained weights. GitHub created_at precedes published_at for v0.4.1; October 24 is the release-publication date.",
-    "url": "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.2",
+    "title": "Phonon · v0.5.0 small-model runtime support",
+    "date": "27 Oct 2026 · published 09:42:20 UTC",
+    "summary": "Supports small Pocket TTS architectures and corrects a Mimi streaming-attention boundary. Browser normalization fixes also ship.",
+    "implication": "New architecture keys are unsupported by Core ML export; Rust API changes break source compatibility. Attached 31M bundles are byte-identical by published hash metadata to v0.4.0. Runtime support is not a new voice or quality benchmark.",
+    "url": "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.5.0",
     "primary_urls": [
       "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.1",
       "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.2",
       "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.0",
       "https://huggingface.co/gradium/phonon-31m-en",
-      "https://huggingface.co/gradium/phonon-40m-en"
+      "https://huggingface.co/gradium/phonon-40m-en",
+      "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.5.0",
+      "https://github.com/gradium-ai/xn-ptts/pull/210",
+      "https://github.com/gradium-ai/xn-ptts/pull/209"
     ]
   }
 ]

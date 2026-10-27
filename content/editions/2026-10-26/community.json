@@ -1,5 +1,15 @@
 [
   {
+    "title": "ComfyUI v0.43.0 release discussion",
+    "date": "27 Oct 2026; exact Reddit UTC unverified",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1xgiqxl/comfyui_v0430/",
+    "summary": "Release summary supplies a discovery link. Primary GitHub publication is 02:40:46 UTC, within the review window.",
+    "implication": "Separate newly published stable build from each feature's earlier merge date and the underlying vendor model launch.",
+    "primary_urls": [
+      "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0"
+    ]
+  },
+  {
     "title": "FastH3 Omni announcement and local workflow discussion",
     "date": "20 Oct 2026 · indexed calendar date; exact UTC post time unverified",
     "summary": "Author announcement in r/comfyui links the release and workflow. Replies include self-reported local timings and image-quality complaints; they are uncontrolled anecdotes, not evidence of quality parity or a hardware-normalized benchmark.",

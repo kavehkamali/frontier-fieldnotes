@@ -11,3 +11,5 @@ The publishing kit contains casual LinkedIn and X drafts, a longer article and o
 The lab demonstrates synthetic vector geometry and a toy semantic-time schedule. It does not use trained token embeddings, generate or denoise language, reproduce LLaCO or establish model performance. Colored projection, full-dimensional rank, crossing thresholds and norm decay are explained separately. The light, minimal theme and direct media-export path make the lesson suitable for an interactive presentation or short post.
 
 [Download the complete kit](https://kavehkamali.github.io/frontier-fieldnotes/assets/edition-005.zip) · [PNG](https://kavehkamali.github.io/frontier-fieldnotes/assets/semantic-card.png) · [GIF](https://kavehkamali.github.io/frontier-fieldnotes/assets/semantic-loop.gif) · [MP4](https://kavehkamali.github.io/frontier-fieldnotes/assets/semantic-video.mp4) · [Numerical and export validation](../../../docs/semantic.md)
+
+[October 27 delta](delta-2026-10-27.md): Direct Forcing correction, Phonon/ComfyUI releases and Runway sharing costs. [Additional dated research candidates](delta-watchlist-2026-10-27.json) remain proposals for future selection.

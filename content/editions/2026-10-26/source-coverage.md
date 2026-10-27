@@ -1,5 +1,7 @@
 # Source coverage · 26 October 2026
 
+> **27 October correction:** the Direct Forcing availability/version assessment in this original snapshot was incomplete. See the [dated delta](delta-2026-10-27.md) for verified public code, paper v2 and subsequent release checks.
+
 The weekly window is **19–26 October 2026**, ending at **20:27:37 UTC on 26 October**. The daily-change comparison starts at **23 October, 23:01:00 UTC**. The previous weekly edition and its 20/23 October deltas were read before selecting topics. This is a bounded research pass, not continuous or exhaustive monitoring.
 
 The editorial scope is 3D Gaussian splatting, image/video generation, voice/audio generation, AI filmmaking, diffusion language models and related learning mechanisms. Robotics and physical AI are excluded. No generated model output was requested, no model files were downloaded or executed, no services were purchased, and no social accounts were published to. Browser cookies and account setup were not accessed.
@@ -82,3 +84,7 @@ The Kokoro “50–100×” headline, “best TTS” preferences and the agent-c
 The LLaCO-linked presentation is an original synthetic geometry lab. Token rank is calculated in the full vector dimension; the two-dimensional projection is for display. Pairwise threshold algebra is distinct from high-dimensional statistical assumptions. The toy semantic schedule is not the paper’s calibrated 8B schedule. No learned embedding, denoiser, text generation, experimental language-model result or paper reproduction is claimed. Other queued visuals remain proposals. The presentation keeps light surfaces, minimal layout and restrained explanatory color.
 
 The publishing kit is prepared for the owner to review and post. Existing editions preserve their original dates and human edits. Only project content and original teaching assets are eligible for the authorized repository publishing path; no credentials, private company information, account changes or social publication are part of this review.
+
+## October 27 follow-up
+
+The original review above remains a dated snapshot. Its Direct Forcing availability/version assessment is corrected in [the October 27 delta](delta-2026-10-27.md), which also records fresh release timestamps, unchanged checks and access gaps. Current structured watchlists distinguish updated records from those last checked October 26.

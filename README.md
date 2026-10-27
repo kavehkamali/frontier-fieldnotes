@@ -65,3 +65,5 @@ Project code and original diagrams: MIT, see LICENSE. Vendored gifenc 1.0.3 is M
 - [Selective-update lab](https://kavehkamali.github.io/frontier-fieldnotes/stream.html): compare position-only and color-aware rankings, pixel error and attribute-record counts. [Download kit004](https://kavehkamali.github.io/frontier-fieldnotes/assets/edition-004.zip).
 
 Previous review: [23 October delta](content/editions/2026-10-19/delta-2026-10-23.md) — Kling 4.0, editable filmmaking workflows, streaming video/3D research, voice updates and the Wan-Alpha++ availability correction. [Previous delta](content/editions/2026-10-19/delta-2026-10-20.md).
+
+Latest daily review: [27 October delta](content/editions/2026-10-26/delta-2026-10-27.md) — Direct Forcing availability correction, Phonon v0.5.0, ComfyUI v0.43.0 and Runway App Studio sharing/hosting clarification.
