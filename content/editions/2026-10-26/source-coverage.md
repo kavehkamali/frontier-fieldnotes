@@ -1,5 +1,7 @@
 # Source coverage · 26 October 2026
 
+> **28 October follow-up:** [new research and workflow delta](delta-2026-10-28.md), including an App Studio date-metadata correction. This document remains the original weekly snapshot.
+
 > **27 October correction:** the Direct Forcing availability/version assessment in this original snapshot was incomplete. See the [dated delta](delta-2026-10-27.md) for verified public code, paper v2 and subsequent release checks.
 
 The weekly window is **19–26 October 2026**, ending at **20:27:37 UTC on 26 October**. The daily-change comparison starts at **23 October, 23:01:00 UTC**. The previous weekly edition and its 20/23 October deltas were read before selecting topics. This is a bounded research pass, not continuous or exhaustive monitoring.
@@ -88,3 +90,7 @@ The publishing kit is prepared for the owner to review and post. Existing editio
 ## October 27 follow-up
 
 The original review above remains a dated snapshot. Its Direct Forcing availability/version assessment is corrected in [the October 27 delta](delta-2026-10-27.md), which also records fresh release timestamps, unchanged checks and access gaps. Current structured watchlists distinguish updated records from those last checked October 26.
+
+### October 28 follow-up
+
+The [daily delta](delta-2026-10-28.md) and [structured source coverage](delta-watchlist-2026-10-28.json) record new research, artifact availability, competitor changes, public Reddit limitations and voice exclusions. Current App Studio changelog metadata is October 26; earlier October 23 observations above remain historical. No new launch is inferred from that edit.

@@ -1,5 +1,18 @@
 [
   {
+    "title": "Openjutsu setup reports lead to inspectable fixes",
+    "date": "27 Oct 2026 Reddit calendar date · exact UTC unverified; patches 27–28 Oct",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1xgt2h1/here_is_my_submission_for_comfyuis_open_source/",
+    "summary": "A community release post and setup complaints led to verified UI/companion-pack fixes. One user reports the missing-node fix worked; quality and identity concerns remain uncontrolled anecdotes.",
+    "implication": "Use repository patches for the technical change. The thread does not establish likeness quality, all-platform reliability or SOTA. No local execution.",
+    "primary_urls": [
+      "https://github.com/D3voz/comfyui-h3-oneclick-swap/commit/df67f4bfa7348742e1b340dd11cc64714d83f323",
+      "https://github.com/D3voz/openjutsu/commit/1ee2997b176bf32dd7b9ac430205cdcd1277b6be",
+      "https://github.com/D3voz/openjutsu/commit/47c3724fe65dfae24cdc7ce14897280920e14419",
+      "https://github.com/D3voz/comfyui-h3-oneclick-swap/commit/9cf2d1a5e6f5f4e5fc3c11a82d9bc897e85085da"
+    ]
+  },
+  {
     "title": "ComfyUI v0.43.0 release discussion",
     "date": "27 Oct 2026; exact Reddit UTC unverified",
     "url": "https://www.reddit.com/r/StableDiffusion/comments/1xgiqxl/comfyui_v0430/",

@@ -1,0 +1,326 @@
+{
+  "review_date": "2026-10-28",
+  "previous_cutoff": "2026-10-27T12:56:12Z",
+  "cutoff": "2026-10-28T12:55:51Z",
+  "status": "Two fresh research additions and two workflow updates. Original weekly selections retained. All four new visual ideas are proposed, not implemented.",
+  "recommendation": "Hexels paired with independent footprint and spatial-color controls is the strongest next advanced graphic. ReferStream is the strongest streaming-filmmaking research hook.",
+  "papers": [
+    {
+      "id": "2610.37566",
+      "arxiv_id": "2610.37566",
+      "priority": 1,
+      "category": "Video",
+      "title": "ReferStream: introduce a subject without overwriting the whole scene.",
+      "full_title": "ReferStream: Interactive Subject Injection for Streaming Video Generation",
+      "date": "27 Oct 2026 · v1",
+      "submitted_at": "2026-10-27",
+      "submitted_at_utc": "2026-10-27T17:12:42Z",
+      "version": "v1",
+      "revised_at": null,
+      "checked_at": "2026-10-28",
+      "change": "New post-cutoff paper on adding visual references during streaming generation without retraining or changing emitted frames.",
+      "summary": "Joint Latent extracts references in the current scene's context. Cache Restoration temporarily writes protected global KV slots for the arrival chunk, then restores them while retaining new generated history. Restoration is not stream rollback.",
+      "evaluation": "Author-run ReferStream Bench contains 68 curated entries: 48 InShot and 20 MultiShot. Overall New-ID similarity is 52.86 versus 39.99 for LongLive2; Existing-ID 73.18 versus 42.29; count accuracy 82.33% versus 73.90%. Similarity scores are scaled values, not recognition percentages.",
+      "caveat": "The collection was used during development; main results reuse archived outputs. LongLive2 gets no visual references; offline comparators get all references and the script upfront. Detection-based metrics lack human validation. Reference backgrounds can leak through rectangular placements, which do not guarantee final position. Cache restoration does not guarantee identity preservation. No independent reproduction.",
+      "access": "Public paper and 24 recorded examples. Official GitHub README/file tree explicitly contains a static project website and media; no runnable inference implementation or released benchmark package verified. Do not describe the GitHub link as released model code.",
+      "creator_implication": "A useful research direction for introducing props or characters after a shot has started. It is not yet a verified production tool or a real-time performance guarantee.",
+      "url": "https://arxiv.org/abs/2610.37566v1",
+      "paper_html": "https://arxiv.org/html/2610.37566v1",
+      "code_url": "https://github.com/Xushuolin/ReferStream",
+      "project_url": "https://xushuolin.github.io/ReferStream/",
+      "primary_urls": [
+        "https://arxiv.org/abs/2610.37566",
+        "https://arxiv.org/html/2610.37566v1",
+        "https://xushuolin.github.io/ReferStream/",
+        "https://github.com/Xushuolin/ReferStream"
+      ],
+      "visual_angle": "Proposed original cache-state diagram: colored global, shot and local history slots; snapshot, inject, generate and restore. Move the arrival time and inspect which old entries return while new history remains. This would demonstrate state management, not generate video or predict identity scores.",
+      "review_depth": "Full methods, benchmark/evaluation limitations and ablations, official project and repository contents; no model execution."
+    },
+    {
+      "id": "2610.37668",
+      "arxiv_id": "2610.37668",
+      "priority": 2,
+      "category": "3D Gaussian",
+      "title": "Hexels: one surface patch can hold a color gradient.",
+      "full_title": "Honeycomb-Surfels: Compact Hexagonal Primitives for Efficient Scene Rendering and Reconstruction",
+      "date": "27 Oct 2026 · v1",
+      "submitted_at": "2026-10-27",
+      "submitted_at_utc": "2026-10-27T17:59:59Z",
+      "version": "v1",
+      "revised_at": null,
+      "checked_at": "2026-10-28",
+      "change": "New post-cutoff paper with an inspectable implementation of hexagonal surface primitives and a linked paper-model collection.",
+      "summary": "Combines soft hexagonal support with a first-order spatial color field, allowing a larger planar patch to represent smooth appearance changes. This is a splatting alternative for neural rendering/reconstruction, not generative 3D.",
+      "evaluation": "Authors evaluate 34 scenes: nine Mip-NeRF360, 15 DTU and ten Tanks and Temples, holding out every eighth camera. At matched uncompressed learned-model memory, reported PSNR gains over 2DGS range 4.53–7.38 dB across datasets. The separately reported 2.31× FPS gain uses primitive-matched comparisons; do not combine the two conditions.",
+      "caveat": "Matched model memory excludes optimizer state and does not mean equal training VRAM. Geometry and color representation change together. Fine texture, curvature, grazing angles and sparse initialization remain difficult; exported surface cells are not necessarily watertight. Native unconstrained baselines can win individual metrics. No independent reproduction.",
+      "access": "Trainer, CUDA kernel/viewer submodules and evaluation instructions verified. GitHub links jhu-ccvl/Hexels checkpoints; the Hub connector verifies that repository's metadata, but checkpoint files were not downloaded or evaluated. README specifies Linux/Python3.11/PyTorch2.5.1/CUDA12.x and testing on a 24GB RTX A5000; 24GB is tested capacity, not a universal minimum. Original code is MIT; inherited dependencies retain their own terms, including research/noncommercial restrictions. Hub metadata says license:other.",
+      "creator_implication": "Worth inspecting for compact captured-scene rendering and browser-viewable assets. The useful question is what each primitive can represent per byte, rather than whether hexagons always beat Gaussians.",
+      "url": "https://arxiv.org/abs/2610.37668v1",
+      "paper_html": "https://arxiv.org/html/2610.37668v1",
+      "code_url": "https://github.com/honeycomb-surfels/hexels",
+      "project_url": "https://honeycomb-surfels.github.io/",
+      "primary_urls": [
+        "https://arxiv.org/abs/2610.37668",
+        "https://arxiv.org/html/2610.37668v1",
+        "https://honeycomb-surfels.github.io/",
+        "https://github.com/honeycomb-surfels/hexels",
+        "https://huggingface.co/jhu-ccvl/Hexels"
+      ],
+      "visual_angle": "Proposed original analytic splatting lab: independently toggle Gaussian/hexagonal support and constant/linear color on a synthetic colored surface. Adjust primitive budget, boundary softness, texture frequency, curvature and camera angle; show residuals and overdraw separately from model bytes. Not a paper reproduction.",
+      "review_depth": "Full paper methods, dataset/budget/timing protocols, limitations, official code/readme and Hub metadata; no install or execution."
+    }
+  ],
+  "visual_queue": [
+    {
+      "title": "Give a new subject temporary access to the scene's memory.",
+      "idea": "Animate a cache timeline showing temporary reference injection followed by restoration of protected global entries while new history remains.",
+      "controls": "Arrival chunk; reference placement; restore toggle; global/local cache visibility; local history window; planned PNG/GIF.",
+      "misconception": "Restoring the old cache deletes the new subject, or restoring a few entries guarantees that every future frame preserves identity.",
+      "connection": "ReferStream, 27 Oct 2026. Proposed analytic state-machine explanation, not learned inference or an empirical quality predictor.",
+      "audience": "Video-model engineers and filmmakers",
+      "status": "Proposed",
+      "recommendation": "Strong current filmmaking hook. Keep separate the guaranteed cache operation and the empirically uncertain visual outcome.",
+      "url": "https://arxiv.org/abs/2610.37566v1",
+      "priority": "Proposed"
+    },
+    {
+      "title": "A splat can describe a gradient, not just one color.",
+      "idea": "Render the same analytic surface with Gaussian or hexagonal footprints and constant or linear color, revealing where larger patches succeed and fail.",
+      "controls": "Independent footprint/color toggles; patch count; edge softness; texture frequency; curvature; grazing camera; error/overdraw overlays; planned PNG/GIF.",
+      "misconception": "The shape alone explains every improvement, or matching primitive count also matches bytes and training memory.",
+      "connection": "Honeycomb-Surfels/Hexels, 27 Oct 2026. Synthetic rendering mechanism rather than trained scenes or benchmark reproduction.",
+      "audience": "Graphics engineers and captured-scene creators",
+      "status": "Proposed",
+      "recommendation": "Best advanced colored graphic from today's papers; vary geometry and appearance independently.",
+      "url": "https://arxiv.org/abs/2610.37668v1",
+      "priority": "Proposed"
+    },
+    {
+      "title": "More generated ads do not establish causal uplift.",
+      "idea": "Show a creative feedback loop with separate review, paused-publication and activation gates, then compare biased selection with a randomized holdout.",
+      "controls": "Variant count; traffic allocation; selection bias; review gate; activation gate; assumed conversion rates.",
+      "misconception": "A higher volume of generated variants proves better marketing outcomes or automatically controls campaigns.",
+      "connection": "Runway Ads GA, 27 Oct 2026. Proposed synthetic workflow and statistical illustration, not measured product performance.",
+      "audience": "Creative leads and ML practitioners",
+      "status": "Proposed",
+      "recommendation": "Useful competitor explainer; secondary to the rendering mechanism.",
+      "url": "https://runway.com/news/company-news/runway-ads",
+      "priority": "Proposed"
+    },
+    {
+      "title": "The video finished, but its audio timeline did not.",
+      "idea": "Align frame and audio-sample grids; shorten the soundtrack and reveal the final assembly boundary, then pad with silence.",
+      "controls": "Frame rate; frame count; audio sample rate; soundtrack end; floor/ceil duration; padding toggle.",
+      "misconception": "Successful frame generation guarantees that final video/audio assembly will succeed.",
+      "connection": "Openjutsu companion-pack audio fix, 28 Oct 2026. Proposed analytic timeline; no model inference.",
+      "audience": "Local video workflow builders",
+      "status": "Proposed",
+      "recommendation": "Small practical lesson about discrete time and pipeline failures.",
+      "url": "https://github.com/D3voz/comfyui-h3-oneclick-swap/commit/9cf2d1a5e6f5f4e5fc3c11a82d9bc897e85085da",
+      "priority": "Proposed"
+    }
+  ],
+  "competitor_changes": [
+    {
+      "id": "runway-ads-ga-2026-10-27",
+      "vendor": "Runway",
+      "title": "Runway Ads generally available to paid plans",
+      "date": "2026-10-27",
+      "date_published_utc": "2026-10-27T16:11:00.000Z",
+      "date_modified_utc": "2026-10-27T16:11:00.000Z",
+      "date_evidence": "Exact datePublished/dateModified in official article JSON-LD; visible date October 27. Public HTML saved in /tmp/frontier-runway-ads-oct28-source.html.",
+      "change": "GA for every paid Runway plan; Enterprise has workspace controls. Reads connected Meta, Google and TikTok performance, generates brand-constrained creative variants and supports reviewed publication. Original introduction was September 30, so this is availability expansion, not first introduction.",
+      "availability": "Paid plans; free workspaces must upgrade. Not tested in an account. The changelog category says All Plans but body and GA article specify paid plans.",
+      "limitation": "Current help requires Admin review and creates a paused ad inside an existing ad set/group. Activation happens in the ad platform. Help says no automatic publishing, campaign/ad-set creation, budget changes, or pause/stop control. The news article says users can start/pause from Runway, so those control claims conflict. Do not promise them until reconciled.",
+      "evidence_type": "Official vendor availability announcement and product help; no independent outcome evaluation. Vendor internal ad-volume/cost-per-subscriber claims are not causal benchmarks.",
+      "visual_angle": "A creative feedback loop with explicit review and activation gates: measured ad performance -> generated variants -> human approval -> paused ad -> platform activation -> measurement. Add selection-bias controls to explain why more variants do not prove causal uplift.",
+      "primary_urls": [
+        "https://runway.com/news/company-news/runway-ads",
+        "https://runway.com/changelog",
+        "https://help.runwayml.com/hc/en-us/articles/56691137245203-Reviewing-and-publishing-ads",
+        "https://runway.com/news/company-news/introducing-runway-ads"
+      ]
+    }
+  ],
+  "workflow_changes": [
+    {
+      "id": "openjutsu-setup-and-soundtrack-fixes",
+      "title": "Openjutsu fixes missing source-slice node, slow setup checks and audio-shorter-than-video assembly failures",
+      "classification": "Useful local filmmaking workflow reliability update; not a new model or quality benchmark",
+      "discovery_url": "https://www.reddit.com/r/StableDiffusion/comments/1xgt2h1/here_is_my_submission_for_comfyuis_open_source/",
+      "discovery_date": "2026-10-27; exact post UTC time not verified",
+      "primary_sources": [
+        {
+          "url": "https://github.com/D3voz/comfyui-h3-oneclick-swap/commit/df67f4bfa7348742e1b340dd11cc64714d83f323",
+          "commit_time": "2026-10-27T17:59:55Z",
+          "change": "Introduces H3SourceSlice; required source-frame/audio node was absent from the published Context-Loop dependency."
+        },
+        {
+          "url": "https://github.com/D3voz/openjutsu/commit/1ee2997b176bf32dd7b9ac430205cdcd1277b6be",
+          "commit_time": "2026-10-27T18:00:14Z",
+          "change": "Replaces unpublished MiniMaxH3ContexLoopSourceSlice with H3SourceSlice in setup checks and Simple, Advanced, Montage and Object workflows."
+        },
+        {
+          "url": "https://github.com/D3voz/openjutsu/commit/47c3724fe65dfae24cdc7ce14897280920e14419",
+          "commit_time": "2026-10-28T05:11:06Z",
+          "change": "Queries only required node definitions instead of the complete /object_info registry; fixes misleading connection/setup errors when large installs exceeded the eight-second timeout."
+        },
+        {
+          "url": "https://github.com/D3voz/comfyui-h3-oneclick-swap/commit/9cf2d1a5e6f5f4e5fc3c11a82d9bc897e85085da",
+          "commit_time": "2026-10-28T12:48:43Z",
+          "change": "Pads audio to ceil(loaded video duration × sample rate), preventing final Chain Assemble failures when audio ends before video and rounding-related short silent tracks. Diff inspected."
+        },
+        {
+          "url": "https://github.com/D3voz/openjutsu/blob/47c3724fe65dfae24cdc7ce14897280920e14419/README.md",
+          "change": "Documents local H3/SAM/Qwen character and object editing, substantial setup requirements, model-dependent results, reflection failures and separate model/face-refinement licenses."
+        }
+      ],
+      "date_scope": "All listed commit timestamps lie inside the review window, with author and committer dates matching. Public push/visibility times were not independently established. The underlying project and workflows predate this window.",
+      "evidence": "Commit patches verify the setup and audio-padding changes. Reddit includes an independent setup-failure report followed by a report that the node fix worked, but no controlled evaluation or independent quality benchmark.",
+      "creator_implication": "If evaluating Openjutsu, update both the UI and companion swap pack before spending GPU time on long edits; an audio-duration mismatch could otherwise fail only after rendering.",
+      "limitations": [
+        "Research/discovery only: nothing was installed or executed, and fixes were not runtime-tested here.",
+        "The author and users still report identity likeness and model inconsistency; reflections can leak the original appearance, and automatic role matching can fail.",
+        "One Reddit report says the setup fix worked; this is an anecdote, not proof of all-platform compatibility.",
+        "MIT app code does not cover all model/companion licenses. Face-refinement dependencies have additional restrictions.",
+        "Default DMAD/SolarRenderer workflow settings differ from the user's MiniMax H3 Turbo 8 preference. Do not install or run those defaults as an automatic fallback."
+      ],
+      "visual_teaching_angle": "A synchronized video/audio timeline: drag the audio end earlier than the final frame, display the discrete H3 clip grid, and toggle silence padding to explain why generation can finish while assembly fails. A separate mask/reference toggle can illustrate motion transfer versus identity leakage."
+    }
+  ],
+  "newly_discovered_outside_window": [
+    {
+      "vendor": "Higgsfield",
+      "title": "Playable / Enterprise Playable Ads documentation",
+      "date": "2026-10-26",
+      "date_published_utc": "2026-10-26T00:35:00.000Z",
+      "date_modified_utc": "2026-10-28T00:37:45Z",
+      "classification": "Newly observed dated changelog entry; publication date before prior review cutoff, modification inside window. Not evidence of an October 28 launch. Earlier June 11 game-builder entry also exists.",
+      "summary": "Browser game construction from text or gameplay video, with no-code controls. General Playable is described as available to everyone; Playable Ads is Enterprise/contact sales, exporting one HTML file up to 5 MB. Current public product page is a sign-in shell.",
+      "implication": "Useful distinction for interactive-ad workflows, not a new video model, generative-3D result or SOTA claim.",
+      "url": "https://higgsfield.ai/creator-hub/changelog#playable",
+      "primary_urls": [
+        "https://higgsfield.ai/creator-hub/changelog#playable",
+        "https://higgsfield.ai/playable"
+      ]
+    }
+  ],
+  "metadata_corrections": [
+    {
+      "vendor": "Runway",
+      "title": "App Studio changelog date now October 26",
+      "observed_date": "2026-10-28",
+      "prior_observation": "October 27 review recorded October 23 changelog date and October 26 announcement.",
+      "current_observation": "Current changelog now labels App Studio October 26. Exact edit time unknown.",
+      "action": "Preserve historical observation, append current correction; do not report another feature release.",
+      "url": "https://runway.com/changelog"
+    }
+  ],
+  "source_coverage": {
+    "competitors": [
+      {
+        "vendor": "Higgsfield",
+        "status": "Dated Playable entry newly observed; outside-window publication plus in-window modification. GPT-6.1 Terra generic integration dated Oct27 00:42Z is outside window and omitted as low-priority. Numerous historical changelog records modified Oct27/28 are not new releases. Kling4 entry still says 720p/1080p.",
+        "urls": [
+          "https://higgsfield.ai/creator-hub/changelog"
+        ]
+      },
+      {
+        "vendor": "OpenArt",
+        "status": "No verified in-window feature release. Oct28 FLUX comparison guide explicitly dates OpenArt FLUX3 Image availability to Oct1; do not recycle. Oct27 MCP guide and Oct26 tutorials are documentation. Third-party Oct28 executive-hire announcement excluded as non-actionable product news.",
+        "urls": [
+          "https://openart.ai/blog/",
+          "https://openart.ai/blog/flux-image-models-compared/",
+          "https://openart.ai/blog/category/updates/"
+        ],
+        "gaps": [
+          "Public whats-new page returns one-line shell. Kling4 page inaccessible on this run; no fresh proof resolving prior HD/4K conflict."
+        ]
+      },
+      {
+        "vendor": "Runway",
+        "status": "Meaningful GA update and metadata correction above.",
+        "urls": [
+          "https://runway.com/changelog",
+          "https://runway.com/news/company-news/runway-ads",
+          "https://help.runwayml.com/hc/en-us/articles/56691137245203-Reviewing-and-publishing-ads"
+        ],
+        "gaps": [
+          "GA article web extractor failed; unauthenticated raw HTML succeeded and metadata independently parsed. No account execution."
+        ]
+      },
+      {
+        "vendor": "Luma",
+        "status": "Latest author-index batch remains Oct27 workflow/SEO guides including Mini-Apps. Previously documented guide not repeated; no independently dated in-window capability rollout established.",
+        "urls": [
+          "https://lumalabs.ai/authors/luma-team"
+        ]
+      },
+      {
+        "vendor": "Kling",
+        "status": "No newly verified direct official release. Higgsfield HD/OpenArt 4K discrepancy remains unresolved.",
+        "urls": [
+          "https://klingai.com/global/blog"
+        ],
+        "gaps": [
+          "Direct official page inaccessible via web tool; indexed date searches yielded no usable official in-window release."
+        ]
+      },
+      {
+        "vendor": "Pika",
+        "status": "Latest dated blog release remains Oct16 ChatGPT integration; undated model-navigation labels not counted as new launches.",
+        "urls": [
+          "https://pika.art/blog"
+        ]
+      },
+      {
+        "vendor": "Adobe",
+        "status": "No verified in-window relevant release. Current blog latest relevant item October19 Lightroom. Search surfaced October28 2025 MAX pages, excluded for year mismatch.",
+        "urls": [
+          "https://blog.adobe.com/en"
+        ],
+        "gaps": [
+          "No exhaustive all-product release-note sweep; date-specific search and central news checked."
+        ]
+      }
+    ],
+    "research_gaps": [
+      "Current arXiv listing was screened for relevant titles, not every paper exhaustively reviewed.",
+      "ReferStream repository is a demo website, not verified inference code or a full benchmark release.",
+      "Hexels Hugging Face tree was inaccessible via the web tool; connector confirmed repository metadata but returned no README. Checkpoint counts and availability details are therefore attributed to the official GitHub README; no files downloaded.",
+      "SplatFlux was not rechecked during this narrow Oct28 pass; do not claim its availability stayed unchanged today.",
+      "No model runs, benchmark reproduction, purchases, cookies or account changes. Community discovery and competitor changes are handled separately by the parent task."
+    ],
+    "community": {
+      "communities_attempted": [
+        "StableDiffusion",
+        "LocalLLaMA",
+        "GaussianSplatting",
+        "comfyui",
+        "generativeAI",
+        "MachineLearning",
+        "HiggsfieldAI"
+      ],
+      "method": "Public last30days route failed DNS; search-indexed public Reddit used as a partial fallback. Primary repositories verified actionable patches. No cookie, account or paid-service access.",
+      "gaps": [
+        "Public indexed fallback is partial and can rank old posts with newer comments. Search date filters are not release-date proof.",
+        "Most Reddit results expose calendar dates rather than exact UTC timestamps; classify their freshness cautiously.",
+        "No complete subreddit listings were retrieved. HiggsfieldAI placeholders and MachineLearning search noise limit coverage.",
+        "Hugging Face VitronEdit/UniVEdit history and official Block Dessa page were inaccessible through web tools.",
+        "Git commit metadata establishes commit dates, not independently verified public push/visibility timestamps.",
+        "No model execution, quality benchmark, account access, cookie scan, purchase, or social posting was performed."
+      ]
+    },
+    "voice": "ElevenLabs, Cartesia and Hume changelogs show no newly verified release since the prior cutoff. Phonon v0.5.0 and Pocket-TTS v4.0.1 are unchanged. Ming LiteRT public commit history ends Oct27 09:27:32Z, before the prior cutoff; Maya2 Native Oct28 change adjusts download metadata, not weights. Do not promote these as fresh model releases.",
+    "voice_primary_urls": [
+      "https://elevenlabs.io/docs/changelog",
+      "https://docs.cartesia.ai/changelog/2026",
+      "https://dev.hume.ai/voice/changelog",
+      "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.5.0",
+      "https://github.com/kyutai-labs/pocket-tts/releases/tag/v4.0.1",
+      "https://huggingface.co/litert-community/Ming-3.0-tts-0.5B/commits/main",
+      "https://huggingface.co/maya-research/maya2-native/commits/main"
+    ]
+  }
+}

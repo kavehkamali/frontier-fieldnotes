@@ -1,5 +1,7 @@
 # Frontier Fieldnotes · Edition 005 · 26 October 2026
 
+> **28 October follow-up:** [new research and workflow delta](delta-2026-10-28.md), including an App Studio date-metadata correction. This document remains the original weekly snapshot.
+
 > **27 October correction and update:** Direct Forcing has public code and an October 24 v2; trained checkpoints are still undistributed. The original October 26 availability assessment below was incomplete. Phonon v0.5.0, ComfyUI v0.43.0 and Runway’s announcement are covered in the [dated delta](delta-2026-10-27.md). The current dashboard includes these updates; this brief retains its original weekly snapshot.
 
 Research window: **19–26 October**, ending **26 October at 20:27:37 UTC**. Changes are also compared with the **23 October, 23:01:00 UTC** review. “New to this edition” does not mean “released today.” The lists mix frontier research with useful creator releases; they are not a universal SOTA ranking.

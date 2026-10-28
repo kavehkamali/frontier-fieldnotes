@@ -1,11 +1,11 @@
 {
-  "verified_at": "2026-10-27",
+  "verified_at": "2026-10-28",
   "window_start": "2026-10-19",
-  "window_end": "2026-10-27",
-  "cutoff": "2026-10-27T12:56:12Z",
-  "previous_cutoff": "2026-10-26T20:27:37Z",
+  "window_end": "2026-10-28",
+  "cutoff": "2026-10-28T12:55:51Z",
+  "previous_cutoff": "2026-10-27T12:56:12Z",
   "original_edition_cutoff": "2026-10-26T20:27:37Z",
-  "scope": "Original October 26 eight-item weekly selection retained. The October 27 addendum corrects Direct Forcing code availability and its October 24 revision, updates Phonon to the October 27 runtime release, and adds Runway’s separately dated October 26 announcement. Other records retain their individual checked_at dates. Additional newly discovered 3D/video candidates and proposed graphics are in delta-watchlist-2026-10-27.json. Author/vendor results remain scoped, with no independent reproduction or universal ranking. Robotics and physical AI are excluded.",
+  "scope": "Original October 26 eight-item weekly selection retained. The October 27 addendum corrects Direct Forcing code availability and its October 24 revision, updates Phonon to the October 27 runtime release, and adds Runway’s separately dated October 26 announcement. Other records retain their individual checked_at dates. Additional newly discovered 3D/video candidates and proposed graphics are in delta-watchlist-2026-10-27.json. Author/vendor results remain scoped, with no independent reproduction or universal ranking. Robotics and physical AI are excluded. October 28 adds two post-cutoff papers and four proposed graphics in delta-watchlist-2026-10-28.json, plus Runway Ads and Openjutsu updates. App Studio date metadata is corrected in its current card; other records retain individual checked_at dates.",
   "papers": [
     {
       "version": "v1",
@@ -230,12 +230,12 @@
       "category": "Generation",
       "title": "Runway App Studio: package a repeated creative task as an app.",
       "full_title": "Runway App Studio",
-      "date": "23 Oct changelog · 26 Oct announcement",
-      "submitted_at": "2026-10-23",
-      "version": "23 Oct product listing; 26 Oct public announcement",
+      "date": "26 Oct announcement/current changelog · date corrected 28 Oct",
+      "submitted_at": "2026-10-26",
+      "version": "26 Oct public announcement and current product listing",
       "revised_at": "2026-10-26",
-      "checked_at": "2026-10-27",
-      "change": "New official announcement at October 26 20:31 UTC, after the previous 20:27:37 review cutoff. Keep the October 23 changelog date separate. Public sharing, visitor-paid generations and ongoing hosting credits are now explicitly documented.",
+      "checked_at": "2026-10-28",
+      "change": "October 28 metadata correction: the current changelog now labels App Studio October 26; the October 27 review observed October 23. Exact edit time is unknown. The separately verified announcement remains October 26 at 20:31 UTC. No additional feature launch is inferred.",
       "summary": "Paid builders can package an Agent session or Workflow as an app and share a public link. Visitors sign in with a Runway account and use their own credits; free users may run built-in/shared apps.",
       "evaluation": "Official changelog, October 26 announcement and detailed help guide reviewed. No application built, no credits spent, no quality/reliability or productivity benchmark verified.",
       "caveat": "Building, personal generations and ongoing hosting consume the builder’s credits; public visitors pay for their own generations. The current help guide still lacks delete/unpublish controls. No actual cost, output-quality or reliability test.",
@@ -250,7 +250,17 @@
       "visual_angle": "Proposed dependency graph with downstream reruns and separate builder/visitor cost lanes. Toggle sharing scope, changed inputs, caching and assumed hosting/run cost; not a Runway integration or measured price model.",
       "review_depth": "Dated primary changelog plus build, access, credit and lifecycle documentation; no product execution.",
       "priority": 8,
-      "announcement_at_utc": "2026-10-26T20:31:00Z"
+      "announcement_at_utc": "2026-10-26T20:31:00Z",
+      "date_history": [
+        {
+          "observed_at": "2026-10-27",
+          "changelog_date": "2026-10-23"
+        },
+        {
+          "observed_at": "2026-10-28",
+          "changelog_date": "2026-10-26"
+        }
+      ]
     }
   ]
 }

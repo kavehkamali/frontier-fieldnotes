@@ -1,5 +1,43 @@
 [
   {
+    "title": "Runway · Ads generally available",
+    "date": "27 Oct 2026 · 16:11 UTC announcement · checked 28 Oct",
+    "summary": "GA for every paid Runway plan; Enterprise has workspace controls. Reads connected Meta, Google and TikTok performance, generates brand-constrained creative variants and supports reviewed publication. Original introduction was September 30, so this is availability expansion, not first introduction.",
+    "implication": "Current help requires Admin review and creates a paused ad inside an existing ad set/group. Activation happens in the ad platform. Help says no automatic publishing, campaign/ad-set creation, budget changes, or pause/stop control. The news article says users can start/pause from Runway, so those control claims conflict. Do not promise them until reconciled. No account test or independent outcome benchmark.",
+    "url": "https://runway.com/news/company-news/runway-ads",
+    "primary_urls": [
+      "https://runway.com/news/company-news/runway-ads",
+      "https://runway.com/changelog",
+      "https://help.runwayml.com/hc/en-us/articles/56691137245203-Reviewing-and-publishing-ads",
+      "https://runway.com/news/company-news/introducing-runway-ads"
+    ]
+  },
+  {
+    "title": "Openjutsu · setup and final assembly fixes",
+    "date": "27–28 Oct commit dates · public push times unverified",
+    "summary": "Public patches replace a missing source-slice node, avoid full-registry setup timeouts and pad short audio to loaded-video duration. The audio patch is dated October 28 at 12:48:43 UTC.",
+    "implication": "Update both the UI and companion pack if evaluating this workflow. No runtime test or quality improvement established. Identity/reflection leakage remains; default model choices do not override the owner’s Turbo 8 preference.",
+    "url": "https://github.com/D3voz/comfyui-h3-oneclick-swap/commit/9cf2d1a5e6f5f4e5fc3c11a82d9bc897e85085da",
+    "primary_urls": [
+      "https://github.com/D3voz/comfyui-h3-oneclick-swap/commit/df67f4bfa7348742e1b340dd11cc64714d83f323",
+      "https://github.com/D3voz/openjutsu/commit/1ee2997b176bf32dd7b9ac430205cdcd1277b6be",
+      "https://github.com/D3voz/openjutsu/commit/47c3724fe65dfae24cdc7ce14897280920e14419",
+      "https://github.com/D3voz/comfyui-h3-oneclick-swap/commit/9cf2d1a5e6f5f4e5fc3c11a82d9bc897e85085da",
+      "https://github.com/D3voz/openjutsu/blob/47c3724fe65dfae24cdc7ce14897280920e14419/README.md"
+    ]
+  },
+  {
+    "title": "Higgsfield · Playable access distinction",
+    "date": "26 Oct publication · 28 Oct modification/discovery · not a new launch",
+    "summary": "Browser game construction from text or gameplay video, with no-code controls. General Playable is described as available to everyone; Playable Ads is Enterprise/contact sales, exporting one HTML file up to 5 MB. Current public product page is a sign-in shell.",
+    "implication": "Useful interactive-ad workflow distinction. A modified changelog date is not a new model release; public product execution was not tested.",
+    "url": "https://higgsfield.ai/creator-hub/changelog#playable",
+    "primary_urls": [
+      "https://higgsfield.ai/creator-hub/changelog#playable",
+      "https://higgsfield.ai/playable"
+    ]
+  },
+  {
     "title": "ComfyUI · v0.43.0 filmmaking integrations",
     "date": "27 Oct 2026 · published 02:40:46 UTC",
     "summary": "Kling 4.0 partner nodes now cover text, keyframe, reference and edit workflows. New stable packaging also includes ACEScg conversion/EXR export and MiniMax-H3 PDD-aware single-head LoRA mapping.",
@@ -25,9 +63,9 @@
   },
   {
     "title": "Runway · App Studio sharing and hosting costs",
-    "date": "23 Oct changelog; 26 Oct 20:31 UTC announcement; checked 27 Oct",
+    "date": "26 Oct current changelog/announcement · date corrected 28 Oct",
     "summary": "Runway documents public links for paid builders; visitors sign in and pay for their own generations. Free users can use shared/built-in apps. Building, running and hosting consume credits. Existing Agent sessions or Workflows can become apps.",
-    "implication": "Review sharing scope and ongoing hosting costs before packaging a creative workflow. No app, spend or reliability test was performed. Vendor examples are not measured production results. Building requires a paid plan; public access still requires Runway sign-in. The help guide still lacks delete/unpublish controls.",
+    "implication": "Review sharing scope and ongoing hosting costs before packaging a creative workflow. No app, spend or reliability test was performed. Vendor examples are not measured production results. Building requires a paid plan; public access still requires Runway sign-in. The help guide still lacks delete/unpublish controls. Current changelog date is October 26; October 23 was the earlier observed label, not a separate verified launch.",
     "url": "https://runway.com/news/company-news/introducing-runway-app-studio",
     "primary_urls": [
       "https://runway.com/news/company-news/introducing-runway-app-studio",
