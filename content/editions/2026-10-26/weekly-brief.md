@@ -1,5 +1,7 @@
 # Frontier Fieldnotes · Edition 005 · 26 October 2026
 
+> **29 October follow-up:** [daily delta](delta-2026-10-29.md) covers artifact releases, voice controls and OpenArt retirement limits. The original weekly snapshot below is preserved.
+
 > **28 October follow-up:** [new research and workflow delta](delta-2026-10-28.md), including an App Studio date-metadata correction. This document remains the original weekly snapshot.
 
 > **27 October correction and update:** Direct Forcing has public code and an October 24 v2; trained checkpoints are still undistributed. The original October 26 availability assessment below was incomplete. Phonon v0.5.0, ComfyUI v0.43.0 and Runway’s announcement are covered in the [dated delta](delta-2026-10-27.md). The current dashboard includes these updates; this brief retains its original weekly snapshot.

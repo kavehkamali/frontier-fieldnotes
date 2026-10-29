@@ -15,3 +15,5 @@ The lab demonstrates synthetic vector geometry and a toy semantic-time schedule.
 [October 27 delta](delta-2026-10-27.md): Direct Forcing correction, Phonon/ComfyUI releases and Runway sharing costs. [Additional dated research candidates](delta-watchlist-2026-10-27.json) remain proposals for future selection.
 
 [October 28 delta](delta-2026-10-28.md): ReferStream, Hexels, Runway Ads and Openjutsu reliability fixes. [Four new proposed graphics and scoped source records](delta-watchlist-2026-10-28.json).
+
+[October 29 delta](delta-2026-10-29.md): OpenArt retirement limits, Kling API scope, Hexel Edge and voice changes. [Dated watchlist and proposed graphics](delta-watchlist-2026-10-29.json).

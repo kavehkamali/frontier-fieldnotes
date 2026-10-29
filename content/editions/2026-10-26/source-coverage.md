@@ -1,5 +1,7 @@
 # Source coverage · 26 October 2026
 
+> **29 October follow-up:** [daily delta](delta-2026-10-29.md) covers artifact releases, voice controls and OpenArt retirement limits. The original weekly snapshot below is preserved.
+
 > **28 October follow-up:** [new research and workflow delta](delta-2026-10-28.md), including an App Studio date-metadata correction. This document remains the original weekly snapshot.
 
 > **27 October correction:** the Direct Forcing availability/version assessment in this original snapshot was incomplete. See the [dated delta](delta-2026-10-27.md) for verified public code, paper v2 and subsequent release checks.
@@ -94,3 +96,7 @@ The original review above remains a dated snapshot. Its Direct Forcing availabil
 ### October 28 follow-up
 
 The [daily delta](delta-2026-10-28.md) and [structured source coverage](delta-watchlist-2026-10-28.json) record new research, artifact availability, competitor changes, public Reddit limitations and voice exclusions. Current App Studio changelog metadata is October 26; earlier October 23 observations above remain historical. No new launch is inferred from that edit.
+
+### October 29 follow-up
+
+See the [dated review](delta-2026-10-29.md) and [structured watchlist](delta-watchlist-2026-10-29.json) for source-access gaps, partial Reddit coverage, commit/public-availability distinctions and newly discovered older documentation. No new paper submission, model run or independent reproduction was established.

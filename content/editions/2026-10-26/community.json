@@ -1,5 +1,18 @@
 [
   {
+    "title": "Openjutsu follow-up · lighting controls, two separate mechanisms",
+    "date": "Original Reddit discovery 27 Oct · primary source additions 29 Oct",
+    "summary": "Repository follow-up finds a prompt-guided first-frame UI control and a separate normals/depth shading node. The original Reddit post is not a new release announcement.",
+    "implication": "No integration between the two relighting mechanisms or quality improvement verified. Inspect the prepared frame before a separate video stage; no generation performed.",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1xgt2h1/here_is_my_submission_for_comfyuis_open_source/",
+    "primary_urls": [
+      "https://github.com/D3voz/openjutsu/commit/5ee5d21d09da42ffe54ff646047658633fc424a1",
+      "https://github.com/D3voz/openjutsu/commit/a75ae3523e4d9eb00e930a49ccba484860c79bb1",
+      "https://github.com/D3voz/openjutsu/blob/a75ae3523e4d9eb00e930a49ccba484860c79bb1/workflows/picture/README.md",
+      "https://github.com/D3voz/comfyui-h3-oneclick-swap/commit/e44a56e92920000e675d14be484aea0d7498d63e"
+    ]
+  },
+  {
     "title": "Openjutsu setup reports lead to inspectable fixes",
     "date": "27 Oct 2026 Reddit calendar date · exact UTC unverified; patches 27–28 Oct",
     "url": "https://www.reddit.com/r/StableDiffusion/comments/1xgt2h1/here_is_my_submission_for_comfyuis_open_source/",

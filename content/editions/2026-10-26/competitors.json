@@ -1,5 +1,92 @@
 [
   {
+    "title": "OpenArt · Legacy Stories and custom models will not migrate",
+    "date": "Observed 2026-10-29; original notice publication unknown",
+    "summary": "Official migration FAQ says the old workspace retires November 1 at 11:59 PM PST. Existing media and Characters are available in the new workspace; plans and credits stay unchanged. Stories and custom models do not transfer, and the Gallery personal page retires. Stories can be exported as final MP4 and asset ZIP; the ZIP is not an editable Story project. Custom models can be downloaded as .safetensors. Downloads remain open until December 31 at 11:59 PM PST.",
+    "implication": "The user may have no affected assets; do not claim data was backed up or migrate anything. Search caches of older pages show November 16, but current dedicated FAQ and banner say November 1. Exact change date is unknown; do not claim a verified deadline acceleration. Official public FAQ and banner, no account inspection or export test.",
+    "url": "https://openart.ai/v1-sunset-faq",
+    "primary_urls": [
+      "https://openart.ai/v1-sunset-faq",
+      "https://openart.ai/whats-new"
+    ]
+  },
+  {
+    "title": "Kling · Kling 4.0 direct API availability and output limits",
+    "date": "2026-10-28",
+    "summary": "Official API Updates entry dated 10/28/2026 says Kling 4.0 API is fully available. Supports text/image/Omni reference endpoints, up to 30-second output, ten keyframes and voice references in Omni. Direct access requires a Flagship Resource Pack or account-manager balance funding. API notice specifies 720p/1080p; 10-bit 4K is still coming soon. This narrows the API claim but does not prove every consumer/host surface lacks 4K.",
+    "implication": "Billing depends on input/output duration. Do not equate API availability with free access or repeat vendor motion/identity improvements as independently established. Exact UTC publication and API execution unverified. Vendor announcement and documented limits; no account call, purchase, output inspection or independent quality benchmark.",
+    "url": "https://kling.ai/document-api/updates/api?date=2026-02-11",
+    "primary_urls": [
+      "https://kling.ai/document-api/updates/api?date=2026-02-11",
+      "https://kling.ai/document-api/updates/api",
+      "https://kling.ai/quickstart/kling-4-model-user-guide"
+    ]
+  },
+  {
+    "title": "Rime · Prism speech-to-speech with a text checkpoint",
+    "date": "28 Oct 2026 · vendor release; checked 29 Oct",
+    "summary": "Rime describes direct audio understanding followed by inspectable response text before speech. Its cloud/on-prem/VPC offering and beta work on customer fine-tuning expand the voice competitor watchlist.",
+    "implication": "Useful architecture lesson for interactive dialogue: retaining input audio cues and exposing output text are separate choices. Production narration quality and open-weight availability are not established. Fine-tuning APIs are being built with beta customers; the product page still says docs coming soon. No account test.",
+    "url": "https://www.rime.ai/resources/prism-first-speech-to-speech-for-enterprise",
+    "primary_urls": [
+      "https://www.rime.ai/resources/prism-first-speech-to-speech-for-enterprise",
+      "https://www.rime.ai/prism",
+      "https://www.prnewswire.com/news-releases/rime-launches-prism-the-first-fine-tunable-frontier-speech-to-speech-model-302922665.html"
+    ]
+  },
+  {
+    "title": "AssemblyAI · TTS-1 availability and three different latency clocks",
+    "date": "27 Oct announcement label; 28 Oct provider listing/evaluation; discovered 29 Oct",
+    "summary": "Newly covered hosted TTS API with six languages, instant voice cloning and a $15 per million input-character list price. The launch lacks SSML, a speed parameter, pronunciation dictionaries, emotion tags and fine-tuned Pro cloning.",
+    "implication": "A useful narration candidate to evaluate, but current evidence is mostly short English voice-agent material. Do not rank byte arrival, audible onset and end-to-end dialogue latency together. AA's accessible page did not expose numeric arena rows; vendor-reported arena rank was not independently verified here. No synthesis run.",
+    "url": "https://www.assemblyai.com/blog/text-to-speech-api",
+    "primary_urls": [
+      "https://www.assemblyai.com/blog/text-to-speech-api",
+      "https://openrouter.ai/assemblyai/assemblyai-tts-1",
+      "https://www.assemblyai.com/blog/whats-inside-a-voice-agent-pipeline",
+      "https://benchmarks.cekura.ai/text-to-speech/assemblyai-tts-1",
+      "https://benchmarks.cekura.ai/text-to-speech",
+      "https://artificialanalysis.ai/text-to-speech/model-families/assemblyai-tts"
+    ]
+  },
+  {
+    "title": "Inworld · documented opt-in delivery direction",
+    "date": "Observed 29 Oct · indexed developer-preview article dated 28 Oct; exact rollout unverified",
+    "summary": "The documented TTS-2 reasoning option runs a language model that writes a delivery instruction before synthesis. Unspoken scene context can steer that instruction; the response exposes it. This is explicit orchestration, not evidence that an audio model internally performs chain-of-thought reasoning.",
+    "implication": "Potentially useful for character lines and narrated scenes. Supported on TTS-2 unary, HTTP streaming and async synthesis; batch is upcoming, not Flash steering. Context is limited to 600 characters. Inline tags take precedence; timeout falls back to synthesis without direction. The step can delay first audio, and repeated requests need not choose the same direction.",
+    "url": "https://docs.inworld.ai/tts/capabilities/steering",
+    "primary_urls": [
+      "https://docs.inworld.ai/tts/capabilities/steering",
+      "https://docs.inworld.ai/api-reference/ttsAPI/texttospeech/synthesize-speech",
+      "https://preview-2025.dev.inworld.ai/blog/realtime-tts-2-reasoning-speed-consistency"
+    ]
+  },
+  {
+    "title": "ElevenLabs · v4 clone strength and Voice Changer path changes",
+    "date": "26 Oct changelog group · newly observed 29 Oct · not a new launch today",
+    "summary": "The changelog documents clone_strength from 0 to 1 for v4 Professional Voice Clones in speech/dialogue, with 0 recommended. Voice Changer has new /v1/voice-changer paths; prior speech-to-speech paths still work but are deprecated, with SDKs using new paths from 2.75.0.",
+    "implication": "Relevant to persistent character voices and integrations. It is a documented control/path change, not a verified quality upgrade or an immediate old-route shutdown.",
+    "url": "https://elevenlabs.io/docs/changelog",
+    "primary_urls": [
+      "https://elevenlabs.io/docs/changelog",
+      "https://elevenlabs.io/docs/api-reference/text-to-speech/convert",
+      "https://elevenlabs.io/docs/api-reference/text-to-dialogue/convert"
+    ]
+  },
+  {
+    "title": "Openjutsu · optional first-frame Relight",
+    "date": "29 Oct source commits · 12:17 UI; 13:46 separate node; public push times unknown",
+    "summary": "From picture now offers nine light looks or custom light text, off by default. It poses and relights the prepared first frame in one FLUX 3 Klein image-edit pass at 3 MP. The image model receives the character image; the source frame reaches it through the prompt upsampler's written pose and canvas shape. Video rendering remains a separate user-reviewed stage.",
+    "implication": "The separately added H3RelightPass normals/depth node is not called by the inspected UI patch. No measured identity or temporal-consistency gain; seed/background changes remain. No generation, and Turbo 8 preference is unchanged.",
+    "url": "https://github.com/D3voz/openjutsu/commit/5ee5d21d09da42ffe54ff646047658633fc424a1",
+    "primary_urls": [
+      "https://github.com/D3voz/openjutsu/commit/5ee5d21d09da42ffe54ff646047658633fc424a1",
+      "https://github.com/D3voz/openjutsu/commit/a75ae3523e4d9eb00e930a49ccba484860c79bb1",
+      "https://github.com/D3voz/openjutsu/blob/a75ae3523e4d9eb00e930a49ccba484860c79bb1/workflows/picture/README.md",
+      "https://github.com/D3voz/comfyui-h3-oneclick-swap/commit/e44a56e92920000e675d14be484aea0d7498d63e"
+    ]
+  },
+  {
     "title": "Runway · Ads generally available",
     "date": "27 Oct 2026 · 16:11 UTC announcement · checked 28 Oct",
     "summary": "GA for every paid Runway plan; Enterprise has workspace controls. Reads connected Meta, Google and TikTok performance, generates brand-constrained creative variants and supports reviewed publication. Original introduction was September 30, so this is availability expansion, not first introduction.",
@@ -77,7 +164,7 @@
     "title": "Higgsfield · Kling 4.0 specifications still conflict",
     "date": "21 Oct platform · 23 Oct API catalog · rechecked 27 Oct",
     "summary": "Current dated specs remain 3–30 seconds at 720p/1080p with keyframe/reference control and editing. Undated introductory marketing still advertises native 4K/HDR.",
-    "implication": "Retained in-window release, not new October 26 news. Higher resolution and quality claims remain unverified; discounts are temporary.",
+    "implication": "Retained in-window release, not new October 26 news. Higher resolution and quality claims remain unverified; discounts are temporary. October 29 follow-up: the direct Kling API notice dated October 28 specifies 720p/1080p, with 10-bit 4K upcoming; do not transfer that surface-specific limit to every host.",
     "url": "https://higgsfield.ai/creator-hub/changelog",
     "primary_urls": [
       "https://open.higgsfield.ai/models/kling-video/v4.0/text-to-video/playground",
@@ -88,7 +175,7 @@
     "title": "OpenArt · Kling 4.0 listing retained",
     "date": "Observed 23 Oct · rechecked 27 Oct · integration date unknown",
     "summary": "Current English instructions still specify 720p/1080p, 3–30-second output, ten keyframes and fifteen references.",
-    "implication": "No additional dated rollout verified. The public What's New feed is not readable beyond navigation; new tutorial dates do not prove feature launches.",
+    "implication": "No additional dated rollout verified. The public What's New feed is not readable beyond navigation; new tutorial dates do not prove feature launches. October 29 follow-up: the direct Kling API notice dated October 28 specifies 720p/1080p, with 10-bit 4K upcoming; do not transfer that surface-specific limit to every host.",
     "url": "https://openart.ai/ai-model/kling-4-0/",
     "primary_urls": [
       "https://openart.ai/suite/whats-new",

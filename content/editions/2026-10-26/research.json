@@ -1,11 +1,11 @@
 {
-  "verified_at": "2026-10-28",
+  "verified_at": "2026-10-29",
   "window_start": "2026-10-19",
-  "window_end": "2026-10-28",
-  "cutoff": "2026-10-28T12:55:51Z",
-  "previous_cutoff": "2026-10-27T12:56:12Z",
+  "window_end": "2026-10-29",
+  "cutoff": "2026-10-29T13:56:49Z",
+  "previous_cutoff": "2026-10-28T12:55:51Z",
   "original_edition_cutoff": "2026-10-26T20:27:37Z",
-  "scope": "Original October 26 eight-item weekly selection retained. The October 27 addendum corrects Direct Forcing code availability and its October 24 revision, updates Phonon to the October 27 runtime release, and adds Runway’s separately dated October 26 announcement. Other records retain their individual checked_at dates. Additional newly discovered 3D/video candidates and proposed graphics are in delta-watchlist-2026-10-27.json. Author/vendor results remain scoped, with no independent reproduction or universal ranking. Robotics and physical AI are excluded. October 28 adds two post-cutoff papers and four proposed graphics in delta-watchlist-2026-10-28.json, plus Runway Ads and Openjutsu updates. App Studio date metadata is corrected in its current card; other records retain individual checked_at dates.",
+  "scope": "Original October 26 eight-item weekly selection retained. The October 27 addendum corrects Direct Forcing code availability and its October 24 revision, updates Phonon to the October 27 runtime release, and adds Runway’s separately dated October 26 announcement. Other records retain their individual checked_at dates. Additional newly discovered 3D/video candidates and proposed graphics are in delta-watchlist-2026-10-27.json. Author/vendor results remain scoped, with no independent reproduction or universal ranking. Robotics and physical AI are excluded. October 28 adds two post-cutoff papers and four proposed graphics in delta-watchlist-2026-10-28.json, plus Runway Ads and Openjutsu updates. App Studio date metadata is corrected in its current card; other records retain individual checked_at dates. October 29 artifact, voice and competitor follow-ups are in delta-watchlist-2026-10-29.json. No fresh paper submission verified; original record checked_at dates remain unchanged.",
   "papers": [
     {
       "version": "v1",

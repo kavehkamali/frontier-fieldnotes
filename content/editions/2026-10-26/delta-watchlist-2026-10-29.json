@@ -1,0 +1,485 @@
+{
+  "review_date": "2026-10-29",
+  "previous_cutoff": "2026-10-28T12:55:51Z",
+  "cutoff": "2026-10-29T13:56:49Z",
+  "status": "Daily artifact, availability and limitation updates. Original weekly selections retained. New visual entries are proposed, not implemented. Unknown publication times and newly discovered older entries are labeled explicitly.",
+  "recommendation": "Prioritize the OpenArt portability deadline for affected workflows. Extend the existing Hexels graphic proposal with capture/fitting/export; use the voice-latency timeline as the strongest new standalone lesson.",
+  "papers": [
+    {
+      "id": "hexel-edge-2026-10-28",
+      "category": "3D Gaussian",
+      "priority": 1,
+      "title": "Hexel Edge: local surface fitting reaches an inspectable Apple-device app.",
+      "full_title": "Hexel Edge on-device reconstruction application",
+      "date": "28 Oct 2026 source commit · observed 29 Oct",
+      "source_commit_at_utc": "2026-10-28T23:37:42Z",
+      "version": "2f1bd739e32d783e686c3aba02ab2fd4b4e28c04; docs checked at 698d1afb0944d3e766074c3beb70362f16c7550d",
+      "checked_at": "2026-10-29",
+      "change": "The official Hexels repository added native Swift/Metal app, renderer, gradients/Adam trainer, capture tools and public development results after yesterday's inspected revision. Commit metadata places the addition inside the window; exact first public push/visibility time is unverified. The underlying paper remains October 27 v1.",
+      "summary": "Experimental local capture, V1 FP32 fixed-population fitting, novel-view rendering and export. ARKit supplies tracked poses and points, with LiDAR depth where available. Calibrated bundles can also be imported.",
+      "evaluation": "Author-reported October 28 development run: M2 iPad Pro, DTU scan24, 42 training and six reserved views, 6,598 cells at 640×480. Twenty measured minutes reached 25.21 dB pooled float-RGB PSNR. Mac prepared calibration/feature seeds; all optimization ran on iPad. This is one development scene, with reserved cameras reused for recipe selection, not a blind benchmark or independent reproduction.",
+      "caveat": "Physical iPhone and non-LiDAR capture remain unvalidated; iPhone checks cover build/simulator only. No V2/V3, adaptive population, Android, standalone SfM or arbitrary unposed-file import. Trained PLY patches and captured OBJ are different outputs; patches may have gaps and are not watertight. No local install or execution here.",
+      "access": "Inspectable source and Xcode build instructions; no public App Store/TestFlight build. Hexel Edge code is MIT, with separate dependency/data terms. Repository source includes actual Swift trainer and Metal shader files rather than only screenshots.",
+      "creator_implication": "Useful experimental route for captured-scene assets on Apple hardware. It does not establish general phone reconstruction quality, a ready-made consumer release, or generative 3D SOTA.",
+      "url": "https://github.com/honeycomb-surfels/hexels/tree/main/hexel_edge",
+      "primary_urls": [
+        "https://github.com/honeycomb-surfels/hexels/commit/2f1bd739e32d783e686c3aba02ab2fd4b4e28c04",
+        "https://github.com/honeycomb-surfels/hexels/blob/698d1afb0944d3e766074c3beb70362f16c7550d/hexel_edge/README.md",
+        "https://github.com/honeycomb-surfels/hexels/blob/698d1afb0944d3e766074c3beb70362f16c7550d/hexel_edge/results/README.md",
+        "https://github.com/honeycomb-surfels/hexels/blob/698d1afb0944d3e766074c3beb70362f16c7550d/hexel_edge/apple/iOS/README.md",
+        "https://github.com/honeycomb-surfels/hexels/blob/698d1afb0944d3e766074c3beb70362f16c7550d/hexel_edge/LICENSE",
+        "https://arxiv.org/abs/2610.37668v1"
+      ],
+      "visual_angle": "Extend yesterday's proposed Hexels mechanism lab with separate capture geometry, fitted appearance and surface-export layers. Toggle calibrated versus deliberately perturbed cameras, sparse/depth seeds, view count and patch budget; inspect novel-view residuals and gaps. Analytic illustration, not a device benchmark or app reproduction.",
+      "review_depth": "Official commit metadata/diff/file tree, app README, public experiment conditions, build/validation limitations and license; no installation or model/device execution."
+    }
+  ],
+  "visual_queue": [
+    {
+      "title": "Captured geometry, fitted color and exported surface are different layers.",
+      "idea": "Extend the proposed Hexels lab with camera calibration and seed geometry, then compare rendered appearance with the independent exported patches.",
+      "controls": "Camera error; view count; sparse/depth seeds; patch budget; appearance/geometry/export overlays; novel-view residuals and holes; planned PNG/GIF.",
+      "misconception": "A good novel-view render implies a complete watertight mesh, or on-device optimization means the evaluation needed no external calibration preparation.",
+      "connection": "Hexel Edge source addition, 28 Oct 2026, following Honeycomb-Surfels paper of 27 Oct. Synthetic mechanism lesson, not measured device performance.",
+      "audience": "Captured-scene creators and graphics engineers",
+      "status": "Proposed",
+      "recommendation": "Extend yesterday's proposed Hexels graphic instead of duplicating its shape-versus-color lesson.",
+      "url": "https://github.com/honeycomb-surfels/hexels/tree/main/hexel_edge",
+      "priority": "Proposed"
+    },
+    {
+      "title": "Which clock makes a voice look fast?",
+      "idea": "Place text arrival, first byte, leading silence and playback on one timeline, then change the measurement boundaries.",
+      "controls": "Whole-text/word-stream input; connection setup; first byte; leading silence; playback buffer; last-word versus first-word clock; planned PNG/GIF.",
+      "misconception": "A 47 ms first-byte measurement and a 171 ms audible-onset measurement describe the same latency.",
+      "connection": "AssemblyAI TTS-1 vendor evaluation and independent Cekura October 28 snapshot. Proposed synthetic timeline with separately labeled measured reference markers.",
+      "audience": "Voice engineers and creators",
+      "status": "Proposed",
+      "recommendation": "Best new standalone voice graphic; show the clock definitions before comparing any model scores.",
+      "url": "https://benchmarks.cekura.ai/text-to-speech/assemblyai-tts-1",
+      "priority": "Proposed"
+    },
+    {
+      "title": "An exported video is not an editable project.",
+      "idea": "Trace a synthetic filmmaking project through timeline, source assets, rendered media and model weights; show which relationships survive export.",
+      "controls": "MP4/assets ZIP/editable project/weights toggles; media versus timeline layers; missing-dependency markers.",
+      "misconception": "Downloading source assets preserves timeline editability or guarantees model portability.",
+      "connection": "OpenArt legacy-workspace retirement FAQ, observed October 29. Proposal only; no user assets inspected.",
+      "audience": "Filmmakers and creative leads",
+      "status": "Proposed",
+      "recommendation": "Practical competitor lesson tied to the November 1 retirement and December 31 download deadline.",
+      "url": "https://openart.ai/v1-sunset-faq",
+      "priority": "Proposed"
+    },
+    {
+      "title": "Separate conditioning controls from guaranteed output.",
+      "idea": "Lay out keyframes, image/video references and voice references on a timeline, with separate capability lanes for a model, direct API and host app.",
+      "controls": "Anchor time; reference role; input duration; requested resolution; app/API/host surface.",
+      "misconception": "A model marketing feature is already available on every endpoint, or a reference is a hard output guarantee.",
+      "connection": "Kling 4.0 October 28 API notice; 720p/1080p documented and 10-bit 4K upcoming. Schematic, not inference.",
+      "audience": "Video workflow builders",
+      "status": "Proposed",
+      "recommendation": "Useful short companion to the API availability update.",
+      "url": "https://kling.ai/document-api/updates/api",
+      "priority": "Proposed"
+    },
+    {
+      "title": "Relighting already-lit pixels can count the light twice.",
+      "idea": "Move a light over a synthetic surface and compare true albedo shading with multiplying already-lit RGB; show normals, depth and missing cast shadows.",
+      "controls": "Light azimuth/elevation; diffuse/specular; albedo/already-lit input; normals/depth; hidden geometry; shadow approximation.",
+      "misconception": "Prompt-guided relighting and depth-based shading are the same operation, or a single depth map reconstructs hidden geometry.",
+      "connection": "Openjutsu UI Relight and separate H3RelightPass source commits, October 29. No integration between them verified. Analytic illustration only.",
+      "audience": "Filmmakers and graphics/ML engineers",
+      "status": "Proposed",
+      "recommendation": "Strong new advanced colored-graphics candidate; clearly separate the image-editing condition from the approximate renderer.",
+      "url": "https://github.com/D3voz/comfyui-h3-oneclick-swap/commit/e44a56e92920000e675d14be484aea0d7498d63e",
+      "priority": "Proposed"
+    }
+  ],
+  "competitor_changes": [
+    {
+      "id": "kling-4-direct-api-oct28",
+      "vendor": "Kling",
+      "title": "Kling 4.0 direct API availability and output limits",
+      "date": "2026-10-28",
+      "publication_time_utc": null,
+      "observed_at": "2026-10-29",
+      "classification": "Dated official API notice newly verified; exact placement before/after previous intraday cutoff is unknown.",
+      "change": "Official API Updates entry dated 10/28/2026 says Kling 4.0 API is fully available. Supports text/image/Omni reference endpoints, up to 30-second output, ten keyframes and voice references in Omni. Direct access requires a Flagship Resource Pack or account-manager balance funding.",
+      "availability": "API notice specifies 720p/1080p; 10-bit 4K is still coming soon. This narrows the API claim but does not prove every consumer/host surface lacks 4K.",
+      "evaluation": "Vendor announcement and documented limits; no account call, purchase, output inspection or independent quality benchmark.",
+      "limitation": "Billing depends on input/output duration. Do not equate API availability with free access or repeat vendor motion/identity improvements as independently established. Exact UTC publication and API execution unverified.",
+      "primary_urls": [
+        "https://kling.ai/document-api/updates/api?date=2026-02-11",
+        "https://kling.ai/document-api/updates/api",
+        "https://kling.ai/quickstart/kling-4-model-user-guide"
+      ],
+      "source_access": "Full dated official API entry obtained through search-indexed primary text twice. Direct opening returned a one-line JavaScript shell. klingai.com was robots-blocked; kling.ai indexed documentation was readable.",
+      "visual_angle": "Proposed keyframe-conditioning timeline: move anchors and reference roles independently; distinguish a requested constraint from guaranteed output, and show app/API/host capability lanes so a marketing feature is not assumed available at every endpoint. Schematic, not model inference."
+    },
+    {
+      "id": "openart-legacy-sunset-nov1",
+      "vendor": "OpenArt",
+      "title": "Legacy Stories and custom models will not migrate",
+      "date": "Observed 2026-10-29; original notice publication unknown",
+      "observed_at": "2026-10-29",
+      "retirement_deadline": "2026-11-01 23:59 PST",
+      "download_deadline": "2026-12-31 23:59 PST",
+      "classification": "Newly discovered actionable retirement notice, not a verified in-window announcement.",
+      "change": "Official migration FAQ says the old workspace retires November 1 at 11:59 PM PST. Existing media and Characters are available in the new workspace; plans and credits stay unchanged. Stories and custom models do not transfer, and the Gallery personal page retires.",
+      "availability": "Stories can be exported as final MP4 and asset ZIP; the ZIP is not an editable Story project. Custom models can be downloaded as .safetensors. Downloads remain open until December 31 at 11:59 PM PST.",
+      "evaluation": "Official public FAQ and banner, no account inspection or export test.",
+      "limitation": "The user may have no affected assets; do not claim data was backed up or migrate anything. Search caches of older pages show November 16, but current dedicated FAQ and banner say November 1. Exact change date is unknown; do not claim a verified deadline acceleration.",
+      "primary_urls": [
+        "https://openart.ai/v1-sunset-faq",
+        "https://openart.ai/whats-new"
+      ],
+      "visual_angle": "Proposed asset-portability diagram with separate rendered media, source assets, editable timeline and model weights; toggle exports to show what can reconstruct a project and what cannot. Use synthetic example assets."
+    }
+  ],
+  "voice_updates": [
+    {
+      "id": "rime-prism-2026-10-28",
+      "title": "Rime · Prism speech-to-speech with a text checkpoint",
+      "date": "28 Oct 2026 · vendor release; checked 29 Oct",
+      "published_at": "2026-10-28",
+      "announcement_at_utc": "2026-10-28T20:05:00Z",
+      "date_scope": "Official blog dated October 28; vendor-issued PRNewswire announcement stamped 16:05 ET, inside the review window. No first-availability timestamp established.",
+      "summary": "Rime describes direct audio understanding followed by inspectable response text before speech. Its cloud/on-prem/VPC offering and beta work on customer fine-tuning expand the voice competitor watchlist.",
+      "evaluation": "Rime reports 56.6 on its run of the tau-Voice harness and 0.57 seconds to first audio. These are vendor-run results using an external benchmark, not independent reproduction. A separate roughly 300 ms marketing statement is not the same measured condition.",
+      "implication": "Useful architecture lesson for interactive dialogue: retaining input audio cues and exposing output text are separate choices. Production narration quality and open-weight availability are not established. Fine-tuning APIs are being built with beta customers; the product page still says docs coming soon. No account test.",
+      "url": "https://www.rime.ai/resources/prism-first-speech-to-speech-for-enterprise",
+      "primary_urls": [
+        "https://www.rime.ai/resources/prism-first-speech-to-speech-for-enterprise",
+        "https://www.rime.ai/prism",
+        "https://www.prnewswire.com/news-releases/rime-launches-prism-the-first-fine-tunable-frontier-speech-to-speech-model-302922665.html"
+      ],
+      "visual_angle": "Proposed audio/text information-flow diagram: toggle input prosody retention, output text inspection and playback buffering. Label synthetic examples and distinguish architecture from measured quality."
+    },
+    {
+      "id": "assemblyai-tts1-2026-10-29-discovery",
+      "title": "AssemblyAI · TTS-1 availability and three different latency clocks",
+      "date": "27 Oct announcement label; 28 Oct provider listing/evaluation; discovered 29 Oct",
+      "published_at": "2026-10-27",
+      "date_scope": "Official GA article is dated October 27 without UTC time. OpenRouter's indexed official model listing dates availability October 28; earlier official pipeline articles also specified an October 28 launch. Keep these dates separate; exact GA instant and whether it followed the previous cutoff are unverified.",
+      "summary": "Newly covered hosted TTS API with six languages, instant voice cloning and a $15 per million input-character list price. The launch lacks SSML, a speed parameter, pronunciation dictionaries, emotion tags and fine-tuned Pro cloning.",
+      "evaluation": "Vendor comparison: 47 ms median time to first byte from one client, distinct from its 90 ms production audio claim. Independent Cekura October 28 snapshot: 171 ms full-text-to-first-audible-sound median and 159 ms from the last streamed word. Its protocol uses 104 sentences, three reads and one US East region; connection setup excluded. Accuracy uses ASR and naturalness uses a predictor, not human listening.",
+      "implication": "A useful narration candidate to evaluate, but current evidence is mostly short English voice-agent material. Do not rank byte arrival, audible onset and end-to-end dialogue latency together. AA's accessible page did not expose numeric arena rows; vendor-reported arena rank was not independently verified here. No synthesis run.",
+      "url": "https://www.assemblyai.com/blog/text-to-speech-api",
+      "primary_urls": [
+        "https://www.assemblyai.com/blog/text-to-speech-api",
+        "https://openrouter.ai/assemblyai/assemblyai-tts-1",
+        "https://www.assemblyai.com/blog/whats-inside-a-voice-agent-pipeline",
+        "https://benchmarks.cekura.ai/text-to-speech/assemblyai-tts-1",
+        "https://benchmarks.cekura.ai/text-to-speech",
+        "https://artificialanalysis.ai/text-to-speech/model-families/assemblyai-tts"
+      ],
+      "visual_angle": "Proposed latency timeline: drag text arrival, first byte, leading silence and playback buffer; change the start/stop clock and compare whole-text versus incremental text. Synthetic values must remain distinct from cited benchmark markers."
+    },
+    {
+      "id": "inworld-reasoning-2026-10-29-observation",
+      "title": "Inworld · documented opt-in delivery direction",
+      "date": "Observed 29 Oct · indexed developer-preview article dated 28 Oct; exact rollout unverified",
+      "published_at": null,
+      "date_scope": "Date comes from an indexed official developer-preview article. Canonical blog URL and direct preview fetch failed. Current production documentation verifies the capability, but not a release instant or regional rollout completion. Treat as newly verified documentation, not a confirmed fresh model launch.",
+      "summary": "The documented TTS-2 reasoning option runs a language model that writes a delivery instruction before synthesis. Unspoken scene context can steer that instruction; the response exposes it. This is explicit orchestration, not evidence that an audio model internally performs chain-of-thought reasoning.",
+      "evaluation": "No independent evaluation of the new direction feature verified. Preview claims about speed/consistency are not promoted; older TTS-2 family benchmarks do not isolate this feature.",
+      "implication": "Potentially useful for character lines and narrated scenes. Supported on TTS-2 unary, HTTP streaming and async synthesis; batch is upcoming, not Flash steering. Context is limited to 600 characters. Inline tags take precedence; timeout falls back to synthesis without direction. The step can delay first audio, and repeated requests need not choose the same direction.",
+      "url": "https://docs.inworld.ai/tts/capabilities/steering",
+      "primary_urls": [
+        "https://docs.inworld.ai/tts/capabilities/steering",
+        "https://docs.inworld.ai/api-reference/ttsAPI/texttospeech/synthesize-speech",
+        "https://preview-2025.dev.inworld.ai/blog/realtime-tts-2-reasoning-speed-consistency"
+      ],
+      "visual_angle": "Proposed state diagram separating spoken text, unspoken scene context, generated delivery instruction and inline overrides. Controls: context, tags, timeout and reused instruction; no synthesized audio or claimed performance."
+    },
+    {
+      "id": "elevenlabs-oct26-newly-observed29",
+      "title": "ElevenLabs · v4 clone strength and Voice Changer path changes",
+      "date": "26 Oct changelog group · newly observed 29 Oct · not a new launch today",
+      "published_at": "2026-10-26",
+      "date_scope": "Current changelog has an October 26 group not captured in our prior review. The first-publication/edit time is unknown; discovery today is not a new October 29 rollout.",
+      "summary": "The changelog documents clone_strength from 0 to 1 for v4 Professional Voice Clones in speech/dialogue, with 0 recommended. Voice Changer has new /v1/voice-changer paths; prior speech-to-speech paths still work but are deprecated, with SDKs using new paths from 2.75.0.",
+      "evaluation": "Official release notes only; no voice cloning test or measured identity/expressiveness tradeoff. Referenced endpoint extractors did not expose clone_strength nested fields, so parameter semantics are attributed to the changelog.",
+      "implication": "Relevant to persistent character voices and integrations. It is a documented control/path change, not a verified quality upgrade or an immediate old-route shutdown.",
+      "url": "https://elevenlabs.io/docs/changelog",
+      "primary_urls": [
+        "https://elevenlabs.io/docs/changelog",
+        "https://elevenlabs.io/docs/api-reference/text-to-speech/convert",
+        "https://elevenlabs.io/docs/api-reference/text-to-dialogue/convert"
+      ],
+      "visual_angle": "Proposed control-scope graphic showing voice identity versus per-line delivery settings; avoid inventing a measured tradeoff curve."
+    }
+  ],
+  "community_review": {
+    "review_date": "2026-10-29",
+    "window_start": "2026-10-28T12:55:51Z",
+    "cutoff": "2026-10-29T13:56:49Z",
+    "status": "One verified workflow feature addition through repository follow-up to prior Reddit discovery; no newly verified model/SOTA release from community posts.",
+    "meaningful_changes": [
+      {
+        "id": "openjutsu-relight-oct29",
+        "title": "Openjutsu adds optional first-frame relighting",
+        "classification": "Local filmmaking workflow feature, not a new model or controlled quality result",
+        "discovery_url": "https://www.reddit.com/r/StableDiffusion/comments/1xgt2h1/here_is_my_submission_for_comfyuis_open_source/",
+        "discovery_date": "2026-10-27; retained discovery post, not a new October 29 announcement",
+        "change": "From picture now offers nine light looks or custom light text, off by default. It poses and relights the prepared first frame in one FLUX 3 Klein image-edit pass at 3 MP. The image model receives the character image; the source frame reaches it through the prompt upsampler's written pose and canvas shape. Video rendering remains a separate user-reviewed stage.",
+        "primary_sources": [
+          {
+            "url": "https://github.com/D3voz/openjutsu/commit/5ee5d21d09da42ffe54ff646047658633fc424a1",
+            "commit_time": "2026-10-29T12:17:29Z",
+            "evidence": "Inspected API, UI and applyRelight patches: optional light field, nine looks, customprompt, single character-image latent reference and 3 MP canvas."
+          },
+          {
+            "url": "https://github.com/D3voz/openjutsu/commit/a75ae3523e4d9eb00e930a49ccba484860c79bb1",
+            "commit_time": "2026-10-29T13:51:05Z",
+            "evidence": "Adds current Relight description to main README."
+          },
+          {
+            "url": "https://github.com/D3voz/openjutsu/blob/a75ae3523e4d9eb00e930a49ccba484860c79bb1/workflows/picture/README.md",
+            "evidence": "Documents first-frame preparation, explicit separate video stage, seed variability, background changes and approximate pose/framing."
+          },
+          {
+            "url": "https://github.com/D3voz/comfyui-h3-oneclick-swap/commit/e44a56e92920000e675d14be484aea0d7498d63e",
+            "commit_time": "2026-10-29T13:46:31Z",
+            "evidence": "Separate H3RelightPass node added to companion pack. Inspected code computes rough shading from normals/depth plus movable light/shaped presets, with image, light-map and text outputs. Do not conflate this node with the currently wired prompt-based Openjutsu UI; the inspected UI patch does not call H3RelightPass."
+          }
+        ],
+        "date_scope": "Author and committer timestamps lie within the exact window. Exact public push/first visibility times were not independently established.",
+        "limitations": [
+          "No installation, runtime, generated-output or independent quality test performed here.",
+          "Single-image latent conditioning is not proof that identity leakage is impossible: the upsampler still sees the source frame, and the model can change appearance.",
+          "Authors document strong seed variation, background lighting changes and approximate pose. Magenta/teal presets mostly affect the background. Do not promise physically accurate or temporally consistent relighting from the UI feature.",
+          "The separate geometry-based node multiplies an already lit image by approximate shading; it is not inverse rendering or a full 3D lighting reconstruction. Its depth map lacks hidden surfaces; the code explicitly omits rear-light cast shadows.",
+          "Existing video defaults use SolarRenderer four steps or H3/DMAD six steps; they do not override the owner's Turbo 8 preference. No generation was run.",
+          "App MIT license does not replace model/dependency terms."
+        ],
+        "creator_implication": "A more explicit lighting choice before animating a prepared character image; review the first frame before spending video-render time. Keep prompt-guided image editing distinct from the new analytic shading node.",
+        "visual_teaching_angle": "Proposed colored relighting lab: drag light azimuth/elevation over a synthetic surface, show normals, depth, diffuse/specular terms and cast-shadow limits. Toggle already-lit RGB versus true albedo to reveal double-shading. Pair with a small conditioning diagram separating source-pose text from image-latent references. Analytic lesson, not Openjutsu inference or a new relighting algorithm."
+      }
+    ],
+    "community_records": [
+      {
+        "community": "comfyui",
+        "url": "https://www.reddit.com/r/comfyui/comments/1xi1kc3/31_mp_minimax_dlss_pass_upscale_almost_realism/",
+        "created_at_utc": "2026-10-28T21:45:39.984Z",
+        "title": "3.1 MP MiniMax plus DLSS pass and upscale",
+        "classification": "In-window workflow anecdote, not a verified new release or benchmark",
+        "summary": "Creator reports roughly six hours with upscaling on RTX 5090 / 64 GB RAM and highlights input-image quality; comments raise audio/cutting/artifact concerns. No complete workflow attached, controlled comparison, new node version or normalized quality result established."
+      },
+      {
+        "community": "comfyui",
+        "url": "https://www.reddit.com/r/comfyui/comments/1xhmt6x/minimax_h3_face_fix_remove_blurry_faces_in/",
+        "created_at_utc": "2026-10-28T12:33:21.391Z",
+        "classification": "Newly discovered tutorial, 22 minutes before prior cutoff; not fresh-window news",
+        "summary": "Author describes face-crop refinement at 0.4 denoise with SelfLift/VEDA. Six GB headline and timings are author claims; workflow and hardware suitability not validated. No recommended variant change."
+      }
+    ],
+    "unchanged": [
+      {
+        "title": "ComfyUI v0.43.0",
+        "published_at_utc": "2026-10-27T02:40:46Z",
+        "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0",
+        "note": "GitHub latest release endpoint still points to already-covered stable version."
+      }
+    ],
+    "coverage": {
+      "communities_attempted": [
+        "StableDiffusion",
+        "LocalLLaMA",
+        "GaussianSplatting",
+        "comfyui",
+        "generativeAI",
+        "MachineLearning",
+        "HiggsfieldAI"
+      ],
+      "method": "Read last30days skill and inspected public-only modules. Used keyless module in cleared environment, with no auth/config/keychain loaders, cookies, browser or paid backends. Initial sandbox run failed DNS. Network-enabled retry: public JSON 403, RSS 0, public listing 172 cards, 4 posts in Oct28–29 calendar filter, comments enriched. Indexed search supplemented all seven communities.",
+      "public_listing_cards": 172,
+      "calendar_filtered_posts": 4,
+      "exact_window_posts": 2,
+      "counts_note": "172 are fetched listing cards, not unique in-window relevant posts. Of four date-filtered posts, only two are after the prior exact cutoff. Top-listing/quick scan is partial and can miss newer/low-engagement posts.",
+      "gaps": [
+        "Search index often returned older posts or unrelated Devvit pages despite date queries; no claim of exhaustive subreddit coverage.",
+        "Only two calendar-filtered posts fall within exact window; neither establishes a new model/SOTA release.",
+        "Openjutsu Relight was found by primary repository follow-up to the prior discovery thread, not a new verified Reddit announcement.",
+        "No fresh actionable public discussion verified for GaussianSplatting, MachineLearning or HiggsfieldAI in this pass. This does not establish absence of activity.",
+        "No model runs, accounts, cookies, purchases or social publication."
+      ]
+    }
+  },
+  "secondary_maintenance": [
+    {
+      "title": "Hy-Nomas demo repairs camera-key end times",
+      "date": "29 Oct 2026 · 07:53:32 UTC commit",
+      "source_commit": "05a142472111ad90322edcab36cfcdbb7fd5ba0c",
+      "summary": "Patch bounds key events to the retained camera trajectory and emits releases for held keys at its endpoint; it also repairs saved/imported timelines before submission. Recorded camera frames and duration stay unchanged. Added tests are visible, but not run here.",
+      "classification": "Source-verified demo maintenance, not new model weights, a new paper or demonstrated generation-quality improvement. Exact public push time unverified.",
+      "url": "https://github.com/Tencent-Hunyuan/Hy-Nomas/commit/05a142472111ad90322edcab36cfcdbb7fd5ba0c",
+      "visual_angle": "Overlay continuous camera samples with discrete key events, trim trailing still frames and show how a delayed key release can outlive the trajectory. Proposed synthetic timeline only.",
+      "priority": "Optional small maintenance note; do not headline as SOTA."
+    }
+  ],
+  "unchanged_or_deferred": [
+    {
+      "title": "ReferStream",
+      "status": "arXiv remains October 27 v1; current repository commits still concern the demo website. No new runnable inference release verified.",
+      "urls": [
+        "https://arxiv.org/abs/2610.37566",
+        "https://github.com/Xushuolin/ReferStream"
+      ]
+    },
+    {
+      "title": "OmniShowcase",
+      "status": "Current branch was rewritten to an October 29 Initial update commit, but tree still contains only README and teaser assets; release checklist still leaves datasets and inference/training code unchecked. Changed history is not a substantive artifact release.",
+      "source_commit": "3ac48df079f093880143ec810a18baa9441a8ca2",
+      "urls": [
+        "https://github.com/justin4ai/OmniShowcase/commit/3ac48df079f093880143ec810a18baa9441a8ca2",
+        "https://github.com/justin4ai/OmniShowcase"
+      ]
+    },
+    {
+      "title": "BoundedGS",
+      "status": "Latest observed commit remains October 27 09:52:09 UTC, before the comparison window. No new capability verified.",
+      "urls": [
+        "https://github.com/XiaoBin2001/BoundedGS"
+      ]
+    },
+    {
+      "title": "Hy-Nomas report and weights",
+      "status": "Report is October 27 06:48:59 UTC; official Hub history shows older weight upload and October 28 morning README edits before prior cutoff. Do not present it as a new October 28 model launch. Only demo-maintenance patch above is in-window verified.",
+      "urls": [
+        "https://arxiv.org/abs/2610.36729",
+        "https://huggingface.co/tencent/Hy-Nomas/commits/main"
+      ]
+    },
+    {
+      "title": "SenseNova 6.8 Code2Video",
+      "status": "Relevant newly discovered code-driven filmmaking model, but GitHub artifacts date October 24–27. Secondary sources report an October 28 official X announcement; direct X returned 403 and Hub history was inaccessible. Do not assign a fresh release timestamp from these secondary claims. Can revisit for next weekly selection with explicit original/discovery dates.",
+      "urls": [
+        "https://github.com/OpenSenseNova/SenseNova-6.8-Code2Video",
+        "https://huggingface.co/sensenova/SenseNova-6.8-Code2Video",
+        "https://x.com/SenseTime_AI/status/2115445835068748044"
+      ]
+    }
+  ],
+  "coverage": {
+    "competitors": [
+      {
+        "vendor": "Higgsfield",
+        "status": "Latest changelog entries remain Oct27 Terra and Oct26 Playable, already covered or outside scope. API migration notice still has Oct31 deadline; current status is healthy, not a new incident.",
+        "urls": [
+          "https://higgsfield.ai/creator-hub/changelog",
+          "https://status.higgsfield.ai/"
+        ]
+      },
+      {
+        "vendor": "OpenArt",
+        "status": "Legacy FAQ provides actionable limitation above. Oct29 InVideo comparison article and upcoming 10:00 PDT webinar are guide/training signals, not a dated capability release. Oct28 FLUX guide remains an Oct1 integration. Current Kling4 page is readable and states full HD.",
+        "urls": [
+          "https://openart.ai/blog/",
+          "https://openart.ai/blog/openart-vs-invideo-comparison/",
+          "https://i18n.openart.ai/enterprise/webinar/how-to-make-100-high-performing-paid-ads-in-a-week-with-ai/",
+          "https://openart.ai/ai-model/kling-4-0/",
+          "https://openart.ai/whats-new"
+        ],
+        "gaps": [
+          "New suite What's New still a navigation shell; legacy What's New latest entry Oct1.",
+          "Oct29 comparison article body inaccessible; no release inferred.",
+          "Raw legacy-page HTTP fallback returned 403; official FAQ readable via web tool."
+        ]
+      },
+      {
+        "vendor": "Runway",
+        "status": "Latest release changelog still Ads Oct27 and App Studio Oct26. Ads help still creates paused ads and excludes pause/stop control, while GA article promises start/pause; prior conflict unresolved. Minor help wording/navigation/export clarifications are not a newly verified capability. Claude Marketplace announcement is Oct20, not fresh.",
+        "urls": [
+          "https://runway.com/changelog",
+          "https://runway.com/news/company-news/runway-ads",
+          "https://help.runwayml.com/hc/en-us/articles/56691137245203-Reviewing-and-publishing-ads",
+          "https://runway.com/news/company-news/runway-claude-marketplace"
+        ],
+        "gaps": [
+          "Seedance/Kling API guide price-as-of dates do not establish a price change without prior matching price evidence."
+        ]
+      },
+      {
+        "vendor": "Luma",
+        "status": "Author index latest batch remains Oct27 guides. No newly verified rollout since prior cutoff.",
+        "urls": [
+          "https://lumalabs.ai/authors/luma-team"
+        ]
+      },
+      {
+        "vendor": "Kling",
+        "status": "Official Oct28 API entry verified through indexed primary source; 4K/HDR availability must be tracked by surface.",
+        "urls": [
+          "https://kling.ai/document-api/updates/api?date=2026-02-11",
+          "https://kling.ai/quickstart/kling-4-model-user-guide"
+        ],
+        "gaps": [
+          "Direct API page is JS shell; exact publication UTC unavailable. No paid API or account test."
+        ]
+      },
+      {
+        "vendor": "Pika",
+        "status": "Blog latest dated release remains Oct16 ChatGPT integration; no new dated release verified.",
+        "urls": [
+          "https://pika.art/blog"
+        ]
+      },
+      {
+        "vendor": "Adobe",
+        "status": "Oct28 anniversary-pin design story is non-actionable; latest relevant item on central blog remains Oct19 Lightroom. No new verified filmmaking release from targeted dates.",
+        "urls": [
+          "https://blog.adobe.com/en"
+        ],
+        "gaps": [
+          "This was central-news/date-query coverage, not exhaustive all-product release notes."
+        ]
+      }
+    ],
+    "research": {
+      "sources": [
+        "https://arxiv.org/list/cs.CV/recent?skip=0&show=2000",
+        "https://arxiv.org/list/cs.CV/new",
+        "https://arxiv.org/list/cs.GR/new",
+        "Official repository histories and pinned documents for shortlisted artifacts"
+      ],
+      "gaps": [
+        "Fetched arXiv new/recent listings still label October 28 and show October 27 submissions. Date-specific search did not establish a genuinely post-cutoff paper. This is an indexing/access limit, not evidence that no new papers exist.",
+        "The review is targeted, not an exhaustive repository or paper crawl.",
+        "Git commit timestamps establish file history, not independently verified first public availability or push times.",
+        "No independent device test, benchmark reproduction, model execution, account change, cookie access or purchase. Community and competitor coverage are delegated separately by the parent task.",
+        "SenseNova official announcement and Hub history access gaps noted above."
+      ]
+    },
+    "voice_unchanged": [
+      {
+        "title": "Cartesia",
+        "url": "https://docs.cartesia.ai/changelog/2026",
+        "status": "No new verified dated release; previously recorded retirement notice remains background."
+      },
+      {
+        "title": "Hume",
+        "url": "https://dev.hume.ai/voice/changelog",
+        "status": "October 2 notice still lists TTS/EVI ending November 13 at 00:01 EST; unchanged."
+      },
+      {
+        "title": "Phonon",
+        "url": "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.5.0",
+        "status": "Latest remains v0.5.0, published October 27 09:42:20Z; already covered."
+      },
+      {
+        "title": "Pocket-TTS",
+        "url": "https://github.com/kyutai-labs/pocket-tts/releases/tag/v4.0.1",
+        "status": "Latest remains v4.0.1, published October 21 13:14:05Z; not new."
+      }
+    ],
+    "voice_gaps": [
+      "No listening tests, account execution, model downloads or paid generation.",
+      "Rime's use of an external harness is still a vendor-run evaluation.",
+      "AssemblyAI exact GA timing remains ambiguous; provider-index date is not original model date.",
+      "Inworld dated preview was search-index accessible only; current production docs establish the interface, not rollout timing.",
+      "ElevenLabs October 26 release group is newly discovered older information; no first-publication timestamp verified."
+    ]
+  }
+}
