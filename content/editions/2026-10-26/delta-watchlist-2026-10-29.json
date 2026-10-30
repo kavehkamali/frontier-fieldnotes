@@ -481,5 +481,14 @@
       "Inworld dated preview was search-index accessible only; current production docs establish the interface, not rollout timing.",
       "ElevenLabs October 26 release group is newly discovered older information; no first-publication timestamp verified."
     ]
-  }
+  },
+  "subsequent_corrections": [
+    {
+      "observed_at": "2026-10-30",
+      "topic": "OpenArt retirement date",
+      "current_faq": "November 16, 2026, 23:59 PST",
+      "conflicting_legacy_banner": "November 1",
+      "note": "Original record retained as October 29 observation. No exact change time or formal extension announcement verified. See delta-watchlist-2026-10-30.json."
+    }
+  ]
 }

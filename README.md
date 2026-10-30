@@ -70,4 +70,6 @@ Previous daily review: [27 October delta](content/editions/2026-10-26/delta-2026
 
 Previous daily review: [28 October delta](content/editions/2026-10-26/delta-2026-10-28.md) — ReferStream, Hexels, Runway Ads GA and Openjutsu reliability fixes. Four proposed teaching graphics; source and date limitations included.
 
-Latest daily review: [29 October delta](content/editions/2026-10-26/delta-2026-10-29.md) — OpenArt retirement limits, Kling API scope, Hexel Edge and voice changes. Dates, source access and evaluation limits remain explicit.
+Previous daily review: [29 October delta](content/editions/2026-10-26/delta-2026-10-29.md) — OpenArt retirement limits, Kling API scope, Hexel Edge and voice changes. Dates, source access and evaluation limits remain explicit.
+
+Latest daily review: [30 October delta](content/editions/2026-10-26/delta-2026-10-30.md) — L3G-World, SonoWorld4D, Pika H3 Flex, SFX v3, Phonon v0.6.0 and the OpenArt deadline discrepancy. Six new graphics are proposals; the weekly publishing kit remains intact.

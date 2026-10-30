@@ -1,11 +1,11 @@
 {
-  "verified_at": "2026-10-29",
+  "verified_at": "2026-10-30",
   "window_start": "2026-10-19",
-  "window_end": "2026-10-29",
-  "cutoff": "2026-10-29T13:56:49Z",
-  "previous_cutoff": "2026-10-28T12:55:51Z",
+  "window_end": "2026-10-30",
+  "cutoff": "2026-10-30T12:58:02Z",
+  "previous_cutoff": "2026-10-29T13:56:49Z",
   "original_edition_cutoff": "2026-10-26T20:27:37Z",
-  "scope": "Original October 26 eight-item weekly selection retained. The October 27 addendum corrects Direct Forcing code availability and its October 24 revision, updates Phonon to the October 27 runtime release, and adds Runway’s separately dated October 26 announcement. Other records retain their individual checked_at dates. Additional newly discovered 3D/video candidates and proposed graphics are in delta-watchlist-2026-10-27.json. Author/vendor results remain scoped, with no independent reproduction or universal ranking. Robotics and physical AI are excluded. October 28 adds two post-cutoff papers and four proposed graphics in delta-watchlist-2026-10-28.json, plus Runway Ads and Openjutsu updates. App Studio date metadata is corrected in its current card; other records retain individual checked_at dates. October 29 artifact, voice and competitor follow-ups are in delta-watchlist-2026-10-29.json. No fresh paper submission verified; original record checked_at dates remain unchanged.",
+  "scope": "Original October 26 eight-item weekly selection retained. The October 27 addendum corrects Direct Forcing code availability and its October 24 revision, updates Phonon to the October 27 runtime release, and adds Runway’s separately dated October 26 announcement. Other records retain their individual checked_at dates. Additional newly discovered 3D/video candidates and proposed graphics are in delta-watchlist-2026-10-27.json. Author/vendor results remain scoped, with no independent reproduction or universal ranking. Robotics and physical AI are excluded. October 28 adds two post-cutoff papers and four proposed graphics in delta-watchlist-2026-10-28.json, plus Runway Ads and Openjutsu updates. App Studio date metadata is corrected in its current card; other records retain individual checked_at dates. October 29 artifact, voice and competitor follow-ups are in delta-watchlist-2026-10-29.json. No fresh paper submission verified; original record checked_at dates remain unchanged. October 30 adds two fresh papers and six proposed graphics in delta-watchlist-2026-10-30.json, corrects the OpenArt current-deadline record, and updates Phonon to v0.6.0. All other weekly record checked_at dates remain unchanged.",
   "papers": [
     {
       "version": "v1",
@@ -196,21 +196,21 @@
       "id": "phonon-0.4.2",
       "priority": 7,
       "category": "Voice",
-      "title": "Phonon: smaller speech models need a matching runtime",
-      "full_title": "Phonon normalization and runtime releases v0.4.1–v0.5.0",
-      "date": "24–27 Oct 2026",
+      "title": "Phonon: preprocessing, checkpoints and runtime must agree",
+      "full_title": "Phonon normalization and runtime releases v0.4.1–v0.6.0",
+      "date": "24–30 Oct 2026",
       "submitted_at": "2026-10-24",
-      "released_at_utc": "2026-10-27T09:42:20Z",
-      "version": "v0.5.0 · 27 Oct 09:42:20 UTC",
-      "revised_at": "2026-10-27",
-      "checked_at": "2026-10-27",
-      "change": "New runtime release after the previous cutoff. Adds support for small Pocket TTS architectures, including one-step flow heads and grouped-query attention. The earlier model-free normalization API remains available; browser abbreviation/elongation rules are fixed.",
-      "summary": "The new runtime accepts smaller Pocket TTS architectures and corrects the Mimi streaming-attention window from context+1 to context positions. Architecture compatibility is separate from the age of model weights.",
-      "evaluation": "Official release metadata and merged implementation reviewed. Maintainers report closer numerical agreement with the Python decoder on fixed latents; this is a reference-parity check, not independent listening or narration-quality evidence. No model run here.",
-      "caveat": "Core ML export does not support the new architecture keys yet. The Rust API has breaking signature/config changes. The separate attention-window correction can slightly change outputs; backwards-compatible architecture defaults do not imply bit-identical output across this runtime upgrade.",
-      "access": "Public runtime release. The attached 31M CoreML/QNN bundles are unchanged from v0.4.0, confirmed by matching published SHA-256 metadata; no binaries were downloaded. Support for an architecture does not grant its checkpoint license or establish platform parity. Prior model-card checks on October 26: existing 31M English weights are Apache 2.0 and ungated; 40M variants are gated and CC BY-NC 4.0. Those advertised counts exclude the audio tokenizer.",
-      "creator_implication": "Check the chosen checkpoint, export backend and runtime together before adopting smaller local narration models. Retest representative scripts when upgrading; no new voice-quality claim.",
-      "url": "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.5.0",
+      "released_at_utc": "2026-10-30T11:26:07Z",
+      "version": "v0.6.0 · 30 Oct 11:26:07 UTC",
+      "revised_at": "2026-10-30",
+      "checked_at": "2026-10-30",
+      "change": "Metal startup on macOS 27 is repaired. Automatic device selection can fall back to CPU after GPU initialization failure; explicit device selection still errors. Core ML export now supports smaller Pocket TTS architectures and aligns the Mimi window and GELU with the checkpoint.",
+      "summary": "Thirteen additional preprocessing language codes apply locale-specific character/symbol rules and Japanese spacing. Word-level number/currency/email normalization remains limited to English, French, German, Spanish and Portuguese. Each added language still requires a checkpoint trained for it; this release does not establish thirteen new voice models.",
+      "evaluation": "Maintainer fixes and published release/asset metadata verified, without downloading models, running inference or independently evaluating listening quality. No new benchmark or universal quality claim.",
+      "caveat": "Rust Lang enum change is breaking; external matches need a catch-all arm. Architecture, preprocessing and backend compatibility are separate from checkpoint language coverage and licensing. Preserve October 27's hash comparison as an observation at that time.",
+      "access": "Public runtime release and attached CoreML/QNN bundles. The CoreML bundle is re-exported. The v0.6.0 QNN digest matches the current v0.5.0 QNN asset, which was replaced on October 28; release-tag identity does not guarantee immutable attachments. Prior checkpoint license observations remain dated October 26: 31M English Apache-2.0/ungated; 40M gated/CC BY-NC 4.0; advertised parameter counts exclude audio tokenizer.",
+      "creator_implication": "Useful for local narration pipelines affected by Metal startup or smaller-model Core ML export. Check checkpoint, preprocessing and backend together.",
+      "url": "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.6.0",
       "code_url": "https://github.com/gradium-ai/xn-ptts",
       "primary_urls": [
         "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.4.1",
@@ -220,10 +220,22 @@
         "https://huggingface.co/gradium/phonon-40m-en",
         "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.5.0",
         "https://github.com/gradium-ai/xn-ptts/pull/210",
-        "https://github.com/gradium-ai/xn-ptts/pull/209"
+        "https://github.com/gradium-ai/xn-ptts/pull/209",
+        "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.6.0",
+        "https://github.com/gradium-ai/xn-ptts/pull/284",
+        "https://github.com/gradium-ai/xn-ptts/pull/310"
       ],
-      "visual_angle": "Proposed extension to the script-to-speech diagram: animate a causal attention window and compare context versus context+1, with separate architecture/export compatibility lanes. Controls: context length, current frame, backend and mask boundary. Synthetic visualization; no generated audio or claimed quality measurement.",
-      "review_depth": "Official release notes, exact public GitHub release metadata and existing model cards reviewed; no local execution or listening comparison."
+      "visual_angle": "Proposed checkpoint/preprocessor/backend matrix: toggle script language, numeral or symbol input and runtime backend; show why accepting a language code does not create a trained voice. Synthetic text pipeline, no generated speech.",
+      "review_depth": "Official release notes, exact GitHub publication and asset metadata. No model download, inference or listening comparison.",
+      "history": [
+        {
+          "checked_at": "2026-10-27",
+          "version": "v0.5.0 · 27 Oct 09:42:20 UTC",
+          "caveat": "Core ML export does not support the new architecture keys yet. The Rust API has breaking signature/config changes. The separate attention-window correction can slightly change outputs; backwards-compatible architecture defaults do not imply bit-identical output across this runtime upgrade.",
+          "access": "Public runtime release. The attached 31M CoreML/QNN bundles are unchanged from v0.4.0, confirmed by matching published SHA-256 metadata; no binaries were downloaded. Support for an architecture does not grant its checkpoint license or establish platform parity. Prior model-card checks on October 26: existing 31M English weights are Apache 2.0 and ungated; 40M variants are gated and CC BY-NC 4.0. Those advertised counts exclude the audio tokenizer.",
+          "note": "Historical observation: v0.5.0 QNN attachment was subsequently replaced October 28. Do not assume tag attachments stayed immutable."
+        }
+      ]
     },
     {
       "id": "runway-app-studio-oct23",

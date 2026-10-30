@@ -1,0 +1,771 @@
+{
+  "review_date": "2026-10-30",
+  "previous_cutoff": "2026-10-29T13:56:49Z",
+  "cutoff": "2026-10-30T12:58:02Z",
+  "status": "Daily research, artifact and competitor update. Calendar-dated launches with unknown UTC are newly covered, not asserted to fall strictly after the prior cutoff. Original weekly selection and publishing kit retained; all new graphics are proposals.",
+  "recommendation": "Correct the current OpenArt deadline record while exposing its conflicting banners. Best new teaching pairing: L3G-World with persistent spatial memory and direct latent conditioning; SonoWorld4D is the spatial-audio follow-up.",
+  "papers": [
+    {
+      "id": "2610.40614",
+      "priority": 1,
+      "title": "L3G-World: Real-Time Infinite World Generation with Latent 3D Gaussian Memory",
+      "date": "29 Oct 2026 · v1",
+      "submitted_at_utc": "2026-10-29T17:54:42Z",
+      "version": "2610.40614v1",
+      "checked_at": "2026-10-30",
+      "change": "Persistent Gaussians store RGB and VAE latent features. The updater spawns in poorly covered regions and refines visible memory; direct latent rasterization avoids RGB-to-VAE re-encoding before video generation.",
+      "evaluation": "Author-run DL3DV and RE10K comparisons use 481-frame out-and-back trajectories on a single A100. Self-consistency compares generated outward and return views, not ground-truth reconstruction. Several baselines receive protocol adaptations. Reported 359x acceleration concerns VAE conditioning/rendering against the fastest relevant baseline, not total video generation.",
+      "caveat": "Primarily static scenes; independently moving objects are not explicitly modeled. Memory grows with explored scene extent, so 'infinite' does not mean constant memory. Autoregressive errors can enter persistent memory. Fast generation trades quality for speed; no independent reproduction.",
+      "access": {
+        "state": "Repository contains documentation, license files and assets; all code/checkpoint release TODOs remain unchecked. No runnable inference release verified.",
+        "licensing": "README separates original MIT code, planned L3G-Mem CC-BY-NC-4.0 weights and L3G-Gen/Fast NVIDIA Open Model License weights. Do not describe all weights as MIT.",
+        "observed_at": "2026-10-30 review"
+      },
+      "creator_implication": "Editorial inference: a strong camera-continuity teaching topic; not a production tool recommendation yet.",
+      "primary_urls": [
+        "https://arxiv.org/abs/2610.40614",
+        "https://arxiv.org/html/2610.40614v1",
+        "https://cvlab-kaist.github.io/L3G-World/",
+        "https://github.com/cvlab-kaist/L3G-World",
+        "https://raw.githubusercontent.com/cvlab-kaist/L3G-World/main/README.md"
+      ],
+      "review_depth": "Sections 3–4; Table 2; Appendix D evaluation protocol; Appendix E limitations.",
+      "timing_note": "The abstract claims 9 FPS, but this review did not fully pin down end-to-end timing conditions. Prefer omitting that number rather than conflating latent-rendering FPS with video FPS.",
+      "visual_angle": {
+        "title": "A scene remembers places, not every frame",
+        "status": "Proposed; not implemented or a model reproduction.",
+        "controls": [
+          "Camera out-and-back trajectory",
+          "Spawn coverage/error thresholds",
+          "Refine existing Gaussians toggle",
+          "Direct latent versus RGB-to-encoder pipeline",
+          "Explored area versus elapsed frames"
+        ],
+        "display": "Colored persistent Gaussians, revisited-view comparison, memory growth plot and separated conditioning versus generation cost bars.",
+        "misconception": "Spatial memory can improve consistency without guaranteeing truth, bounded memory or correct moving objects.",
+        "design": "Light minimal canvas; restrained violet/cyan/orange; analytic synthetic scene; eventual PNG/GIF/MP4 export."
+      }
+    },
+    {
+      "id": "2610.40640",
+      "priority": 2,
+      "title": "SonoWorld4D: From One Video to a 4D Audio-Visual Scene via Diffusion Synchronization",
+      "date": "29 Oct 2026 · v1",
+      "submitted_at_utc": "2026-10-29T17:58:45Z",
+      "version": "2610.40640v1",
+      "checked_at": "2026-10-30",
+      "change": "Combines dynamic foreground Gaussians and a static panoramic background with synchronized camera-space and object-space audio diffusion. Forward rendering and inverse feedback keep intrinsic source audio separate from listener-dependent Doppler and attenuation.",
+      "evaluation": "Author-created SonoScene4D has 54 scenes (25 vehicle, 29 human), including 13 with two dynamic sources. Quantitative evaluation uses captured full panoramas and mask-tracked per-object FoV inputs; it is not an unconstrained one-video evaluation. Four baselines are adapted. A 50-person preference study covers nine scenes. HYWorld 2.0 is used for quantitative backgrounds; proprietary Marble appears in qualitative demonstrations.",
+      "caveat": "The acoustic model uses direct paths, without reflections or reverberation. Inverse feedback assumes known trajectories and excludes occluded intervals; separation and resampling add error. 'Real-time' refers to rendering an already prepared scene, not its construction. Author-only evaluation and no independent reproduction.",
+      "access": {
+        "state": "Linked repository contains only a 177-byte README stating code is coming soon. No runnable framework or model release verified.",
+        "code_url": "https://github.com/HuMathe/sonoworld4d",
+        "observed_at": "2026-10-30 review"
+      },
+      "creator_implication": "Editorial inference: useful for explaining camera-independent spatial sound and future immersive filmmaking; not evidence of a ready editor or instant scene generation.",
+      "primary_urls": [
+        "https://arxiv.org/abs/2610.40640",
+        "https://arxiv.org/html/2610.40640v1",
+        "https://humathe.github.io/sonoworld4d/",
+        "https://github.com/HuMathe/sonoworld4d",
+        "https://raw.githubusercontent.com/HuMathe/sonoworld4d/main/README.md"
+      ],
+      "review_depth": "Sections 3–5; Appendix B direct-path model/inversion; Appendix C background comparison; Appendices E–G evaluation/study/implementation.",
+      "timing_note": "Prepared-scene rendering is separate from reconstruction.",
+      "visual_angle": {
+        "title": "Why a moving camera should not bake motion into the sound",
+        "status": "Proposed; not implemented or a model reproduction.",
+        "controls": [
+          "Drag listener and source trajectories",
+          "Source speed and sound frequency",
+          "Distance attenuation",
+          "Object-space versus recorded-track toggle",
+          "Occlusion mask",
+          "Diffusion synchronization weight"
+        ],
+        "display": "Colored source/listener paths, emission-time versus arrival-time waves, frequency/loudness traces and two synchronized diffusion branches. Use an analytic tone, not claimed generated audio.",
+        "misconception": "Re-spatializing an already Doppler-shifted camera recording can apply motion effects twice; novel-view rendering is distinct from scene generation.",
+        "design": "Light minimal canvas; restrained violet/cyan/orange; exportable silent annotated GIF plus optional synthesized-tone MP4."
+      }
+    }
+  ],
+  "visual_queue": [
+    {
+      "title": "A scene remembers places, not every frame",
+      "status": "Proposed",
+      "priority": 1,
+      "controls": [
+        "Camera out-and-back trajectory",
+        "Spawn coverage/error thresholds",
+        "Refine existing Gaussians toggle",
+        "Direct latent versus RGB-to-encoder pipeline",
+        "Explored area versus elapsed frames"
+      ],
+      "display": "Colored persistent Gaussians, revisited-view comparison, memory growth plot and separated conditioning versus generation cost bars.",
+      "misconception": "Spatial memory can improve consistency without guaranteeing truth, bounded memory or correct moving objects.",
+      "connection": "L3G-World: Real-Time Infinite World Generation with Latent 3D Gaussian Memory · 29 Oct 2026",
+      "url": "https://arxiv.org/abs/2610.40614",
+      "design": "Light minimal canvas; restrained violet/cyan/orange; analytic synthetic scene; eventual PNG/GIF/MP4 export."
+    },
+    {
+      "title": "Why a moving camera should not bake motion into the sound",
+      "status": "Proposed",
+      "priority": 2,
+      "controls": [
+        "Drag listener and source trajectories",
+        "Source speed and sound frequency",
+        "Distance attenuation",
+        "Object-space versus recorded-track toggle",
+        "Occlusion mask",
+        "Diffusion synchronization weight"
+      ],
+      "display": "Colored source/listener paths, emission-time versus arrival-time waves, frequency/loudness traces and two synchronized diffusion branches. Use an analytic tone, not claimed generated audio.",
+      "misconception": "Re-spatializing an already Doppler-shifted camera recording can apply motion effects twice; novel-view rendering is distinct from scene generation.",
+      "connection": "SonoWorld4D: From One Video to a 4D Audio-Visual Scene via Diffusion Synchronization · 29 Oct 2026",
+      "url": "https://arxiv.org/abs/2610.40640",
+      "design": "Light minimal canvas; restrained violet/cyan/orange; exportable silent annotated GIF plus optional synthesized-tone MP4."
+    },
+    {
+      "title": "A distilled student is not a teacher stopped early",
+      "status": "Proposed",
+      "priority": 3,
+      "controls": [
+        "Teacher/student step budget",
+        "Reference conditioning",
+        "Conditioning/denoising/decoding/finishing timeline",
+        "Local versus hosted capabilities"
+      ],
+      "misconception": "Six generation steps or seven seconds of transformer computation describe the full end-to-end product.",
+      "connection": "Pika H3 Flex · 29 Oct launch",
+      "display": "Proposed light-theme interactive distillation explainer: two colored particle distributions and 50-step teacher versus six-step student paths, with step budget and guidance/reference controls; separate an inference timeline into conditioning, denoising, decoding and hosted finishing. Mark it as a schematic, not measured model outputs. Add local/API toggles for native resolution, upsampling and audio-stem separation so open weights are not confused with the entire service.",
+      "url": "https://pika.art/blog/pika-h3-flex-research"
+    },
+    {
+      "title": "Describing four impacts is different from placing four clips",
+      "status": "Proposed",
+      "priority": 4,
+      "controls": [
+        "Event count",
+        "Order",
+        "Overlap",
+        "Prompt constraints versus explicit timeline placement"
+      ],
+      "misconception": "Better multipart prompting guarantees exact repetition counts, timing or separate stems.",
+      "connection": "ElevenLabs SFX v3 · 29 Oct launch",
+      "display": "Proposed event-timeline graphic: change requested count, order and overlap, and distinguish descriptive prompt constraints from explicit placed clips. Use synthetic event markers, not invented model outputs or quality scores.",
+      "url": "https://elevenlabs.io/docs/overview/capabilities/sound-effects"
+    },
+    {
+      "title": "Geometry guidance needs a semantic description",
+      "status": "Proposed",
+      "priority": 5,
+      "controls": [
+        "Source RGB/normal-map/action-text lanes",
+        "Clip scrubber",
+        "Action/object/appearance text masks",
+        "Sampling interval"
+      ],
+      "misconception": "A surface normal map identifies what an object is or which action it performs.",
+      "connection": "Openjutsu source commit · 30 Oct 04:49:56 UTC",
+      "display": "A colored three-lane timeline: source RGB → normal-map geometry → editable action text. Toggle 'geometry only' versus 'geometry+semantics', scrub a held-cup/blowing-candle example, and mask text fields for actions/objects/appearance. Explain why a normal vector cannot identify the object or action. Label generated output comparisons as proposed/not benchmarked.",
+      "url": "https://github.com/D3voz/openjutsu/commit/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe"
+    },
+    {
+      "title": "A language code is not a trained voice",
+      "status": "Proposed",
+      "priority": 6,
+      "controls": [
+        "Script language",
+        "Symbols/numerals",
+        "Checkpoint",
+        "Export backend"
+      ],
+      "misconception": "Adding a preprocessing language code releases a new voice or complete normalization.",
+      "connection": "Phonon v0.6.0 · 30 Oct",
+      "display": "Proposed checkpoint/preprocessor/backend matrix: toggle script language, numeral or symbol input and runtime backend; show why accepting a language code does not create a trained voice. Synthetic text pipeline, no generated speech.",
+      "url": "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.6.0"
+    }
+  ],
+  "competitor_changes": [
+    {
+      "id": "openart-sunset-date-discrepancy-oct30",
+      "vendor": "OpenArt",
+      "title": "Current retirement FAQ says November 16; legacy banners still say November 1",
+      "date": "Observed 2026-10-30; document update time unknown",
+      "publication_time_utc": null,
+      "classification": "Material documentation discrepancy/correction to yesterday's recorded current deadline; not a verified newly announced extension.",
+      "change": "The dedicated official retirement FAQ now repeatedly states November 16, 2026, 11:59 PM PST. Yesterday's read and published review recorded November 1. The current legacy What's New banner still says November 1. The image-page extraction varied between November 16 and November 1 during this review, so it is not reliable confirmation of a synchronized change.",
+      "current_faq_deadline": "2026-11-16 23:59 PST",
+      "conflicting_legacy_banner_deadline": "2026-11-01 PST",
+      "download_deadline_unchanged": "2026-12-31 23:59 PST",
+      "limitations_unchanged": "Stories and custom models do not migrate. Story MP4 and assets ZIP are exportable; the ZIP is not an editable Story project. Custom model downloads are .safetensors. Existing media/Characters and plans/credits remain available or unchanged as documented.",
+      "creator_implication": "Correct the current watchlist to quote the dedicated FAQ with an explicit banner discrepancy and retain yesterday's observation. Do not infer that any user's workspace was migrated or that an official extension was announced at a known time.",
+      "primary_urls": [
+        "https://openart.ai/v1-sunset-faq",
+        "https://openart.ai/whats-new",
+        "https://openart.ai/image"
+      ],
+      "visual_angle": "Extend the existing portability concept with separate creation-retirement and export-download deadlines. Distinguish final rendered media, component assets, editable project state and model weights; annotate the source discrepancy rather than portraying an assured extension.",
+      "source_access_gaps": [
+        "No publication/update timestamp or official explanation for conflicting deadlines was found.",
+        "Public page extraction/cache variation prevents establishing whether all live workspace surfaces changed.",
+        "No account or export flow tested."
+      ]
+    },
+    {
+      "id": "pika-h3-flex-oct29",
+      "vendor": "Pika",
+      "title": "Pika H3 Flex releases six-step video/audio adapters; hosted finishing remains separate",
+      "date": "2026-10-29",
+      "publication_time_utc": null,
+      "observed_at": "2026-10-30",
+      "classification": "Official launch and technical article dated October 29. Exact first publication UTC was not established; do not assert precise placement relative to the prior intraday cutoff.",
+      "change": "Pika released MiniMax-H3-derived FL2VA and Ref2VA adapters with inference code. Local generation supports text, endpoint frames or multimodal references, synchronized mixed stereo audio, six generator evaluations and native 480p/768p. Up to 12 reference inputs and requested 5–15-second clips are documented.",
+      "availability": "Public GitHub code and Hugging Face adapter repository were readable. API Club availability is announced; creation-product availability is scheduled for November 2. No paid request, model download or local inference was performed.",
+      "hosted_boundary": "1080p/2K/4K output is upsampled finishing. Upsampling, five separated audio stems, optional prompt enhancement and the accelerated serving stack are Pika-hosted capabilities, not included in the local generator adapter package. Stems are separated from a generated mixed soundtrack rather than generated independently.",
+      "evaluation": "Pika's own comparisons use the same prompts at 768p against MiniMax H3, fal H3 Max and HeyGen Video Quality. The vendor reports quality/preference wins in selected categories but acknowledges competitors preferred for physics, narrative, lighting/materials and some reference-control tasks. The seven-second headline is transformer computation for a 15-second 768p clip, not end-to-end completion. DesignArena launch rank is a vendor-cited external leaderboard snapshot, not independently reverified here.",
+      "mechanism": "Vendor describes supervised fine-tuning, projected distribution matching distillation from 50 to six steps, then reward/preference learning using merged low-rank adapters. This is a post-trained student, not an instruction to run an arbitrary 50-step model for six steps.",
+      "license_and_hardware": "Adapters retain the MiniMax H3 Community License; inference code is Apache-2.0. Current CLI runs one request on one GPU, with optional CPU offload. Model card reports representative H100 80GB checks; large reference combinations are not guaranteed to fit. Showcase clips are not exact release-validation reproductions.",
+      "creator_implication": "A useful open-adapter experiment for reference-driven film iteration, with API-only finishing clearly budgeted separately. No universal SOTA or consumer-GPU real-time claim is justified by the inspected evidence.",
+      "primary_urls": [
+        "https://pika.art/blog/pika-h3-flex",
+        "https://pika.art/blog/pika-h3-flex-research",
+        "https://github.com/Pika-Labs/Pika-H3-Flex",
+        "https://huggingface.co/Pika-Labs/Pika-H3-Flex"
+      ],
+      "visual_angle": "Proposed light-theme interactive distillation explainer: two colored particle distributions and 50-step teacher versus six-step student paths, with step budget and guidance/reference controls; separate an inference timeline into conditioning, denoising, decoding and hosted finishing. Mark it as a schematic, not measured model outputs. Add local/API toggles for native resolution, upsampling and audio-stem separation so open weights are not confused with the entire service.",
+      "source_access_gaps": [
+        "Direct API reference page and Hugging Face commit history returned tool access errors.",
+        "Exact publication UTC and DesignArena live rank not independently verified.",
+        "No weights downloaded, no inference run and no latency or quality comparison reproduced."
+      ]
+    },
+    {
+      "review_date": "2026-10-30",
+      "title": "SuperSplat adds creator discovery, XR controls and camera-animation export",
+      "date": "2026-10-29",
+      "publication_time_utc": null,
+      "classification": "Official dated product update; exact placement against the prior intraday cutoff is unknown. Tooling/viewer release, not a new reconstruction model or SOTA benchmark.",
+      "verified_delta": "PlayCanvas announces creator following, a Following feed, notification improvements and visible search filters. Viewer updates include two-handed XR manipulation and distance-based detail selection. Studio gains a timeline. SplatTransform can render project camera tracks to image frames with depth of field and motion blur. Uploads add SPZ/LCC2 and automatic LOD generation above 40 million splats.",
+      "availability": "Vendor says viewer changes are live on existing and embedded scenes. New-splat notifications from followed creators remain future work. No exact editor/viewer version was established.",
+      "evaluation_scope": "Vendor reports one large streamed Quest 3 scene improving from 9.7 to 30.7 fps, or 40.3 in Performance mode. A 72 Hz target is not a measured 72 fps result. No independent benchmark reproduced.",
+      "primary_url": "https://blog.playcanvas.com/new-in-supersplat-follow-creators-a-new-home-page-and-enhanced-xr-mode/",
+      "discovery_url": "https://www.reddit.com/r/GaussianSplatting/comments/1xilngb/major_supersplat_release_follow_creators_new_home/",
+      "reddit_caveats": "The announcement thread says Quest XR currently requires reloading the default WebGPU viewer into WebGL. Commenters report scaling problems, artifacts and lower frame rates; these are anecdotes, not a controlled cross-device result. A responder says older scene splat counts still need backfilling. Do not promote universal performance or complete deployment from these comments.",
+      "creator_implication": "Relevant to making shareable 3D presentations and eventually exporting a repeatable camera path for posts; no reconstruction-quality breakthrough implied.",
+      "visual_angle": "Proposed light-theme splat-budget/LOD explainer: orbit a schematic scene, vary camera distance and splat budget, toggle distance-only versus view-based selection, and inspect detail across a head turn. A camera-path timeline could export frames for an eventual GIF. Label rendered performance as schematic unless measured.",
+      "coverage_gaps": "Primary article directly returned an access error, but targeted search exposed its full dated official text. Public Reddit discussion readable. No headset, upload, export or source-code execution tested. No exact publication timestamp or release tag verified.",
+      "recommendation": "Include as a useful 3D workflow delta after the major model/audio releases, with the single-scene performance limitation retained."
+    }
+  ],
+  "voice_updates": [
+    {
+      "id": "phonon-v0.6.0",
+      "category": "Voice runtime",
+      "title": "Phonon v0.6.0 fixes Metal startup and completes smaller-model Core ML export",
+      "date": "2026-10-30",
+      "released_at_utc": "2026-10-30T11:26:07Z",
+      "version": "v0.6.0",
+      "change": "Metal startup on macOS 27 is repaired. Automatic device selection can fall back to CPU after GPU initialization failure; explicit device selection still errors. Core ML export now supports smaller Pocket TTS architectures and aligns the Mimi window and GELU with the checkpoint.",
+      "language_scope": "Thirteen additional preprocessing language codes apply locale-specific character/symbol rules and Japanese spacing. Word-level number/currency/email normalization remains limited to English, French, German, Spanish and Portuguese. Each added language still requires a checkpoint trained for it; this release does not establish thirteen new voice models.",
+      "access": "Public runtime release and attached CoreML/QNN bundles. The CoreML bundle is re-exported. The v0.6.0 QNN digest matches the current v0.5.0 QNN asset, which was replaced on October 28; release-tag identity does not guarantee immutable attachments.",
+      "evaluation": "Maintainer fixes and published release/asset metadata verified, without downloading models, running inference or independently evaluating listening quality. No new benchmark or universal quality claim.",
+      "limitations": "Rust Lang enum change is breaking; external matches need a catch-all arm. Architecture, preprocessing and backend compatibility are separate from checkpoint language coverage and licensing. Preserve October 27's hash comparison as an observation at that time.",
+      "creator_implication": "Useful for local narration pipelines affected by Metal startup or smaller-model Core ML export. Check checkpoint, preprocessing and backend together.",
+      "primary_urls": [
+        "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.6.0",
+        "https://github.com/gradium-ai/xn-ptts/releases/tag/v0.5.0",
+        "https://github.com/gradium-ai/xn-ptts/pull/284",
+        "https://github.com/gradium-ai/xn-ptts/pull/310"
+      ],
+      "artifact_metadata": [
+        {
+          "version": "v0.6.0",
+          "published_at": "2026-10-30T11:26:07Z",
+          "updated_at": "2026-10-30T11:26:07Z",
+          "assets": [
+            {
+              "name": "phonon-31m-en-coreml.zip",
+              "created_at": "2026-10-30T11:25:30Z",
+              "updated_at": "2026-10-30T11:25:38Z",
+              "digest": "sha256:2869326ab074f55ed5b644e68b1befef69dc51545b73296d49f5b4dab14c4218",
+              "url": "https://github.com/gradium-ai/xn-ptts/releases/download/v0.6.0/phonon-31m-en-coreml.zip"
+            },
+            {
+              "name": "phonon-31m-en-qnn.zip",
+              "created_at": "2026-10-30T11:25:30Z",
+              "updated_at": "2026-10-30T11:25:50Z",
+              "digest": "sha256:91d864412d952e5e4ce3e27a0d43975df7d97e983c130a33538e596031865d8b",
+              "url": "https://github.com/gradium-ai/xn-ptts/releases/download/v0.6.0/phonon-31m-en-qnn.zip"
+            }
+          ]
+        },
+        {
+          "version": "v0.5.0",
+          "published_at": "2026-10-27T09:42:20Z",
+          "updated_at": "2026-10-28T11:01:03Z",
+          "assets": [
+            {
+              "name": "phonon-31m-en-coreml.zip",
+              "created_at": "2026-10-27T09:38:45Z",
+              "updated_at": "2026-10-27T09:38:53Z",
+              "digest": "sha256:10f3a99fd39256db44f826267ef21d78cca959b16c0554926344c09fde27b436",
+              "url": "https://github.com/gradium-ai/xn-ptts/releases/download/v0.5.0/phonon-31m-en-coreml.zip"
+            },
+            {
+              "name": "phonon-31m-en-qnn.zip",
+              "created_at": "2026-10-28T11:00:42Z",
+              "updated_at": "2026-10-28T11:01:03Z",
+              "digest": "sha256:91d864412d952e5e4ce3e27a0d43975df7d97e983c130a33538e596031865d8b",
+              "url": "https://github.com/gradium-ai/xn-ptts/releases/download/v0.5.0/phonon-31m-en-qnn.zip"
+            }
+          ]
+        }
+      ],
+      "visual_angle": "Proposed checkpoint/preprocessor/backend matrix: toggle script language, numeral or symbol input and runtime backend; show why accepting a language code does not create a trained voice. Synthetic text pipeline, no generated speech."
+    },
+    {
+      "id": "elevenlabs-sfx-v3",
+      "category": "Audio generation",
+      "title": "ElevenLabs SFX v3 adds multipart scene prompting, with limited access",
+      "date": "2026-10-29",
+      "publication_time_utc": null,
+      "observed_at": "2026-10-30",
+      "freshness": "Official announcement dated October 29; exact UTC was not established, so its placement relative to the previous intraday cutoff is unknown. Newly covered release.",
+      "change": "Vendor reports stronger multi-event prompt following, music/vocal generation and fewer high-frequency artifacts than SFX v2; announced in ElevenCreative and ElevenAPI.",
+      "availability": "Official capability docs require model_id eleven_text_to_sound_v3, label access limited and potentially region-dependent, and warn accounts without access receive Unknown model. v2 remains the API default.",
+      "evaluation": "Vendor comparison claims without a numerical evaluation protocol or independent listening result verified here. No paid synthesis or account access test.",
+      "limitations": "Documentation warns exact repetition counts can fail. Multipart prompting is not verified frame-accurate event control or separate generated stems. Maximum documented duration is 30 seconds; minimum-duration docs conflict (overview 0.1 seconds versus API schema 0.5 seconds), so no unified minimum is asserted.",
+      "creator_implication": "A fresh candidate for exploring a film scene's combined sound, subject to account availability and listening review; do not promise exact event placement from descriptive text.",
+      "primary_urls": [
+        "https://elevenlabs.io/blog/sound-effects-v3",
+        "https://elevenlabs.io/docs/overview/capabilities/sound-effects",
+        "https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert",
+        "https://elevenlabs.io/docs/overview/models"
+      ],
+      "visual_angle": "Proposed event-timeline graphic: change requested count, order and overlap, and distinguish descriptive prompt constraints from explicit placed clips. Use synthetic event markers, not invented model outputs or quality scores."
+    }
+  ],
+  "community_review": {
+    "coverage": {
+      "route": "Inspected last30days reddit_public/reddit_listing modules called in env-cleared Python, unauthenticated public JSON/RSS/listing routes; no cookies, keychain, account setup or paid backends.",
+      "first_pass": {
+        "requested_communities": 7,
+        "json_search": "403",
+        "rss_records": 22,
+        "listing_discovery_cards": 94,
+        "returned_calendar_date_records": 50,
+        "exact_window_records": 47,
+        "exact_window_by_community": {
+          "StableDiffusion": 24,
+          "LocalLLaMA": 23
+        },
+        "note": "Final records also contain one photogrammetry RSS result outside exact window. Listing totals and RSS totals overlap; do not sum as unique posts."
+      },
+      "targeted_retry": {
+        "requested_communities": [
+          "GaussianSplatting",
+          "comfyui",
+          "generativeAI",
+          "MachineLearning",
+          "HiggsfieldAI"
+        ],
+        "listing_cards": 236,
+        "listing_cards_by_community": {
+          "GaussianSplatting": 46,
+          "comfyui": 49,
+          "generativeAI": 48,
+          "MachineLearning": 46,
+          "HiggsfieldAI": 47
+        },
+        "exact_window_records": 72,
+        "exact_window_by_community": {
+          "GaussianSplatting": 10,
+          "comfyui": 25,
+          "generativeAI": 22,
+          "MachineLearning": 7,
+          "HiggsfieldAI": 8
+        }
+      },
+      "combined_exact_window_records": 119,
+      "caveats": [
+        "All seven requested communities yielded exact-window listing records after retry. This is sampled top/hot public listing coverage, not exhaustive crawling.",
+        "Post timestamps use created_utc; relative web labels such as '23m ago' are ignored.",
+        "All exact-window titles were screened. Only selected relevant post bodies and primary sources were inspected. Numerous tool announcements remain unverified; no claim of complete verification.",
+        "Public JSON search was denied; initial indexed queries mostly returned stale or unrelated results. Direct public Reddit pages worked for selected leads. Engagement counts are time-of-fetch snapshots, not evidence of quality."
+      ]
+    },
+    "verified_changes": [
+      {
+        "id": "openjutsu-semantic-description",
+        "title": "Openjutsu adds editable action descriptions beside normal-map motion guidance",
+        "event_timestamp": "2026-10-30T04:49:56Z",
+        "timestamp_type": "Git author and committer timestamp; exact public push time not independently established",
+        "primary_sources": [
+          "https://github.com/D3voz/openjutsu/commit/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe",
+          "https://github.com/D3voz/openjutsu/blob/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe/workflows/picture/README.md",
+          "https://github.com/D3voz/openjutsu/blob/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe/workflows/build/openjutsu_picture_pipeline.py"
+        ],
+        "reddit_discovery": {
+          "url": "https://www.reddit.com/r/StableDiffusion/comments/1xj9obu/you_can_now_use_relight_in_openjutsu/",
+          "timestamp": "2026-10-30T08:21:11.213Z",
+          "status": "Fresh Reddit Relight post; initial Relight UI/node was already covered Oct29. The semantic-description commit is the actual new delta."
+        },
+        "what_changed": "From picture now runs the selected visual describer (default Qwen3-VL8B) on the chosen source clip at two frames/second; it writes actions, held objects and expressions. For a replacement picture, a separate picture-to-text description is used to rewrite those actions for the new character and setting. Relighting the video's own person uses the source description directly. Result is editable/optional before Render video and prepended to the renderer prompt's detailed_description. User must regenerate description after changing clip length.",
+        "evidence": "Inspected commit patch, workflow builder, lib/picture.ts, UI and API/test changes. This verifies implemented workflow plumbing, not output quality.",
+        "limitations": [
+          "Author motivation is that normals lose semantic identity of held objects and expressions; no independent quality benchmark was found.",
+          "Two-fps sampling can miss fast actions (inference), and model-generated descriptions can contain errors; UI explicitly invites manual correction.",
+          "'Two passes' is conceptual: replacement-character flow has source-video description, picture description and text rewrite TextGenerate nodes; do not imply only two model calls.",
+          "No model execution, service purchase or video generation performed.",
+          "Still separate from H3RelightPass in comfyui-h3-oneclick-swap; companion repo had no commits in exact window.",
+          "H3/SolarRenderer defaults in this upstream project do not override user's MiniMax-H3 Turbo8/8iteration preference."
+        ],
+        "other_in_window_commits": [
+          {
+            "sha": "522cf55d275c743983628f22b43bd3d8a07ec198",
+            "time": "2026-10-29T13:59:00Z",
+            "change": "From picture part picker"
+          },
+          {
+            "sha": "77767957ce4ab8de36efdf3671f62c8495fe9349",
+            "time": "2026-10-29T14:56:10Z",
+            "change": "Relight the video's own person"
+          },
+          {
+            "sha": "ea3e91333f4971cc599963bf8c2eccd5db67b6c7",
+            "time": "2026-10-29T15:19:10Z",
+            "change": "Keep-the-crop framing option"
+          },
+          {
+            "sha": "db91b02c43a1aef8fbe2f043a2dd3b3178587fd0",
+            "time": "2026-10-30T07:25:54Z",
+            "change": "Eight additional lighting looks (9 to17)"
+          },
+          {
+            "sha": "7fe118bb5a61fcfac0148e1bfea3dd29884dbf26",
+            "time": "2026-10-30T07:49:48Z",
+            "change": "README overview of17looks"
+          }
+        ],
+        "visual_angle": "A colored three-lane timeline: source RGB → normal-map geometry → editable action text. Toggle 'geometry only' versus 'geometry+semantics', scrub a held-cup/blowing-candle example, and mask text fields for actions/objects/appearance. Explain why a normal vector cannot identify the object or action. Label generated output comparisons as proposed/not benchmarked."
+      }
+    ],
+    "dated_late_discoveries": [
+      {
+        "title": "StableGen v0.4.0",
+        "primary_url": "https://github.com/sakalond/StableGen/releases/tag/v0.4.0",
+        "release_published": "2026-10-28T18:08:38Z",
+        "reddit_url": "https://www.reddit.com/r/StableDiffusion/comments/1xiolct/qwen_image_21_trellis2_in_blender_from_a_prompt/",
+        "reddit_timestamp": "2026-10-29T16:22:36.028Z",
+        "status": "Primary release verified but outside exact delta window; fresh Reddit post is late discovery, not today's release.",
+        "summary": "Masked texture editing, SkinTokens auto-rigging, Qwen Image2.1/experimental backends, projection guard, MarigoldV2. Blender+ComfyUI workflow, not one self-contained ComfyUI graph. Release notes list Blender4.2–4.5 and5.1+, not5.0; model licenses differ and experimental backends are explicitly experimental. Author examples/timing, not independent evaluation."
+      },
+      {
+        "title": "Rapid-H3",
+        "primary_url": "https://github.com/jeet0733/Rapid-H3/tree/6a5d376deed3a64052f811d79222487448590419",
+        "repo_created": "2026-10-29T03:57:35Z",
+        "commit_time": "2026-10-29T04:13:38Z",
+        "repo_pushed_at": "2026-10-29T04:15:03Z",
+        "reddit_url": "https://www.reddit.com/r/StableDiffusion/comments/1xj824f/rapidh3_super_fast_h3_video_audio_in_about_2/",
+        "reddit_timestamp": "2026-10-30T06:36:17.570Z",
+        "status": "Fresh community announcement, implementation predates exact window. Do not present as newly released Oct30.",
+        "summary": "Community GB10/DGX Spark INT8 kernels and alternate denoising schedules. Author claims ~117s vs590–630s warm-server10stepbf16 reference for768×1344/141frames; six-shot timing. Default ts_h2 uses6steps at0.7size+1full refine, notTurbo8. Motion set16clips reports13/16camera push-ins vs16/16stock, reducedface sharpness; author’s 'no visible loss' headline is not general parity. Initial images absent, cold-startoverhead, no independent reproduction or Turbo8 comparison."
+      }
+    ],
+    "architecture_cautions": [
+      {
+        "title": "Kokoro+OpenVoice any-tts",
+        "reddit_url": "https://www.reddit.com/r/LocalLLaMA/comments/1xiplj7/kokoro_can_now_clone_any_voice_with_just_600_mb/",
+        "reddit_timestamp": "2026-10-29T16:59:08.693Z",
+        "primary_link_from_author": "https://github.com/0xShug0/audio.cpp/blob/main/docs/recipes.md",
+        "status": "Reddit author body inspected; primary recipe/version/date not verified in this slice. Parent may verify separately.",
+        "claim_correction": "This is a compositional pipeline: Kokoro TTS then old OpenVoice ToneColorConverter; not new native Kokoro cloning weights or retraining. TTS controls words/pronunciation/prosody; VC transfers timbre. Starting voice affects result.",
+        "performance_evidence": "~600MB extra peak VRAM/~10% CUDA slowdown/CPU0.5×speed still2×realtime are author-reported, hardware/evaluation not established here.",
+        "visual_angle": "Split the speech pipeline into content/prosody and timbre; sliders choose baseTTSvoice and conversion target; show memory overhead separately from total model memory."
+      }
+    ],
+    "discovery_links": [
+      {
+        "title": "Pika H3 Flex",
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1xiqifk/new_minimax_h3_finetune_by_pika_labs/",
+        "created_at": "2026-10-29T17:31:48.221Z",
+        "verification": "Official release, repository and model card checked separately."
+      },
+      {
+        "title": "SuperSplat release",
+        "url": "https://www.reddit.com/r/GaussianSplatting/comments/1xilngb/major_supersplat_release_follow_creators_new_home/",
+        "created_at": "2026-10-29T14:32:53.501Z",
+        "verification": "Official dated PlayCanvas article checked through indexed primary text."
+      }
+    ],
+    "unverified_leads_policy": "Additional title-only tools and price allegations were not promoted to confirmed changes. Listing counts do not imply that every body or linked source was verified."
+  },
+  "secondary_maintenance": {
+    "openjutsu": {
+      "id": "openjutsu-semantic-description",
+      "title": "Openjutsu adds editable action descriptions beside normal-map motion guidance",
+      "event_timestamp": "2026-10-30T04:49:56Z",
+      "timestamp_type": "Git author and committer timestamp; exact public push time not independently established",
+      "primary_sources": [
+        "https://github.com/D3voz/openjutsu/commit/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe",
+        "https://github.com/D3voz/openjutsu/blob/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe/workflows/picture/README.md",
+        "https://github.com/D3voz/openjutsu/blob/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe/workflows/build/openjutsu_picture_pipeline.py"
+      ],
+      "reddit_discovery": {
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1xj9obu/you_can_now_use_relight_in_openjutsu/",
+        "timestamp": "2026-10-30T08:21:11.213Z",
+        "status": "Fresh Reddit Relight post; initial Relight UI/node was already covered Oct29. The semantic-description commit is the actual new delta."
+      },
+      "what_changed": "From picture now runs the selected visual describer (default Qwen3-VL8B) on the chosen source clip at two frames/second; it writes actions, held objects and expressions. For a replacement picture, a separate picture-to-text description is used to rewrite those actions for the new character and setting. Relighting the video's own person uses the source description directly. Result is editable/optional before Render video and prepended to the renderer prompt's detailed_description. User must regenerate description after changing clip length.",
+      "evidence": "Inspected commit patch, workflow builder, lib/picture.ts, UI and API/test changes. This verifies implemented workflow plumbing, not output quality.",
+      "limitations": [
+        "Author motivation is that normals lose semantic identity of held objects and expressions; no independent quality benchmark was found.",
+        "Two-fps sampling can miss fast actions (inference), and model-generated descriptions can contain errors; UI explicitly invites manual correction.",
+        "'Two passes' is conceptual: replacement-character flow has source-video description, picture description and text rewrite TextGenerate nodes; do not imply only two model calls.",
+        "No model execution, service purchase or video generation performed.",
+        "Still separate from H3RelightPass in comfyui-h3-oneclick-swap; companion repo had no commits in exact window.",
+        "H3/SolarRenderer defaults in this upstream project do not override user's MiniMax-H3 Turbo8/8iteration preference."
+      ],
+      "other_in_window_commits": [
+        {
+          "sha": "522cf55d275c743983628f22b43bd3d8a07ec198",
+          "time": "2026-10-29T13:59:00Z",
+          "change": "From picture part picker"
+        },
+        {
+          "sha": "77767957ce4ab8de36efdf3671f62c8495fe9349",
+          "time": "2026-10-29T14:56:10Z",
+          "change": "Relight the video's own person"
+        },
+        {
+          "sha": "ea3e91333f4971cc599963bf8c2eccd5db67b6c7",
+          "time": "2026-10-29T15:19:10Z",
+          "change": "Keep-the-crop framing option"
+        },
+        {
+          "sha": "db91b02c43a1aef8fbe2f043a2dd3b3178587fd0",
+          "time": "2026-10-30T07:25:54Z",
+          "change": "Eight additional lighting looks (9 to17)"
+        },
+        {
+          "sha": "7fe118bb5a61fcfac0148e1bfea3dd29884dbf26",
+          "time": "2026-10-30T07:49:48Z",
+          "change": "README overview of17looks"
+        }
+      ],
+      "visual_angle": "A colored three-lane timeline: source RGB → normal-map geometry → editable action text. Toggle 'geometry only' versus 'geometry+semantics', scrub a held-cup/blowing-candle example, and mask text fields for actions/objects/appearance. Explain why a normal vector cannot identify the object or action. Label generated output comparisons as proposed/not benchmarked."
+    },
+    "known_artifact_checks": [
+      {
+        "name": "Hexels / Hexel Edge",
+        "source": "https://github.com/honeycomb-surfels/hexels",
+        "head": "698d1afb0944d3e766074c3beb70362f16c7550d",
+        "commit_time": "2026-10-29T00:00:20Z",
+        "result": "No new change beyond Oct29 coverage."
+      },
+      {
+        "name": "ReferStream",
+        "source": "https://github.com/Xushuolin/ReferStream/commit/1ee0b570b438a5ef1283b377a7303aaf8c1cc101",
+        "commit_time": "2026-10-30T09:35:18Z",
+        "result": "README/site/demo organization only. README still says inference code is not included. Do not announce a runnable release or infer public-push time from commit time."
+      },
+      {
+        "name": "OmniShowcase",
+        "source": "https://github.com/justin4ai/OmniShowcase",
+        "head": "7dbbb4ab94c99770cb1a0ab584ca7dcb8aa44c51",
+        "commit_time": "2026-10-29T17:57:26Z",
+        "result": "Current tree remains README/assets/teaser, with rewritten initial history; no newly runnable capability verified."
+      },
+      {
+        "name": "BoundedGS",
+        "head": "23bca8369a793ab9e29cc2b5d7c5966d4660d850",
+        "commit_time": "2026-10-27T09:52:09Z",
+        "result": "Unchanged."
+      },
+      {
+        "name": "Hy-Nomas",
+        "source": "https://github.com/Tencent-Hunyuan/Hy-Nomas",
+        "result": "Oct29/30 README additions expose SGLang instructions and Reactor Runtime information. Underlying merges predate the review window; do not describe these as new integrations.",
+        "evidence": [
+          {
+            "url": "https://github.com/sgl-project/sglang/pull/46124",
+            "merged_at": "2026-10-25T10:27:23Z"
+          },
+          {
+            "url": "https://github.com/Tencent-Hunyuan/Hy-Nomas/pull/3",
+            "merged_at": "2026-10-26T04:08:40Z"
+          }
+        ],
+        "limits": "SGLang guide describes nightly rather than stable main; some features/variants remain unsupported. README's Genie 4 comparison was not independently validated."
+      }
+    ]
+  },
+  "unchanged_or_deferred": [
+    {
+      "title": "Audio8-TTS-Realistic-0.6B",
+      "reason": "Paper v1 is October 10; model repository commits inspected are October 14–27. An October 29 social launch lead was not primary-verified. No new exact-window weights established; first public visibility remains unknown.",
+      "urls": [
+        "https://arxiv.org/abs/2610.14776",
+        "https://huggingface.co/Edge0/Audio8-TTS-Realistic-0.6b",
+        "https://github.com/Edge0-AI/Audio8_TTS"
+      ]
+    },
+    {
+      "title": "ElevenLabs Cue",
+      "reason": "October 28 research disclosure describes alignment already behind Scribe and the standalone API, not a verified new API release. Older than this delta window; candidate for a future dated fundamentals treatment.",
+      "urls": [
+        "https://elevenlabs.io/blog/cue-aligner"
+      ]
+    },
+    {
+      "title": "Video Generation Meets Agent Harness",
+      "arxiv": "2610.40191v1",
+      "submitted": "2026-10-29T14:47:39Z",
+      "sources": [
+        "https://arxiv.org/abs/2610.40191",
+        "https://agentic-videogen.github.io/",
+        "https://github.com/agentic-videogen/awesome-agentic-videogen"
+      ],
+      "reason": "Survey/position report rather than new generator or verified SOTA result. HTML rendering stopped after the introduction; full technical review incomplete. Useful background, not promoted over the two stronger fresh papers."
+    },
+    {
+      "vendor": "Higgsfield",
+      "status": "Changelog still latest October 27 Terra and October 26 Playable. No newly verified filmmaking release. Status page all services online, updated October 30 12:56 UTC; October 31 API migration remains existing background rather than a new announcement.",
+      "urls": [
+        "https://higgsfield.ai/creator-hub/changelog",
+        "https://status.higgsfield.ai/"
+      ],
+      "gaps": [
+        "No customer API integration inspected; upcoming migration deadline does not establish user-specific impact."
+      ]
+    },
+    {
+      "vendor": "OpenArt",
+      "status": "Actionable retirement-source discrepancy above. No additional dated capability release verified in public blog/date searches; October 29 webinar/comparison content is not itself a rollout.",
+      "urls": [
+        "https://openart.ai/blog/",
+        "https://openart.ai/whats-new",
+        "https://openart.ai/v1-sunset-faq"
+      ],
+      "gaps": [
+        "Legacy What's New latest dated feature entry remains October 1; no comprehensive new-suite release feed was exposed."
+      ]
+    },
+    {
+      "vendor": "Runway",
+      "status": "Changelog latest remains October 27 Ads and October 26 App Studio. Prior control-scope conflict persists: Ads announcement says start/pause from Runway, while help says publish creates paused ads in existing sets and excludes pausing/stopping. No new resolution or rollout verified.",
+      "urls": [
+        "https://runway.com/changelog",
+        "https://runway.com/news/company-news/runway-ads",
+        "https://help.runwayml.com/hc/en-us/articles/56691137245203-Reviewing-and-publishing-ads"
+      ]
+    },
+    {
+      "vendor": "Luma",
+      "status": "Latest author-index batch remains October 27 guides. No newly verified rollout.",
+      "urls": [
+        "https://lumalabs.ai/authors/luma-team"
+      ]
+    },
+    {
+      "vendor": "Kling",
+      "status": "Targeted October 29/30 API update search returned the previously recorded October 28 Kling 4 direct API notice. October 29 blog guides are not launch evidence. No new API capability verified.",
+      "urls": [
+        "https://kling.ai/document-api/updates/api",
+        "https://kling.ai/blog"
+      ],
+      "gaps": [
+        "API page directly returns a JavaScript shell; indexed primary documentation was used. No account or paid API test."
+      ]
+    },
+    {
+      "vendor": "Pika",
+      "status": "October 29 H3 Flex launch and technical deep dive verified; actionable details above.",
+      "urls": [
+        "https://pika.art/blog",
+        "https://pika.art/blog/pika-h3-flex",
+        "https://pika.art/blog/pika-h3-flex-research"
+      ]
+    },
+    {
+      "vendor": "Adobe",
+      "status": "Central blog latest item remains October 28 anniversary pins, non-actionable for generation; latest relevant listed item October 19 Lightroom. Targeted October 29/30 Firefly/video queries did not establish a fresh release. Older-year search results excluded.",
+      "urls": [
+        "https://blog.adobe.com/en"
+      ],
+      "gaps": [
+        "Central-news and targeted date-query coverage, not exhaustive all-product release notes."
+      ]
+    }
+  ],
+  "coverage": {
+    "reddit": {
+      "route": "Inspected last30days reddit_public/reddit_listing modules called in env-cleared Python, unauthenticated public JSON/RSS/listing routes; no cookies, keychain, account setup or paid backends.",
+      "first_pass": {
+        "requested_communities": 7,
+        "json_search": "403",
+        "rss_records": 22,
+        "listing_discovery_cards": 94,
+        "returned_calendar_date_records": 50,
+        "exact_window_records": 47,
+        "exact_window_by_community": {
+          "StableDiffusion": 24,
+          "LocalLLaMA": 23
+        },
+        "note": "Final records also contain one photogrammetry RSS result outside exact window. Listing totals and RSS totals overlap; do not sum as unique posts."
+      },
+      "targeted_retry": {
+        "requested_communities": [
+          "GaussianSplatting",
+          "comfyui",
+          "generativeAI",
+          "MachineLearning",
+          "HiggsfieldAI"
+        ],
+        "listing_cards": 236,
+        "listing_cards_by_community": {
+          "GaussianSplatting": 46,
+          "comfyui": 49,
+          "generativeAI": 48,
+          "MachineLearning": 46,
+          "HiggsfieldAI": 47
+        },
+        "exact_window_records": 72,
+        "exact_window_by_community": {
+          "GaussianSplatting": 10,
+          "comfyui": 25,
+          "generativeAI": 22,
+          "MachineLearning": 7,
+          "HiggsfieldAI": 8
+        }
+      },
+      "combined_exact_window_records": 119,
+      "caveats": [
+        "All seven requested communities yielded exact-window listing records after retry. This is sampled top/hot public listing coverage, not exhaustive crawling.",
+        "Post timestamps use created_utc; relative web labels such as '23m ago' are ignored.",
+        "All exact-window titles were screened. Only selected relevant post bodies and primary sources were inspected. Numerous tool announcements remain unverified; no claim of complete verification.",
+        "Public JSON search was denied; initial indexed queries mostly returned stale or unrelated results. Direct public Reddit pages worked for selected leads. Engagement counts are time-of-fetch snapshots, not evidence of quality."
+      ]
+    },
+    "papers": [
+      "Targeted scan, not an exhaustive account of 197 new cs.CV listings on Oct30.",
+      "Primary arXiv HTML was read for both promoted papers. Their project pages initially failed through web extraction; public HTTP retrieval succeeded and linked repositories were inspected.",
+      "GitHub repository state is observed during this review; commit timestamps are not proof of first public availability.",
+      "No model execution, independent benchmark reproduction, paid services or account access.",
+      "Public Reddit/product discovery handled by the parent and sibling agent, not independently repeated here."
+    ],
+    "voice_unchanged": [
+      "Pocket-TTS latest v4.0.1, October 21.",
+      "ElevenLabs changelog latest October 26 group already covered.",
+      "Cartesia latest September entries, Hume October 2 notice with November 13 sunset, and Rime October 28 Prism unchanged in inspected feeds."
+    ],
+    "other_gaps": [
+      "Pika exact publication UTC, hosted endpoints and live arena rank not independently verified.",
+      "SFX v3 exact publication UTC and account eligibility unverified; duration minimum differs across official pages.",
+      "OpenArt FAQ and legacy banners disagree; exact document edit time unknown.",
+      "SuperSplat official article direct extraction failed; indexed official text supplied dated details. No exact release tag or device/export test.",
+      "No model output, speed, listening test or independent reproduction performed. No account changes, paid generation or social publishing."
+    ]
+  }
+}

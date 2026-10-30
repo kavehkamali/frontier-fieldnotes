@@ -1,5 +1,7 @@
 # Frontier Fieldnotes · Edition 005 · 26 October 2026
 
+> **30 October follow-up:** [daily delta](delta-2026-10-30.md) adds L3G-World, SonoWorld4D, Pika H3 Flex, SFX v3 and Phonon v0.6.0; the OpenArt deadline now has conflicting official sources. All new visuals are proposals. The original weekly snapshot is preserved.
+
 > **29 October follow-up:** [daily delta](delta-2026-10-29.md) covers artifact releases, voice controls and OpenArt retirement limits. The original weekly snapshot below is preserved.
 
 > **28 October follow-up:** [new research and workflow delta](delta-2026-10-28.md), including an App Studio date-metadata correction. This document remains the original weekly snapshot.

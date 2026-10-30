@@ -1,5 +1,40 @@
 [
   {
+    "title": "Pika H3 Flex community discovery",
+    "date": "29 Oct 2026 · 17:31:48 UTC Reddit post",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1xiqifk/new_minimax_h3_finetune_by_pika_labs/",
+    "summary": "A public release thread led to the official adapter/code and hosted-service distinction.",
+    "implication": "Use primary technical scope rather than community speed or quality claims. No local inference; default generation preference remains Turbo 8.",
+    "primary_urls": [
+      "https://pika.art/blog/pika-h3-flex",
+      "https://pika.art/blog/pika-h3-flex-research",
+      "https://github.com/Pika-Labs/Pika-H3-Flex",
+      "https://huggingface.co/Pika-Labs/Pika-H3-Flex"
+    ]
+  },
+  {
+    "title": "SuperSplat discovery and XR reports",
+    "date": "29 Oct 2026 · 14:32:53 UTC Reddit post",
+    "url": "https://www.reddit.com/r/GaussianSplatting/comments/1xilngb/major_supersplat_release_follow_creators_new_home/",
+    "summary": "Fresh community announcement led to the dated PlayCanvas product update.",
+    "implication": "The announcement thread says Quest XR currently requires reloading the default WebGPU viewer into WebGL. Commenters report scaling problems, artifacts and lower frame rates; these are anecdotes, not a controlled cross-device result. A responder says older scene splat counts still need backfilling. Do not promote universal performance or complete deployment from these comments.",
+    "primary_urls": [
+      "https://blog.playcanvas.com/new-in-supersplat-follow-creators-a-new-home-page-and-enhanced-xr-mode/"
+    ]
+  },
+  {
+    "title": "Openjutsu follow-up · semantics beside normals",
+    "date": "30 Oct 2026 · 08:21:11 UTC Reddit post; earlier same-day source commit",
+    "url": "https://www.reddit.com/r/StableDiffusion/comments/1xj9obu/you_can_now_use_relight_in_openjutsu/",
+    "summary": "Relight itself was covered yesterday. A new source patch adds editable action descriptions sampled from the selected clip.",
+    "implication": "Verified implementation plumbing, not output quality. Description errors and missed fast motion remain possible. No generation.",
+    "primary_urls": [
+      "https://github.com/D3voz/openjutsu/commit/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe",
+      "https://github.com/D3voz/openjutsu/blob/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe/workflows/picture/README.md",
+      "https://github.com/D3voz/openjutsu/blob/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe/workflows/build/openjutsu_picture_pipeline.py"
+    ]
+  },
+  {
     "title": "Openjutsu follow-up · lighting controls, two separate mechanisms",
     "date": "Original Reddit discovery 27 Oct · primary source additions 29 Oct",
     "summary": "Repository follow-up finds a prompt-guided first-frame UI control and a separate normals/depth shading node. The original Reddit post is not a new release announcement.",

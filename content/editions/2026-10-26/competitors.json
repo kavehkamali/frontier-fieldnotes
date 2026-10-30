@@ -1,13 +1,74 @@
 [
   {
-    "title": "OpenArt · Legacy Stories and custom models will not migrate",
-    "date": "Observed 2026-10-29; original notice publication unknown",
-    "summary": "Official migration FAQ says the old workspace retires November 1 at 11:59 PM PST. Existing media and Characters are available in the new workspace; plans and credits stay unchanged. Stories and custom models do not transfer, and the Gallery personal page retires. Stories can be exported as final MP4 and asset ZIP; the ZIP is not an editable Story project. Custom models can be downloaded as .safetensors. Downloads remain open until December 31 at 11:59 PM PST.",
-    "implication": "The user may have no affected assets; do not claim data was backed up or migrate anything. Search caches of older pages show November 16, but current dedicated FAQ and banner say November 1. Exact change date is unknown; do not claim a verified deadline acceleration. Official public FAQ and banner, no account inspection or export test.",
+    "title": "Pika · H3 Flex adapters and hosted finishing",
+    "date": "29 Oct 2026 · exact UTC unverified; checked 30 Oct",
+    "summary": "Pika released MiniMax-H3-derived FL2VA and Ref2VA adapters with inference code. Local generation supports text, endpoint frames or multimodal references, synchronized mixed stereo audio, six generator evaluations and native 480p/768p. Up to 12 reference inputs and requested 5–15-second clips are documented.",
+    "implication": "1080p/2K/4K output is upsampled finishing. Upsampling, five separated audio stems, optional prompt enhancement and the accelerated serving stack are Pika-hosted capabilities, not included in the local generator adapter package. Stems are separated from a generated mixed soundtrack rather than generated independently. Public GitHub code and Hugging Face adapter repository were readable. API Club availability is announced; creation-product availability is scheduled for November 2. No paid request, model download or local inference was performed. Seven seconds measures transformer computation; vendor comparisons do not establish universal SOTA. Adapters use the MiniMax community license; code is Apache-2.0.",
+    "url": "https://pika.art/blog/pika-h3-flex",
+    "primary_urls": [
+      "https://pika.art/blog/pika-h3-flex",
+      "https://pika.art/blog/pika-h3-flex-research",
+      "https://github.com/Pika-Labs/Pika-H3-Flex",
+      "https://huggingface.co/Pika-Labs/Pika-H3-Flex"
+    ]
+  },
+  {
+    "title": "ElevenLabs · SFX v3 scene prompting, limited access",
+    "date": "29 Oct 2026 · exact UTC unverified; checked 30 Oct",
+    "summary": "Vendor reports stronger multi-event prompt following, music/vocal generation and fewer high-frequency artifacts than SFX v2; announced in ElevenCreative and ElevenAPI.",
+    "implication": "Official capability docs require model_id eleven_text_to_sound_v3, label access limited and potentially region-dependent, and warn accounts without access receive Unknown model. v2 remains the API default. Exact repetition counts can fail. No independent listening test or account check.",
+    "url": "https://elevenlabs.io/blog/sound-effects-v3",
+    "primary_urls": [
+      "https://elevenlabs.io/blog/sound-effects-v3",
+      "https://elevenlabs.io/docs/overview/capabilities/sound-effects",
+      "https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert",
+      "https://elevenlabs.io/docs/overview/models"
+    ]
+  },
+  {
+    "title": "SuperSplat · camera-track export and XR update",
+    "date": "29 Oct 2026 · exact UTC/version unverified",
+    "summary": "PlayCanvas announces creator following, a Following feed, notification improvements and visible search filters. Viewer updates include two-handed XR manipulation and distance-based detail selection. Studio gains a timeline. SplatTransform can render project camera tracks to image frames with depth of field and motion blur. Uploads add SPZ/LCC2 and automatic LOD generation above 40 million splats.",
+    "implication": "Vendor reports one large streamed Quest 3 scene improving from 9.7 to 30.7 fps, or 40.3 in Performance mode. A 72 Hz target is not a measured 72 fps result. No independent benchmark reproduced. Tooling update, not a reconstruction breakthrough. Primary article directly returned an access error, but targeted search exposed its full dated official text. Public Reddit discussion readable. No headset, upload, export or source-code execution tested. No exact publication timestamp or release tag verified.",
+    "url": "https://blog.playcanvas.com/new-in-supersplat-follow-creators-a-new-home-page-and-enhanced-xr-mode/",
+    "primary_urls": [
+      "https://blog.playcanvas.com/new-in-supersplat-follow-creators-a-new-home-page-and-enhanced-xr-mode/"
+    ]
+  },
+  {
+    "title": "Openjutsu · editable action text beside geometry guidance",
+    "date": "30 Oct 2026 · source commit 04:49:56 UTC; public push time unknown",
+    "summary": "From picture now runs the selected visual describer (default Qwen3-VL8B) on the chosen source clip at two frames/second; it writes actions, held objects and expressions. For a replacement picture, a separate picture-to-text description is used to rewrite those actions for the new character and setting. Relighting the video's own person uses the source description directly. Result is editable/optional before Render video and prepended to the renderer prompt's detailed_description. User must regenerate description after changing clip length.",
+    "implication": "Inspect and edit descriptions before rendering. Sampling may miss fast motion; no output-quality or consistency benchmark verified. Normals, text and relighting are separate mechanisms. No model run; Turbo 8 preference unchanged.",
+    "url": "https://github.com/D3voz/openjutsu/commit/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe",
+    "primary_urls": [
+      "https://github.com/D3voz/openjutsu/commit/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe",
+      "https://github.com/D3voz/openjutsu/blob/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe/workflows/picture/README.md",
+      "https://github.com/D3voz/openjutsu/blob/d7e405c07e67f7dd4044e6317c2d890c1ebd5abe/workflows/build/openjutsu_picture_pipeline.py"
+    ]
+  },
+  {
+    "title": "OpenArt · retirement FAQ now says November 16; banners conflict",
+    "date": "Observed 30 Oct 2026 · document edit time unknown",
+    "summary": "The dedicated FAQ now states November 16, 2026 at 11:59 PM PST. Yesterday’s FAQ observation and current legacy banners say November 1. December 31 at 11:59 PM PST remains the export deadline. Stories and custom models do not migrate; a Story asset ZIP is not an editable project. MP4, asset ZIP and custom-model .safetensors downloads are documented.",
+    "implication": "Material documentation correction, not a verified dated extension announcement. Preserve the conflicting source observations and confirm the notice for an affected workflow. No account assets, migrations or exports inspected.",
     "url": "https://openart.ai/v1-sunset-faq",
     "primary_urls": [
       "https://openart.ai/v1-sunset-faq",
-      "https://openart.ai/whats-new"
+      "https://openart.ai/whats-new",
+      "https://openart.ai/image"
+    ],
+    "date_history": [
+      {
+        "observed_at": "2026-10-29",
+        "value": "Dedicated FAQ and banner captured as November 1; older indexed text said November 16.",
+        "source_snapshot": "delta-2026-10-29.md"
+      },
+      {
+        "observed_at": "2026-10-30",
+        "value": "Dedicated FAQ repeatedly says November 16; legacy banner says November 1; image-page extraction varies.",
+        "source_snapshot": "delta-2026-10-30.md"
+      }
     ]
   },
   {

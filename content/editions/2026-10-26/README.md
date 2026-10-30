@@ -17,3 +17,5 @@ The lab demonstrates synthetic vector geometry and a toy semantic-time schedule.
 [October 28 delta](delta-2026-10-28.md): ReferStream, Hexels, Runway Ads and Openjutsu reliability fixes. [Four new proposed graphics and scoped source records](delta-watchlist-2026-10-28.json).
 
 [October 29 delta](delta-2026-10-29.md): OpenArt retirement limits, Kling API scope, Hexel Edge and voice changes. [Dated watchlist and proposed graphics](delta-watchlist-2026-10-29.json).
+
+[October 30 delta](delta-2026-10-30.md): Gaussian memory, spatial audio, H3 Flex, SFX v3, runtime/workflow updates and the OpenArt deadline discrepancy. [Scoped evidence and six proposed graphics](delta-watchlist-2026-10-30.json).
